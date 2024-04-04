@@ -4,6 +4,8 @@ import { resolve } from 'path';
 import sharp from 'sharp';
 import chalk from 'chalk';
 
+let headUpdateTimer = `${chalk.green(Object.keys(CreatorDetailList).length)} heads updated.`;
+console.time(headUpdateTimer);
 process.stdout.write(`[🗿] Updating heads...`);
 
 async function updateHeads() {
@@ -32,5 +34,5 @@ async function updateHeads() {
 }
 
 await updateHeads();
-let timeTaken = process.hrtime.bigint().toString().slice(0, -4);
-process.stdout.write(`\r${chalk.green(Object.keys(CreatorDetailList).length)} heads updated ${chalk.gray(`[${chalk.bold([timeTaken.slice(0, -2), '.', timeTaken.slice(-2)].join(''))}ms]`)}\n`);
+process.stdout.write('\r');
+console.timeEnd(headUpdateTimer);
