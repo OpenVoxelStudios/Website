@@ -1,0 +1,189 @@
+.mainpage {
+    width: 100%;
+    height: calc(100vh - 125px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainpage .main {
+    width: 50%;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.mainpage * {
+    z-index: 1;
+}
+
+.mainpage .main h1 {
+    font-size: 6vw;
+    margin: 0;
+    font-weight: bold;
+}
+
+.mainpage .main .maps {
+    font-size: 50px;
+    padding: 25px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mainpage .main #v0 {
+    z-index: 0;
+    position: absolute;
+    border-radius: 16px;
+    filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-height: 90%;
+    max-width: 180%;
+}
+
+.arg {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 14vh;
+}
+
+.arg .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    font-size: 28px;
+}
+
+.arg .text h1 {
+    font-size: 64px;
+}
+
+.arg .img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    animation: float 6s ease-in-out infinite;
+
+    position: relative;
+    transition: all 0.2s ease;
+    transform-style: preserve-3d;
+}
+
+.arg .img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+
+
+@media screen and (min-width: 2000px) {
+    .mainpage .main h1 {
+        font-size: 120px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .mainpage .main {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .arg .img:hover {
+        animation-play-state: paused;
+        scale: 1.05;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .mainpage .main h1 {
+        font-size: 10vw;
+    }
+
+    .mainpage .main .maps {
+        font-size: 25px;
+    }
+
+    .arg {
+        position: relative;
+    }
+
+    .arg .img {
+        animation: smallfloat 6s ease-in-out infinite;
+        z-index: 0;
+
+    }
+
+    .arg .text {
+        z-index: 5;
+        text-align: center;
+        height: fit-content;
+
+        background: rgba(137, 137, 137, 0.2);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .arg .text,
+    .arg .img {
+        position: absolute;
+        width: 90%;
+    }
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(-2px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(8%);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(-2px);
+    }
+}
+
+@keyframes smallfloat {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(-2px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(2%);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(-2px);
+    }
+}

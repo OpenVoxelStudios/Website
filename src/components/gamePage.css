@@ -1,0 +1,280 @@
+.gamepage {
+    width: calc(100% - 50px);
+    height: fit-content;
+    margin: 25px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gamepage .details {
+    height: fit-content;
+    width: 73%;
+}
+
+.gamepage .moreinfos {
+    width: calc(100% - 50px);
+    height: fit-content;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.gamepage .moreinfos-changelog {
+    width: 100%;
+    padding: 0;
+}
+
+.gamepage .moreinfos * {
+    font-size: 24px;
+}
+.gamepage .moreinfos h3 {
+    font-size: 28px;
+}
+.gamepage .moreinfos h2 {
+    font-size: 31px;
+}
+.gamepage .moreinfos h1 {
+    font-size: 34px;
+}
+
+.gamepage .moreinfos .changelog {
+    margin-top: 25px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.gamepage .moreinfos .changelog .text {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gamepage .moreinfos .changelog .text .title {
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 15px;
+    padding: 10px
+}
+
+.gamepage .moreinfos .changelog .text .title .download {
+    height: 50px;
+    width: 50px;
+}
+
+.gamepage .moreinfos .changelog .text .title .name {
+    margin-left: 15px;
+    font-size: 32px;
+}
+
+.gamepage .moreinfos .changelog .text .title .name .bold {
+    font-weight: bold;
+}
+
+.gamepage .moreinfos .changelog .arrow {
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: auto;
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gamepage .moreinfos .changelog .arrow .dot {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 25px;
+}
+
+.gamepage .moreinfos .changelog .arrow .dash {
+    position: absolute;
+    height: calc(100% - 20px);
+    width: 5px;
+    border-radius: 25px;
+}
+
+.gamepage .details .selector {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gamepage .details .selector .description,
+.gamepage .details .selector .versions {
+    font-size: 48px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.gamepage .info {
+    height: fit-content;
+    padding: 15px;
+    width: 24%;
+}
+
+.gamepage .info .name {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gamepage .info .name .icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 6px;
+}
+
+.gamepage .info .name .name {
+    font-size: 32px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.gamepage .info .description {
+    font-size: 32px;
+}
+
+.gamepage .info .separator {
+    width: 100%;
+    height: 2px;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.gamepage .info .downloadLatest {
+    height: 75px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.gamepage .info .downloadLatest .icon {
+    height: 50px;
+    width: 50px;
+}
+
+.gamepage .info .downloadLatest .text {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.gamepage .info .creators {
+    padding-top: 15px;
+}
+
+.gamepage .info .creators .title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.gamepage .info .creators .creator {
+    margin-top: 15px;
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.gamepage .info .creators .creator .head {
+    margin-left: 15px;
+    height: 75px;
+    width: 75px;
+    image-rendering: pixelated;
+    border-radius: 8px;
+}
+
+.gamepage .info .creators .creator .name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.gamepage .details img {
+    max-width: 1000px;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .gamepage .info {
+        width: 100%;
+    }
+
+    .gamepage .details {
+        margin-top: 25px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .gamepage .moreinfos * {
+        font-size: 22px;
+    }
+
+    .gamepage .info .description {
+        font-size: 24px;
+    }
+
+    .gamepage .moreinfos .changelog .text .title .name {
+        font-size: 26px;
+    }
+
+    .gamepage .details .selector .description,
+    .gamepage .details .selector .versions {
+        margin: 0;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+    }
+    
+    .gamepage .details .selector .description.active,
+    .gamepage .details .selector .versions.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 16px;
+    }
+
+    .gamepage .info .downloadLatest .text {
+        font-size: 22px;
+    }
+
+    .gamepage .info .creators .title {
+        font-size: 28px;
+    }
+    
+    .gamepage .info .creators .creator .head {
+        width: 50px;
+        height: 50px;
+    }
+
+    .gamepage .info .creators .creator .name {
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "openvoxelstudio-website",
+  "description": "A really cool website for OpenVoxel Studio made in React.",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "author": {
+    "email": "kubik@openvoxel.studio",
+    "name": "Kodeur Kubik",
+    "url": "https://github.com/KodeurKubik"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "contributors": [
+    {
+      "email": "kubik@openvoxel.studio",
+      "name": "Kodeur Kubik",
+      "url": "https://github.com/KodeurKubik"
+    }
+  ],
+  "license": "Apache-2.0",
+  "displayName": "OpenVoxel Studio Website",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenVoxelStudios/Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OpenVoxelStudios/Website/issues"
+  },
+  "homepage": "https://openvoxel.studio",
+  "scripts": {
+    "dev": "bunx vite",
+    "build": "bunx vite build",
+    "preview": "bunx vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0",
+    "sharp": "^0.33.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}
