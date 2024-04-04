@@ -8,11 +8,15 @@ function Game({ name, date, downloads, description, image, link }: { name: strin
 
             <div className='details'>
                 <img className='thumbnail' src={image} />
-                <p className='date'>{date}</p>
-                <p className='downloads'>
-                    <img className='downloadicon' src={IconDownload} />
-                    {downloads}+
-                </p>
+                {date !== null &&
+                    <p className='date'>{date}</p>
+                }
+                {downloads !== null &&
+                    <p className='downloads'>
+                        <img className='downloadicon' src={IconDownload} />
+                        {downloads}+
+                    </p>
+                }
             </div>
 
             <p className='glass description'>{description}</p>
