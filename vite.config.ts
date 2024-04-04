@@ -1,12 +1,11 @@
 import { BuildOptions, UserConfig, defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'path';
-import { gameList } from './src/data.ts';
+import { gameList, links } from './src/data.ts';
 import type { RollupOptions } from './node_modules/rollup/dist/rollup.d.ts';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 
 const root = resolve(__dirname, 'src');
-
 
 var config: UserConfig = {
   root,
@@ -18,13 +17,18 @@ var config: UserConfig = {
       input: {
         main: resolve(root, 'index.html'),
         games: resolve(root, 'games', 'index.html'),
+
       },
     },
   },
 };
 
-// rmSync(resolve(root, 'game'), { recursive: true });
+// Redirections
+Object.keys(links).forEach(link => {
+  ; (((config.build as BuildOptions).rollupOptions as RollupOptions).input as { [entryAlias: string]: string; })[`redirect_${link}`] = resolve(root, link, 'index.html');
+})
 
+// Game specific pages
 gameList.filter(g => g.active !== false && g.link.startsWith('/')).forEach(game => {
   const game_id = game.link.split('/').reverse()[0];
   const game_root = resolve(root, 'game', game_id);

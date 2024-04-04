@@ -5,7 +5,7 @@ import Games from './components/games';
 import Header from './components/header';
 import MainPage from './components/main';
 
-function App({ page, game_id }: { page: string, game_id?: string }) {
+function App({ page, game_id, redirect_to }: { page: string, game_id?: string, redirect_to?: string }) {
   return (
     <>
       <Header />
@@ -21,6 +21,11 @@ function App({ page, game_id }: { page: string, game_id?: string }) {
 
         {page == "game" &&
           <GamePage game={game_id as string} />
+        }
+
+        {page == "redirect" &&
+          <a href={redirect_to}><h1>Redirecting to {redirect_to}... (click here if nothing happend)</h1></a>
+          && (location.href = redirect_to as string)
         }
       </div>
 

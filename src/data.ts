@@ -1,3 +1,12 @@
+/* 
+ * Each of this link is a page on the website that will redirect as well as a variable to use
+*/
+export const links = {
+    discord: "https://discord.com/invite/Xhvb2wujVh",
+    launcher: "https://launcher.openvoxel.studio/",
+    youtube: "https://www.youtube.com/@OpenVoxel",
+}
+
 export const CreatorDetailList = {
     "CMANIF": {
         minecraft: "786e1712-c2a2-405b-8b78-3cc58bd953f9",
