@@ -15,4 +15,8 @@ Don't forget to install all the dependencies with `bun i` or `npm i` (`i` stands
 
 ### Preview Build
 > (To run after the build to preview what got built)
+
 `bunx vite preview` or `bunx run preview`
+
+
+Oh also, this project uses Minecraft heads for some pages so there is a script to download them all. To run that script you can either run `bun beforeRun.ts` or run `bun i`.
