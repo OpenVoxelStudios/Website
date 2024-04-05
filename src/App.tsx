@@ -15,18 +15,20 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
     if (newGame_id) setGAME_ID(newGame_id);
 
     window.history.replaceState({ "page": PAGE, "game_id": GAME_ID }, document.title, PATH);
+  };
+
+  window.addEventListener('load', () => {
     location.hash = "";
     location.hash = "content";
-  };
+  });
 
   useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
-      console.log('POPSTATE', event.state);
       if (event.state) {
         const { page: newPage, game_id: newGameId } = event.state;
         setPAGE(newPage || page);
         setGAME_ID(newGameId || game_id);
-      }
+      };;
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -38,7 +40,7 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
 
   // Updates current state
   window.history.replaceState({ "page": PAGE, "game_id": GAME_ID }, document.title, location.href);
-  
+
 
   return (
     <>
