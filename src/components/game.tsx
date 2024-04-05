@@ -1,9 +1,9 @@
 import './game.css';
 import IconDownload from '/icons/Download.svg';
 
-function Game({ name, date, downloads, description, image, link }: { name: string, date: string, downloads: number, description: string, image: string, link: string }) {
+function Game({ localRedirect, name, date, downloads, description, image, link }: { localRedirect: Function, name: string, date: string | null, downloads: number | null, description: string, image: string, link: string }) {
     return (
-        <div className='coolclick game glass' onClick={() => location.href = link + '/'}>
+        <div className='coolclick game glass' onClick={() => localRedirect(`/game/${link.game_id}/`, 'game', link.game_id)}>
             <p className='glass title'>{name}</p>
 
             <div className='details'>

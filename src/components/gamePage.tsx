@@ -6,9 +6,10 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 function GamePage({ game }: { game: string }) {
-    const GAME = gameList.find(l => l.link.split('/').reverse()[0] == game) as typeof gameList[0];
+    const GAME = gameList.find(l => l.link.game_id == game) as typeof gameList[0];
     const [description, setDescription] = useState(true);
 
+    document.title = `${GAME.name} - OpenVoxel Studios`;
 
     return (
         <div className='gamepage'>

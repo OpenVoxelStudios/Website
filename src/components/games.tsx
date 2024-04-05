@@ -3,7 +3,8 @@ import './games.css';
 import Game from './game';
 import { gameList } from '../data.ts';
 
-function Games() {
+const Games = ({ localRedirect }: { localRedirect: Function }) => {
+    document.title = "Our Games - OpenVoxel Studios";
     const filters = [
         "Downloads", "No Downloads",
         "Recent", "Old",
@@ -29,6 +30,7 @@ function Games() {
                 <div className='gamelist'>
                     <div className='sub'>
                         {gameList
+                            .filter((a) => search.length == 0 || (!a.downloads || !a.date))
                             .sort((a, b) => {
                                 if (filter == 'Downloads') {
                                     return b.downloads - a.downloads
@@ -48,7 +50,7 @@ function Games() {
                             })
                             .filter((a) => a.name.toLowerCase().includes(search.toLowerCase()) || search.split(' ').every(v => a.tags.some(v2 => v2.includes(v))))
                             .map((v, index) => {
-                                return <Game date={v.date} description={v.description} downloads={v.downloads} image={v.image} name={v.name} link={v.link} key={index} />
+                                return <Game localRedirect={localRedirect} date={v.date} description={v.description} downloads={v.downloads} image={v.image} name={v.name} link={v.link} key={index} />
                             })}
                     </div>
                 </div>

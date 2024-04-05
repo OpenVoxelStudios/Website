@@ -2,13 +2,13 @@ import './main.css';
 import IconDownload from '/icons/Download.svg';
 import OVChestOpen from '/ov_chest_open.mp4';
 
-function MainPage() {
+const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
+    document.title = "OpenVoxel Studios";
 
     function scrollSetFrame() {
-        setTimeout(() => {
+        if (location.pathname == "/") setTimeout(() => {
             let vid = document.getElementById('v0') as HTMLVideoElement;
-
-            vid.currentTime = ((-vid.getBoundingClientRect().top + 150) / vid.getBoundingClientRect().bottom / 3 * 2) * vid.duration;
+            if (vid) vid.currentTime = ((-vid.getBoundingClientRect().top + 150) / vid.getBoundingClientRect().bottom / 3 * 2) * vid.duration;
 
             requestAnimationFrame(scrollSetFrame);
         }, 1000 / 30)
@@ -23,7 +23,7 @@ function MainPage() {
                 <div className='main'>
                     <h1>Minecraft Maps,</h1>
                     <h1>Without Mods.</h1>
-                    <div className='coolclick glass maps' onClick={() => location.href = "/games/"}>
+                    <div className='coolclick glass maps' onClick={() => localRedirect("/games/", 'games')}>
                         <img src={IconDownload} />
                         View Maps
                     </div>
