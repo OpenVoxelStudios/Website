@@ -30,8 +30,8 @@ const Header = ({ localRedirect }: { localRedirect: Function }) => {
             </header>
 
             <nav className="menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
-                <h1><a className='coolclick' href="#" onClick={(e) => { localRedirect('/', 'main'); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
-                <h1><a className='coolclick' href="#" onClick={(e) => { localRedirect('/games/', 'games'); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
+                <h1><a className='coolclick' href="#" onClick={(e) => { localRedirect('/', 'main', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
+                <h1><a className='coolclick' href="#" onClick={(e) => { localRedirect('/games/', 'games', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
                 <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); location.href = links.launcher }}>Launcher</a></h1>
 
                 <div className='bottom'>

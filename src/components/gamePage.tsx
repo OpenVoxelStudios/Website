@@ -64,12 +64,12 @@ function GamePage({ game }: { game: string }) {
                                 <div className='text'>
                                     <div className='coolclick glass title' onClick={() => location.href = v.download}>
                                         <img className='download' src={IconDownload}></img>
-                                        <a className='name'>
+                                        <p className='name'>
                                             <a className='bold'>[{v.supports}] {v.name}</a>
                                             <a> (on {v.date})</a>
-                                        </a>
+                                        </p>
                                     </div>
-                                    <p className='description'><Markdown remarkPlugins={[remarkGfm]}>{v.changes || "No Additional Description Provided."}</Markdown></p>
+                                    <div className='description'><Markdown remarkPlugins={[remarkGfm]}>{v.changes || "No Additional Description Provided."}</Markdown></div>
                                 </div>
                             </div>
                         })

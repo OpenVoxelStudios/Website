@@ -10,25 +10,23 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
   const [PAGE, setPAGE] = useState(page);
   const [GAME_ID, setGAME_ID] = useState(game_id);
 
-  function localRedirect(PATH: string, newPage?: string, newGame_id?: string) {
+  function localRedirect(PATH: string, newPage?: string, newGame_id?: string, replace?: boolean) {
+    location.hash = "";
+    location.hash = "content";
     if (newPage) setPAGE(newPage);
     if (newGame_id) setGAME_ID(newGame_id);
 
-    window.history.replaceState({ "page": PAGE, "game_id": GAME_ID }, document.title, PATH);
+    console.log({ "page": PAGE, "game_id": GAME_ID }, document.title, PATH)
+    window.history[replace ? 'replaceState' : 'pushState']({ "page": PAGE, "game_id": GAME_ID }, document.title, PATH);
   };
-
-  window.addEventListener('load', () => {
-    location.hash = "";
-    location.hash = "content";
-  });
 
   useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
       if (event.state) {
-        const { page: newPage, game_id: newGameId } = event.state;
-        setPAGE(newPage || page);
-        setGAME_ID(newGameId || game_id);
-      };;
+        console.log(event.state)
+        setPAGE(event.state.page);
+        setGAME_ID(event.state.game_id);
+      };
     };
 
     window.addEventListener("popstate", handlePopState);
