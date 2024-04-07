@@ -5,25 +5,28 @@ import GamePage from './components/gamePage';
 import Games from './components/games';
 import Header from './components/header';
 import MainPage from './components/main';
+import DataStuff from './components/datastuff';
 
 function App({ page, game_id, redirect_to }: { page: string, game_id?: string, redirect_to?: string }) {
   const [PAGE, setPAGE] = useState(page);
   const [GAME_ID, setGAME_ID] = useState(game_id);
+  const [hidden, sethidden] = useState(true);
 
   function localRedirect(PATH: string, newPage?: string, newGame_id?: string, replace?: boolean) {
     location.hash = "";
     location.hash = "content";
+
+    sethidden(true);
+
     if (newPage) setPAGE(newPage);
     if (newGame_id) setGAME_ID(newGame_id);
 
-    console.log({ "page": PAGE, "game_id": GAME_ID }, document.title, PATH)
     window.history[replace ? 'replaceState' : 'pushState']({ "page": PAGE, "game_id": GAME_ID }, document.title, PATH);
   };
 
   useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {
       if (event.state) {
-        console.log(event.state)
         setPAGE(event.state.page);
         setGAME_ID(event.state.game_id);
       };
@@ -39,12 +42,12 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
   // Updates current state
   window.history.replaceState({ "page": PAGE, "game_id": GAME_ID }, document.title, location.href);
 
-
   return (
     <>
       <Header localRedirect={localRedirect} />
+      <DataStuff hidden={hidden} sethidden={sethidden} />
 
-      <div className='content' id='content'>
+      <div className='content' id='content' hidden={hidden}>
         {PAGE == "main" &&
           <MainPage localRedirect={localRedirect} />
         }

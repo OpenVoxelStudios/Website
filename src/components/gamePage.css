@@ -9,6 +9,10 @@
     justify-content: space-between;
 }
 
+.gamepage * {
+    overflow-wrap: break-word;
+}
+
 .gamepage .details {
     height: fit-content;
     width: 73%;

@@ -52,7 +52,7 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
 
                 <div className='text'>
                     <h1>No Mods Required.</h1>
-                    <p>100% vanilla. haha yes</p>
+                    <p>All maps are 100% vanilla and require no mods at all to work! Thanks to Datapacks and Resource packs.</p>
                 </div>
             </div>
         </>
