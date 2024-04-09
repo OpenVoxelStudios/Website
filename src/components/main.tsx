@@ -1,4 +1,5 @@
 import './main.css';
+import TILEIMG from '/tile.webp';
 import IconDownload from '/icons/Download.svg';
 import OVChestOpen from '/ov_chest_open.mp4';
 
@@ -41,7 +42,7 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
                 </div>
 
                 <div className='glass img'>
-                    <img src={IconDownload} />
+                    <img src={TILEIMG} />
                 </div>
             </div>
 

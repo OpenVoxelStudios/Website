@@ -76,7 +76,11 @@
     color: white;
     font-size: 2vw;
     margin-right: 15px;
-    height: 40px;
+    display: flex;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     flex: 1;
 }
 

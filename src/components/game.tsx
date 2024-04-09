@@ -14,7 +14,7 @@ function Game({ localRedirect, name, date, downloads, description, image, link }
                 {downloads !== null &&
                     <p className='downloads'>
                         <img className='downloadicon' src={IconDownload} />
-                        {downloads}+
+                        {downloads}
                     </p>
                 }
             </div>

@@ -69,6 +69,10 @@ img {
   transition: transform 0.15s ease;
 }
 
+.coolclick:hover {
+  transform: scale(1.06);
+}
+
 .coolclick:active {
-  transform: translateY(3px);
+  transform: scale(1.06) translateY(3px);
 }

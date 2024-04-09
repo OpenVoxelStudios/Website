@@ -18,7 +18,7 @@ const Footer = () => {
 
                     <a className='subtitle'>Minecraft Maps, without Mods.</a>
                 </div>
-                <a className='small'>© OpenVoxel Studios 2024<br />NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</a>
+                <a className='small'>Copyright © OpenVoxel Studios 2024<br />NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</a>
             </div>
         </>
     )
