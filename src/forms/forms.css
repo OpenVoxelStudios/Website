@@ -1,0 +1,110 @@
+.formRoot {
+    height: fit-content;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin: 0 auto;
+}
+
+.formHeader {
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.formThumbnail {
+    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+
+    object-fit: cover;
+
+    filter: blur(5px);
+}
+
+.formHeader h1 {
+    font-size: 2vw;
+}
+
+.formHeader p {
+    font-size: 1.5vw;
+}
+
+.formRoot .formText {
+    font-size: 1.5vw;
+}
+
+.Form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin: 0 auto;
+}
+
+.Form>* {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 25px;
+}
+
+.FormSelect {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FormSelect select {
+    margin-top: 20px;
+    width: 60%;
+}
+
+.FormRadio {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FormRadio .radioInput {
+    width: 80%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .formRoot {
+        width: 100%;
+    }
+
+    .formHeader h1 {
+        font-size: 4vw;
+    }
+
+    .formHeader p {
+        font-size: 3vw;
+    }
+
+    .formRoot .formText {
+        font-size: 3vw;
+    }
+}

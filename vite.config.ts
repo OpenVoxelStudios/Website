@@ -4,6 +4,7 @@ import { resolve } from 'path';
 import { gameList, links } from './src/data.ts';
 import type { RollupOptions } from './node_modules/rollup/dist/rollup.d.ts';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { FormList } from './src/forms/forms.ts';
 
 const root = resolve(__dirname, 'src');
 
@@ -22,6 +23,11 @@ var config: UserConfig = {
     },
   },
 };
+
+// Forms
+FormList.forEach(form => {
+  ; (((config.build as BuildOptions).rollupOptions as RollupOptions).input as { [entryAlias: string]: string; })[`form_${form}`] = resolve(root, 'forms', form, 'index.html');
+})
 
 // Redirections
 Object.keys(links).forEach(link => {

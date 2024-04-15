@@ -1,13 +1,18 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Banner from '/banner.png';
 import Footer from './components/footer';
 import GamePage from './components/gamePage';
 import Games from './components/games';
 import Header from './components/header';
 import MainPage from './components/main';
 import DataStuff from './components/datastuff';
+import { FormList, FormData } from './forms/forms.ts';
 
-function App({ page, game_id, redirect_to }: { page: string, game_id?: string, redirect_to?: string }) {
+/* Forms Imports */
+import FormBetaTest from './forms/beta-test/form.tsx';
+
+function App({ page, game_id, redirect_to, form }: { page: string, game_id?: string, redirect_to?: string, form?: typeof FormList[number] }) {
   const [PAGE, setPAGE] = useState(page);
   const [GAME_ID, setGAME_ID] = useState(game_id);
   const [hidden, sethidden] = useState(true);
@@ -63,6 +68,23 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
         {PAGE == "redirect" &&
           <a href={redirect_to}><h1>Redirecting to {redirect_to}... (click here if nothing happend)</h1></a>
           && (location.href = redirect_to as string)
+        }
+
+        {PAGE == 'form' && form != undefined &&
+          <div className='formRoot'>
+
+            <div className='glass formHeader'>
+              <img className='formThumbnail' src={Banner} />
+
+              <h1>{FormData[form].title}</h1>
+              <p>{FormData[form].description}</p>
+
+            </div>
+
+            {form == "beta-test" &&
+              <FormBetaTest />
+            }
+          </div>
         }
       </div>
 
