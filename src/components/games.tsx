@@ -33,24 +33,24 @@ const Games = ({ localRedirect }: { localRedirect: Function }) => {
                             .filter((a) => search.length == 0 || (!a.downloads || !a.date))
                             .sort((a, b) => {
                                 if (filter == 'Downloads') {
-                                    return b.downloads - a.downloads
+                                    return (b.downloads as number) - (a.downloads as number)
                                 } else if (filter == 'No Downloads') {
-                                    return a.downloads - b.downloads
+                                    return (a.downloads as number) - (b.downloads as number)
                                 } else if (filter == 'Recent') {
-                                    return new Date(b.date).getTime() - new Date(a.date).getTime()
+                                    return (b.date as Date).getTime() - (a.date as Date).getTime()
                                 } else if (filter == 'Old') {
-                                    return new Date(a.date).getTime() - new Date(b.date).getTime()
+                                    return (a.date as Date).getTime() - (b.date as Date).getTime()
                                 } else if (filter == 'ABC') {
                                     return a.name.localeCompare(b.name)
                                 } else if (filter == 'ZYX') {
                                     return b.name.localeCompare(a.name)
                                 }
 
-                                return b.downloads - a.downloads;
+                                return (b.downloads as number) - (a.downloads as number);
                             })
                             .filter((a) => a.name.toLowerCase().includes(search.toLowerCase()) || search.split(' ').every(v => a.tags.some(v2 => v2.includes(v))))
                             .map((v, index) => {
-                                return <Game localRedirect={localRedirect} date={v.date} description={v.description} downloads={v.downloads} image={v.image} name={v.name} link={v.link} key={index} />
+                                return <Game localRedirect={localRedirect} date={v.date} description={v.description} downloads={v.downloads} image={v.image} name={v.name} link={v.link as { game_id: string; }} key={index} />
                             })}
                     </div>
                 </div>

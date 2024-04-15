@@ -6,7 +6,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 function GamePage({ game }: { game: string }) {
-    const GAME = gameList.find(l => l.link.game_id == game) as typeof gameList[0];
+    const GAME = gameList.find(l => typeof l.link === 'object' &&  l.link.game_id == game) as typeof gameList[0];
     const [description, setDescription] = useState(true);
 
     document.title = `${GAME.name} - OpenVoxel Studios`;
@@ -66,7 +66,7 @@ function GamePage({ game }: { game: string }) {
                                         <img className='download' src={IconDownload}></img>
                                         <p className='name'>
                                             <a className='bold'>[{v.supports}] {v.name}</a>
-                                            <a> (on {v.date})</a>
+                                            <a> (on {v.date.toLocaleDateString()})</a>
                                         </p>
                                     </div>
                                     <div className='description'><Markdown remarkPlugins={[remarkGfm]}>{v.changes || "No Additional Description Provided."}</Markdown></div>

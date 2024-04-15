@@ -48,7 +48,7 @@ export const gameList: {
     link: string | {
         game_id: string,
     },
-    date: string | null,
+    date: Date | null,
     image: string,
     icon: string,
     downloads: number | null,
@@ -56,7 +56,7 @@ export const gameList: {
     active?: boolean,
     versions: {
         name: string,
-        date: string,
+        date: Date,
         changes: string,
         type: "alpha" | "beta" | "release",
         download: string,
@@ -68,7 +68,7 @@ export const gameList: {
             description: "Pressing the start button of the map, you didn't expect to receive a message from the government. Even less did you expect having to defend your home from a bloodthirsty creature...",
             creators: ["Stevelocks"],
             link: { game_id: "oak-house-murder" },
-            date: "Nov 7, 2023",
+            date: new Date(1699311600000),
             image: "/games/banners/oak-house-murder.jpg",
             icon: "/games/icons/oak-house-murder.png",
             downloads: 206,
@@ -76,7 +76,7 @@ export const gameList: {
             versions: [
                 {
                     changes: "Urjent on Youtube changed some things in the resource pack to make it funny!\n* changed a bunch of sounds\n* changed the anomaly's texture\nGo watch the video [here](https://www.youtube.com/watch?v=MUS4bP2kgNM)",
-                    date: "Feb 17, 2024",
+                    date: new Date(1708124400000),
                     download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.3-KNARF/oak-house-murder.zip",
                     name: "Version 1.3.KNARF",
                     supports: "1.20.2-1.20.4",
@@ -84,7 +84,7 @@ export const gameList: {
                 },
                 {
                     changes: "yes more things surprisingly!\n\n* Fixed bug where generator has a max of 19 fuel (sometimes happens, unpredictable). This could mean more bugs appear, but this is probably going to stay\n* Nerfed the Anomaly when the player is outside, or when fuel is low",
-                    date: "Feb 10, 2024",
+                    date: new Date(1707519600000),
                     download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.3/oakhousemurder.zip",
                     name: "Version 1.3",
                     supports: "1.20.2-1.20.4",
@@ -92,7 +92,7 @@ export const gameList: {
                 },
                 {
                     changes: "Fixed some more bugs!\n\n* removed obtainable cosmetics because it caused too many problems\n* supposedly fixed a bug where the anomaly could get stuck on the ladder, but I couldn't replicate this\n* Fixed the somewhat buggy animations of the creature when the animations change\n* this map now works on 1.20.3 and beyond! names no longer appear at the door and the wires :)\n* fixed a visual bug with the fuel",
-                    date: "Jan 3, 2024",
+                    date: new Date(1704236400000),
                     download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.2/oakhousemurder.zip",
                     name: "Version 1.2",
                     supports: "1.20.2-1.20.4",
@@ -100,7 +100,7 @@ export const gameList: {
                 },
                 {
                     changes: "Just fixed a few bugs!\nalso when you beat the game you get access to cosmetics :)\n* You could climb part of the house\n* The trapdoor near the computer could be opened\n* Walking on the bed teleports the player downwards\n* Fuel was very large when holding it\n* Ladder vanishes when holding an item in your main hand\n* You keep items when \"combat logging\"\n* You could get more than 19 fuel by keeping it in a different slot.",
-                    date: "Dec 5, 2024",
+                    date: new Date(1733353200000),
                     download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.1/oakhousemurder.zip",
                     name: "Version 1.1",
                     supports: "1.20.2-1.20.4",
@@ -114,7 +114,7 @@ export const gameList: {
             description: "Introducing Lethal Budget, a budget version of lethal company for Minecraft that I made without actually playing the game!",
             creators: ["Stevelocks"],
             link: { game_id: "lethal-budget" },
-            date: "Dec 22, 2023",
+            date: new Date(1703199600000),
             image: "/games/banners/lethal-budget.jpg",
             icon: "/games/icons/lethal-budget.png",
             downloads: 2529,
@@ -123,7 +123,7 @@ export const gameList: {
             versions: [
                 {
                     changes: "oh boy it's an update :D\n\n* The map will now give you 5 seconds to load the facility instead of 2 before bringing you back.\n* Map size is 13 instead of 20 for faster loading and easier navigation\n* Monsters have been buffed and now spawn much faster.\n* The door now brings you back into the facility faster after the first entry (half a second)\n* You can now use /trigger rain_trigger to disable the rain if it is too laggy. This feature already existed, but I forgot to mention it lol",
-                    date: "Jan 17th, 2023",
+                    date: new Date(1673910000000),
                     download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.0/lethal-budget.zip",
                     name: "Update #1",
                     supports: "1.20.3-1.20.4",
@@ -136,7 +136,7 @@ export const gameList: {
             description: "A Datapack where I put some of Lethal Company's monsters in Minecraft. Currently features 3 mobs: Jester, Hoarding Bug and Snare Flea",
             creators: ["Stevelocks"],
             link: { game_id: "lethal-infestation" },
-            date: "Mar 6, 2024",
+            date: new Date(1709679600000),
             image: "/games/banners/lethal-infestion.jpg",
             icon: "/games/icons/lethal-infestion.png",
             downloads: 183,
@@ -145,7 +145,7 @@ export const gameList: {
             versions: [
                 {
                     changes: "Initial release!\n* Jester\n* Hoarding Bug\n* Snare Flea",
-                    date: "Mar 6, 2024",
+                    date: new Date(1709679600000),
                     download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.0/lethal-infestion.zip",
                     name: "Version 1.0",
                     supports: "1.20+",
