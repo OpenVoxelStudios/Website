@@ -1,6 +1,7 @@
 import './main.css';
 import TILEIMG from '/tile.webp';
 import IconDownload from '/icons/Download.svg';
+import LauncherImage from '/images/launcher.png';
 import OVChestOpen from '/ov_chest_open.mp4';
 
 const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
@@ -24,7 +25,7 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
                 <div className='main'>
                     <h1>Minecraft Maps,</h1>
                     <h1>Without Mods.</h1>
-                    <div className='coolclick glass maps' onClick={() => localRedirect("/games/", 'games')}>
+                    <div className='coolclick glass maps' onClick={() => localRedirect("/games/", 'games', undefined, true)}>
                         <img src={IconDownload} />
                         View Maps
                     </div>
@@ -37,8 +38,8 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
 
             <div className='arg'>
                 <div className='text'>
-                    <h1>Some title haha</h1>
-                    <p>No stop it Dani- Haha subtitle go BRRR</p>
+                    <h1>No Mods Required.</h1>
+                    <p><b>All maps are 100% vanilla and require no mods at all to work!</b> Thanks to Datapacks and Resource packs.<br />* Some Maps may use Mods to enhance the experience, but are not required!</p>
                 </div>
 
                 <div className='glass img'>
@@ -48,12 +49,12 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
 
             <div className='arg'>
                 <div className='glass img'>
-                    <img src={IconDownload} />
+                    <img src={LauncherImage} />
                 </div>
 
                 <div className='text'>
-                    <h1>No Mods Required.</h1>
-                    <p>All maps are 100% vanilla and require no mods at all to work! Thanks to Datapacks and Resource packs.</p>
+                    <h1>Custom Launcher.</h1>
+                    <p><b>Play all our games effortlessly in one place!</b><br />Click on a game to download it and play. The Launcher also comes with optimization Mods to even work on slower computers.</p>
                 </div>
             </div>
         </>

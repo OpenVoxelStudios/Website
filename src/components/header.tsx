@@ -22,7 +22,7 @@ const Header = ({ localRedirect }: { localRedirect: Function }) => {
                 <img className='coolclick icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => setMenu(!menu)} />
 
                 <div className='brand'>
-                    <img className='coolclick logo' src={Icon} onClick={() => localRedirect('/', 'main')} />
+                    <img className='coolclick logo' src={Icon} onClick={() => localRedirect('/', 'main', undefined, true)} />
                     <a className='title'>OpenVoxel Studios</a>
                 </div>
 

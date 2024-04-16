@@ -1,9 +1,15 @@
 import './game.css';
 import IconDownload from '/icons/Download.svg';
 
-function Game({ localRedirect, name, date, downloads, description, image, link }: { localRedirect: Function, name: string, date: Date | null, downloads: number | null, description: string, image: string, link: { game_id: string; } }) {
+function Game({ localRedirect, name, date, downloads, description, image, link }: { localRedirect: Function, name: string, date: Date | null, downloads: number | null, description: string, image: string, link: string | { game_id: string; } }) {
     return (
-        <div className='coolclick game glass' onClick={() => localRedirect(`/game/${link.game_id}/`, 'game', link.game_id, true)}>
+        <div className='coolclick game glass' onClick={() => {
+            if (typeof link == 'string') {
+                location.href = link;
+            } else {
+                localRedirect(`/game/${link.game_id}/`, 'game', link.game_id, true)
+            }
+        }}>
             <p className='glass title'>{name}</p>
 
             <div className='details'>

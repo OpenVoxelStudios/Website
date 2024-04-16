@@ -32,6 +32,9 @@ const Games = ({ localRedirect }: { localRedirect: Function }) => {
                         {gameList
                             .filter((a) => search.length == 0 || (!a.downloads || !a.date))
                             .sort((a, b) => {
+                                if (!a.downloads || !a.date) return 1;
+                                if (!b.downloads || !b.date) return -1;
+
                                 if (filter == 'Downloads') {
                                     return (b.downloads as number) - (a.downloads as number)
                                 } else if (filter == 'No Downloads') {
@@ -50,7 +53,7 @@ const Games = ({ localRedirect }: { localRedirect: Function }) => {
                             })
                             .filter((a) => a.name.toLowerCase().includes(search.toLowerCase()) || search.split(' ').every(v => a.tags.some(v2 => v2.includes(v))))
                             .map((v, index) => {
-                                return <Game localRedirect={localRedirect} date={v.date} description={v.description} downloads={v.downloads} image={v.image} name={v.name} link={v.link as { game_id: string; }} key={index} />
+                                return <Game localRedirect={localRedirect} date={v.date} description={v.description} downloads={v.downloads} image={v.image} name={v.name} link={v.link} key={index} />
                             })}
                     </div>
                 </div>

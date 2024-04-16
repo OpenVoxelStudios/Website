@@ -19,7 +19,7 @@ function GamePage({ game }: { game: string }) {
                     <a className='name'>{GAME.name}</a>
                 </div>
                 <p className='description'>
-                    {GAME.description}
+                    {GAME.extended_description}
                 </p>
 
                 <div className='separator'></div>

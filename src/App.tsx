@@ -15,6 +15,8 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
   function localRedirect(PATH: string, newPage?: string, newGame_id?: string, replace?: boolean) {
     location.hash = "";
     location.hash = "content";
+    
+    if (newPage == PAGE && (!newGame_id || (newGame_id && newGame_id == GAME_ID))) return;
 
     sethidden(true);
 

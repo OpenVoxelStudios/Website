@@ -43,6 +43,7 @@ export type CreatorList = keyof typeof CreatorDetailList;
 export const gameList: {
     name: string,
     description: string,
+    extended_description?: string,
     fulldetails?: string,
     creators: CreatorList[],
     link: string | {
@@ -65,11 +66,12 @@ export const gameList: {
 }[] = [
         {
             name: "Oak House Murder",
-            description: "Pressing the start button of the map, you didn't expect to receive a message from the government. Even less did you expect having to defend your home from a bloodthirsty creature...",
+            description: "Residence Massacre in Minecraft!",
+            extended_description: "Pressing the start button of the map, you didn't expect to receive a message from the government. Even less did you expect having to defend your home from a bloodthirsty creature...",
             creators: ["Stevelocks"],
             link: { game_id: "oak-house-murder" },
             date: new Date(1699311600000),
-            image: "/games/banners/oak-house-murder.jpg",
+            image: "/games/banners/oak-house-murder.png",
             icon: "/games/icons/oak-house-murder.png",
             downloads: 206,
             tags: ["oak", "house", "murder", "resident", "masacre", "horror"],
@@ -111,11 +113,12 @@ export const gameList: {
         },
         {
             name: "Lethal Budget",
-            description: "Introducing Lethal Budget, a budget version of lethal company for Minecraft that I made without actually playing the game!",
+            description: "Lethal Company on a budget!",
+            extended_description: "Introducing Lethal Budget, a budget version of lethal company for Minecraft that I made without actually playing the game!",
             creators: ["Stevelocks"],
             link: { game_id: "lethal-budget" },
             date: new Date(1703199600000),
-            image: "/games/banners/lethal-budget.jpg",
+            image: "/games/banners/lethal-budget.png",
             icon: "/games/icons/lethal-budget.png",
             downloads: 2529,
             tags: ["lethal", "budget", "company", "horror"],
@@ -133,11 +136,12 @@ export const gameList: {
         },
         {
             name: "Lethal Infestion",
-            description: "A Datapack where I put some of Lethal Company's monsters in Minecraft. Currently features 3 mobs: Jester, Hoarding Bug and Snare Flea",
+            description: "Lethal Company monsters in the overworld!",
+            extended_description: "A Datapack where I put some of Lethal Company's monsters in Minecraft. Currently features 3 mobs: Jester, Hoarding Bug and Snare Flea",
             creators: ["Stevelocks"],
             link: { game_id: "lethal-infestation" },
             date: new Date(1709679600000),
-            image: "/games/banners/lethal-infestion.jpg",
+            image: "/games/banners/lethal-infestion.png",
             icon: "/games/icons/lethal-infestion.png",
             downloads: 183,
             tags: ["lethal", "budget", "company", "horror", "entities", "monsters", "jester", "hoarding", "bug", "snare", "flea"],
@@ -154,8 +158,8 @@ export const gameList: {
             ],
         },
         {
-            name: "More Maps!",
-            description: "More Maps Soon! We are actively coding new maps for the best of the community!",
+            name: "More Maps Soon!",
+            description: "We are actively coding new maps for the best of the community!",
             creators: ["CMANIF", "ChoosingBerry", "Kubik", "Monster Art", "S0FL", "Sammy", "Stevelocks"],
             link: links.discord,
             date: null,
