@@ -6,7 +6,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 function GamePage({ game }: { game: string }) {
-    const GAME = gameList.find(l => typeof l.link === 'object' &&  l.link.game_id == game) as typeof gameList[0];
+    const GAME = gameList.find(l => typeof l.link === 'object' && l.link.game_id == game) as typeof gameList[0];
     const [description, setDescription] = useState(true);
 
     document.title = `${GAME.name} - OpenVoxel Studios`;
@@ -24,7 +24,7 @@ function GamePage({ game }: { game: string }) {
 
                 <div className='separator'></div>
 
-                <div className='coolclick glass downloadLatest' onClick={() => location.href = GAME.versions.filter(v => v.type == "release")[0].download }>
+                <div className='coolclick glass downloadLatest' onClick={() => (window.open(GAME.versions.filter(v => v.type == "release")[0].download, '_blank') as Window).focus()}>
                     <img className='icon' src={IconDownload} />
                     <a className='text'>Download Latest</a>
                 </div>
@@ -34,7 +34,7 @@ function GamePage({ game }: { game: string }) {
                 <div className='creators'>
                     <a className='title'>Project Creators:</a>
                     {GAME.creators.map((creatorName, i) => {
-                        return <div className='coolclick glass creator' key={i} onClick={() => location.href = `https://youtube.com/${CreatorDetailList[creatorName].youtube}`}>
+                        return <div className='coolclick glass creator' key={i} onClick={() => (window.open(`https://youtube.com/${CreatorDetailList[creatorName].youtube}`, '_blank') as Window).focus()}>
                             <img className='head' src={'/heads/' + CreatorDetailList[creatorName].minecraft + '.png'} />
                             <a className='name'>{creatorName}</a>
                         </div>
@@ -62,7 +62,7 @@ function GamePage({ game }: { game: string }) {
                                 </div>
 
                                 <div className='text'>
-                                    <div className='coolclick glass title' onClick={() => location.href = v.download}>
+                                    <div className='coolclick glass title' onClick={() => (window.open(v.download, '_blank') as Window).focus()}>
                                         <img className='download' src={IconDownload}></img>
                                         <p className='name'>
                                             <a className='bold'>[{v.supports}] {v.name}</a>

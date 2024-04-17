@@ -4,9 +4,11 @@ import IconDiscord from '/icons/Discord.svg';
 import Icon from '/logo.png';
 import { useState } from 'react';
 import { links } from '../data.ts';
+import PinardoImage from '/images/pinardo.png'
 
 const Header = ({ localRedirect }: { localRedirect: Function }) => {
     const [menu, setMenu] = useState(false);
+    const [pinardo, setPinardo] = useState(0);
 
     document.onkeydown = (ev) => {
         if (menu && ev.key == "Escape") setMenu(false)
@@ -19,14 +21,17 @@ const Header = ({ localRedirect }: { localRedirect: Function }) => {
     return (
         <>
             <header className="header" id='header'>
-                <img className='coolclick icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => setMenu(!menu)} />
+                <img className='coolclick icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => {
+                    setMenu(!menu);
+                    if (!menu) setPinardo((pinardo + 1) % 14);
+                }} />
 
                 <div className='brand'>
                     <img className='coolclick logo' src={Icon} onClick={() => localRedirect('/', 'main', undefined, true)} />
                     <a className='title'>OpenVoxel Studios</a>
                 </div>
 
-                <img onClick={() => location.href = links.discord} className='coolclick icon' src={IconDiscord} />
+                <img onClick={() => (window.open(links.discord, '_blank') as Window).focus()} className='coolclick icon' src={IconDiscord} />
             </header>
 
             <nav className="menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
@@ -35,7 +40,12 @@ const Header = ({ localRedirect }: { localRedirect: Function }) => {
                 <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); location.href = links.launcher }}>Launcher</a></h1>
 
                 <div className='bottom'>
-                    <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); location.href = links.discord }}>Our Discord</a></h1>
+                    <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }}>Our Discord</a></h1>
+                    {pinardo == 13 &&
+                        <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
+                            <img src={PinardoImage} style={{ width: "40%" }} />
+                        </h1>
+                    }
                 </div>
             </nav>
         </>

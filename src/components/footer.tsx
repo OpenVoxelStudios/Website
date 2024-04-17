@@ -11,14 +11,19 @@ const Footer = () => {
                         <a className='title'>OpenVoxel Studios</a>
                     </div>
 
+                    <a className='subtitle'>Minecraft Maps, without Mods.</a>
+                </div>
+                <a className='small'>
                     <div className='coolclick glass backtotop' id='scrollToTopBtn' onClick={() => {
                         location.hash = "";
                         location.hash = "content";
                     }}></div>
 
-                    <a className='subtitle'>Minecraft Maps, without Mods.</a>
-                </div>
-                <a className='small'>Copyright © OpenVoxel Studios 2024<br />NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</a>
+                    <br />
+                    <p className='actuallybigger'>Copyright © OpenVoxel Studios 2024</p>
+                    <br />
+                    NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+                </a>
             </div>
         </>
     )
