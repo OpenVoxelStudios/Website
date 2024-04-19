@@ -67,12 +67,17 @@ img {
 
 .coolclick {
   transition: transform 0.15s ease;
+  cursor: pointer;
 }
 
 
 @media screen and (max-width: 1000px) {
   .coolclick:active {
     transform: translateY(3px);
+  }
+
+  .content {
+    padding-top: 100px;
   }
 }
 

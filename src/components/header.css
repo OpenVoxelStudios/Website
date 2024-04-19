@@ -62,24 +62,36 @@
     left: -100%;
 }
 
-.menu > .bottom {
-    position: absolute;
-    bottom: 0;
+.menu .submenu {
     width: 100%;
+    height: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 50px;
+    justify-content: space-between;
 }
 
-.menu h1,
-.menu h1 a {
+.menu .submenu h1 {
+    width: 100%;
     color: #fff;
     text-align: center;
     z-index: 101;
+    margin: 0;
+}
+
+.menu .submenu > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    bottom: 15px;
+    width: 100%;
 }
 
 .menu h1 a {
     display: block;
     font-size: 40px;
     padding: 10px 20px;
-    margin-bottom: 20px;
     text-decoration: none;
     transition: all .3s ease;
 }
@@ -90,6 +102,11 @@
 
 
 @media screen and (max-width: 1000px) {
+    .header {
+        height: 75px;
+        background-image: linear-gradient(to bottom, #3e4152, #3e415250, #3e415250);
+    }
+
     .header .brand .title {
         font-size: 32px;
         display: inline-block;
@@ -98,6 +115,7 @@
 
     .menu {
         width: 100%;
+        margin-top: 75px;
     }
 }
 

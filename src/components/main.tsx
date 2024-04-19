@@ -1,5 +1,5 @@
 import './main.css';
-import TILEIMG from '/tile.webp';
+import BannerTeam from '/banner-team.png';
 import IconDownload from '/icons/Download.svg';
 import LauncherImage from '/images/launcher.png';
 import OVChestOpen from '/ov_chest_open.mp4';
@@ -8,9 +8,9 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
     document.title = "OpenVoxel Studios";
 
     function scrollSetFrame() {
-        if (location.pathname == "/") setTimeout(() => {
-            let vid = document.getElementById('v0') as HTMLVideoElement;
-            if (vid) vid.currentTime = ((-vid.getBoundingClientRect().top + 150) / vid.getBoundingClientRect().bottom / 3 * 2) * vid.duration;
+        let vid = document.getElementById('v0') as HTMLVideoElement;
+        setTimeout(() => {
+            if (vid && vid.getBoundingClientRect().bottom > 0) vid.currentTime = ((-vid.getBoundingClientRect().top + 150) / vid.getBoundingClientRect().bottom / 3 * 2) * vid.duration;
 
             requestAnimationFrame(scrollSetFrame);
         }, 1000 / 30)
@@ -30,7 +30,7 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
                         View Maps
                     </div>
 
-                    <video id="v0">
+                    <video id="v0" autoPlay={true} muted={true} playsInline={true} onPlay={(e) => e.currentTarget.pause()}>
                         <source type="video/mp4;" src={OVChestOpen}></source>
                     </video>
                 </div>
@@ -43,7 +43,7 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
                 </div>
 
                 <div className='glass img'>
-                    <img src={TILEIMG} />
+                    <img src={BannerTeam} />
                 </div>
             </div>
 

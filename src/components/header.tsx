@@ -35,17 +35,22 @@ const Header = ({ localRedirect }: { localRedirect: Function }) => {
             </header>
 
             <nav className="menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
-                <h1><a className='coolclick' href="#" onClick={(e) => { localRedirect('/', 'main', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
-                <h1><a className='coolclick' href="#" onClick={(e) => { localRedirect('/games/', 'games', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
-                <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); location.href = links.launcher }}>Launcher</a></h1>
+                <div className='submenu'>
+                    <div>
+                        <h1><a className='coolclick' onClick={(e) => { localRedirect('/', 'main', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
+                        <h1><a className='coolclick' onClick={(e) => { localRedirect('/games/', 'games', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
+                        <h1><a className='coolclick' onClick={() => { setMenu(false); location.href = links.launcher }}>Launcher</a></h1>
+                    </div>
 
-                <div className='bottom'>
-                    <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }}>Our Discord</a></h1>
-                    {pinardo == 13 &&
-                        <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
-                            <img src={PinardoImage} style={{ width: "40%" }} />
-                        </h1>
-                    }
+                    <div>
+                        <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.youtube, '_blank') as Window).focus() }}>Our YouTube</a></h1>
+                        <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }}>Our Discord</a></h1>
+                        {pinardo == 13 &&
+                            <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
+                                <img src={PinardoImage} style={{ width: "40%" }} />
+                            </h1>
+                        }
+                    </div>
                 </div>
             </nav>
         </>

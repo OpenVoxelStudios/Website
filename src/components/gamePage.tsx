@@ -1,9 +1,10 @@
 import './gamePage.css';
 import IconDownload from '/icons/Download.svg';
-import { CreatorDetailList, gameList } from '../data.ts';
+import { gameList } from '../data.ts';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import Creator from './creator.tsx';
 
 function GamePage({ game }: { game: string }) {
     const GAME = gameList.find(l => typeof l.link === 'object' && l.link.game_id == game) as typeof gameList[0];
@@ -34,10 +35,7 @@ function GamePage({ game }: { game: string }) {
                 <div className='creators'>
                     <a className='title'>Project Creators:</a>
                     {GAME.creators.map((creatorName, i) => {
-                        return <div className='coolclick glass creator' key={i} onClick={() => (window.open(`https://youtube.com/${CreatorDetailList[creatorName].youtube}`, '_blank') as Window).focus()}>
-                            <img className='head' src={'/heads/' + CreatorDetailList[creatorName].minecraft + '.png'} />
-                            <a className='name'>{creatorName}</a>
-                        </div>
+                        return <Creator creatorName={creatorName} key={i} />
                     })}
                 </div>
             </div>
