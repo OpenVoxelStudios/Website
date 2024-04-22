@@ -58,7 +58,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 14vh;
+    margin-bottom: 10%;
 }
 
 .arg .text {
@@ -76,7 +76,7 @@
 
 .arg .img {
     width: 50%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     align-items: center;
     animation: float 6s ease-in-out infinite;
@@ -89,11 +89,101 @@
 .arg .img>img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     image-rendering: pixelated;
     border-radius: 16px;
 }
 
+
+.team {
+    width: 80%;
+    height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 10%;
+}
+
+.team .heads {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+
+.team .heads .head {
+    width: 95px;
+    height: 95px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out, border 0.05s ease-in;
+}
+
+.team .heads .head>img {
+    height: 70%;
+    image-rendering: pixelated;
+    border-radius: 8px;
+}
+
+.team .description .top {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.team .description .top>h1 {
+    font-size: 40px;
+}
+
+.team .description .top>img {
+    height: 50px;
+    width: 50px;
+    image-rendering: pixelated;
+    border-radius: 4px;
+}
+
+.team .description {
+    height: auto;
+    flex: 1;
+    padding: 20px;
+}
+
+.team .description * {
+    font-size: 24px;
+}
+
+.team .description .nottop * {
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.team .description h3 {
+    font-size: 28px;
+}
+
+.team .description h2 {
+    font-size: 31px;
+}
+
+.team .description h1 {
+    font-size: 34px;
+}
 
 
 @media screen and (min-width: 2000px) {
@@ -114,9 +204,60 @@
         animation-play-state: paused;
         scale: 1.05;
     }
+
+    .team .heads .head:hover {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
 }
 
 @media screen and (max-width: 1000px) {
+    .team {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .team .description * {
+        font-size: 18px;
+    }
+
+    .team .description h3 {
+        font-size: 22px;
+    }
+
+    .team .description h2 {
+        font-size: 24px;
+    }
+
+    .team .description h1 {
+        font-size: 26px;
+    }
+
+    .team .description .top>h1 {
+        font-size: 25px;
+    }
+
+    .team .description .top>img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .team .heads {
+        flex-direction: row;
+        width: calc(100% - 10px);
+        height: fit-content;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .team .heads .head {
+        width: 50px;
+        height: 50px;
+    }
+
+    .team .description {
+        width: calc(100% - 40px);
+    }
+
     .mainpage .main h1 {
         font-size: 10vw;
     }
@@ -132,7 +273,10 @@
     .arg .img {
         animation: smallfloat 6s ease-in-out infinite;
         z-index: 0;
+    }
 
+    .arg .img>img {
+        object-fit: cover;
     }
 
     .arg .text {
@@ -144,8 +288,8 @@
         background: rgba(137, 137, 137, 0.2);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         border: 1px solid rgba(255, 255, 255, 0.3);
     }
 

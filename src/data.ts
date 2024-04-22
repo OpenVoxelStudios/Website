@@ -7,38 +7,90 @@ export const links = {
     youtube: "https://www.youtube.com/@OpenVoxel",
 }
 
-export const CreatorDetailList = {
+export type CreatorList = "CMANIF" | "ChoosingBerry" | "Kubik" | "Monster Art" | "S0FL" | "Sammy" | "Stevelocks";
+
+export const CreatorDetailList: Record<CreatorList, {
+    minecraft: string;
+    youtube: string;
+    description: string;
+}> = {
     "CMANIF": {
         minecraft: "786e1712-c2a2-405b-8b78-3cc58bd953f9",
         youtube: "@CMANIF",
+        description: "Hi ! I am CMANIF ! A french guy who loves building things on Minecraft. (I'm not a dev). I'm participating in the Open Voxel project and I hope to see this project grow one day! (Although it's already happening) :)"
+            + "\n\n# My Socials"
+            + "\n\n**Youtube**: [@CMANIF](https://youtube.com/@CMANIF)"
+            + "\n\n**Discord**: [cmanif](https://discordapp.com/users/728545314507849748)"
+            + "\n\n**Minecraft**: CMANIF",
     },
     "ChoosingBerry": {
         minecraft: "82aa54c4-c65a-4a66-8ef8-39388a612480",
         youtube: "@ChoosingBerry29",
+        description: "Hi I'm **ChoosingBerry**! I am a Youtuber who is making models for this amazing dev group don't ask how I got here it just sort of happened when I was in Stevelocks's Server"
+            + "\n\n# My Socials"
+            + "\n\n**Youtube**: [@ChoosingBerry29](https://www.youtube.com/@ChoosingBerry29)"
+            + "\n\n**Discord**: [choosingberry29](https://discordapp.com/users/724906882380202006)"
+            + "\n\n**Minecraft**: ChoosingBerry29",
     },
     "Kubik": {
         minecraft: "f26a09dd-c01d-4885-91e3-32110c8fab38",
         youtube: "@KodeurKubik",
+        description: "Hi! I'm **Kubik** (_aka Kodeur_Kubik_) and I really enjoy programming! When I joined this team, I was so bad in Minecraft command blocks but now, I am a lot better with that stuff!"
+            + "\n\n"
+            + "I also like programming in [Node.JS](https://nodejs.org/). I've also done the Launcher, this Website and I usually program Discord Bots."
+            + "\n\n"
+            + "`I'm not crazy. (i think)`"
+            + "\n\n# My Socials"
+            + "\n\n**Youtube**: [@KodeurKubik](https://www.youtube.com/@KodeurKubik)"
+            + "\n\n**Discord**: [kodeurkubik](https://discordapp.com/users/685739284287848458)"
+            + "\n\n**Minecraft**: Kodeur_Kubik"
+            + "\n\n**Business Email**: kubik@openvoxel.studio",
     },
     "Monster Art": {
         minecraft: "f31cfecd-0045-4c92-858f-326cc89ef9c4",
         youtube: "@Monster_Art",
+        description: "Hi ! I'm **Monster Art** (_aka Meca Monster Art_) and I like to make minecraft custom stuffs with nice people."
+            + "\n\n"
+            + "About me, I have a personnal universe that (almost) no one will never understand but it's okay, don't ask about that and by the way I like leeks and oranges. LLLLLLLLLLEEEEEEK"
+            + "\n\n# My Socials"
+            + "\n\n**Youtube**: [@Monster_Art](https://www.youtube.com/@Monster_Art)"
+            + "\n\n**Discord**: [monsterart](https://discordapp.com/users/655453962874388482)"
+            + "\n\n**Minecraft**: Monster_Art",
     },
     "S0FL": {
         minecraft: "68c5c95f-80e9-499e-9128-d4d597633afc",
-        youtube: "@s0fl813"
+        youtube: "@s0fl813",
+        description: "Hey, I'm S0FL, the most (highly) inactive dev on the team. I only know programming and math. Nothing else."
+            + "\n\nAlso I'm Brazilian (suddenlycaralho)."
+            + "\n\n"
+            + "I originally created a discord server to make Roblox Doors alongside Stevelocks but I went away because of school, and when I got back it turned into OpenVoxel Studios! (Sick)"
+            + "\n\n"
+            + "Always looking forward to whatever the awesome people at the team will do."
+            + "\n\n"
+            + "God bless you 🙏"
+            + "\n\n"
+            + "👽seek ZWSPs"
+            + "\n\n# My Socials"
+            + "\n\n**Discord**: [s0fl](https://discordapp.com/users/249993006705278986)"
+            + "\n\n**Minecraft**: S0FL",
     },
     "Sammy": {
         minecraft: "d0c31c74-f1b0-4c27-a988-db9a6d95bb70",
         youtube: "@Sammy3D",
+        description: "",
     },
     "Stevelocks": {
         minecraft: "0849bc57-4d67-414b-a371-b71c45e02a14",
         youtube: "@Stevelocks100",
+        description: "Heyo I'm Stevelocks! I am a Canadian who likes to code stuff, but can also model and animate. I've worked make a few maps, and I hope to continue making more with Openvoxel Studios!"
+            + "\n\n"
+            + "\n\n# My Socials"
+            + "\n\n**Youtube**: [@Stevelocks100](https://youtube.com/@stevelocks100)"
+            + "\n\n**Discord**: [stevelocks](https://discordapp.com/users/709164804144758814)"
+            + "\n\n**Minecraft**: Stevelocks100"
+            + "\n\n**Business Email**: stevelocks@openvoxel.studio",
     },
 };
-
-export type CreatorList = keyof typeof CreatorDetailList;
 
 export const gameList: {
     name: string,

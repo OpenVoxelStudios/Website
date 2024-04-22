@@ -38,7 +38,8 @@
     "install": "bun beforeRun.ts",
     "dev": "bunx vite",
     "build": "bunx vite build",
-    "preview": "bunx vite preview"
+    "preview": "bunx vite preview",
+    "test": "bunx vite build && bunx vite preview"
   },
   "dependencies": {
     "chalk": "^5.3.0",

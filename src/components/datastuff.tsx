@@ -7,8 +7,6 @@ const DataStuff = ({ hidden, sethidden }: { hidden: boolean, sethidden: Function
         const onPageLoad = () => {
             sethidden(false);
             (document.querySelector('meta[name="theme-color"]') as HTMLMetaElement)?.setAttribute('content', '#3e4152');
-            location.hash = "";
-            location.hash = "content";        
         };
 
         if (document.readyState === 'complete') {

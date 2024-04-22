@@ -7,22 +7,22 @@ const Footer = () => {
             <div className="glass footer">
                 <div className='top'>
                     <div className='main'>
-                        <img className='logo' src={Icon} />
+                        <img className='notextselection logo' src={Icon} />
                         <a className='title'>OpenVoxel Studios</a>
                     </div>
 
                     <a className='subtitle'>Minecraft Maps, without Mods.</a>
                 </div>
-                <a className='small'>
-                    <div className='coolclick glass backtotop' id='scrollToTopBtn' onClick={() => {
+                <a className='notextselection small'>
+                    <div className='notextselection coolclick glass backtotop' id='scrollToTopBtn' onClick={() => {
                         location.hash = "";
                         location.hash = "content";
                     }}></div>
 
                     <br />
-                    <p className='actuallybigger'>Copyright © OpenVoxel Studios 2024</p>
+                    <p className='yestextselection actuallybigger'>Copyright © OpenVoxel Studios 2024</p>
                     <br />
-                    NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+                    <div className='yestextselection'>NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</div>
                 </a>
             </div>
         </>

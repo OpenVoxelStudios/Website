@@ -21,30 +21,30 @@ const Header = ({ localRedirect }: { localRedirect: Function }) => {
     return (
         <>
             <header className="header" id='header'>
-                <img className='coolclick icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => {
+                <img className='coolclick notextselection icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => {
                     setMenu(!menu);
                     if (!menu) setPinardo((pinardo + 1) % 14);
                 }} />
 
                 <div className='brand'>
-                    <img className='coolclick logo' src={Icon} onClick={() => localRedirect('/', 'main', undefined, true)} />
+                    <img className='coolclick notextselection logo' src={Icon} onClick={() => localRedirect('/', 'main', undefined, true)} />
                     <a className='title'>OpenVoxel Studios</a>
                 </div>
 
-                <img onClick={() => (window.open(links.discord, '_blank') as Window).focus()} className='coolclick icon' src={IconDiscord} />
+                <img onClick={() => (window.open(links.discord, '_blank') as Window).focus()} className='coolclick notextselection icon' src={IconDiscord} />
             </header>
 
-            <nav className="menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
+            <nav className="notextselection menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
                 <div className='submenu'>
                     <div>
-                        <h1><a className='coolclick' onClick={(e) => { localRedirect('/', 'main', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
-                        <h1><a className='coolclick' onClick={(e) => { localRedirect('/games/', 'games', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
-                        <h1><a className='coolclick' onClick={() => { setMenu(false); location.href = links.launcher }}>Launcher</a></h1>
+                        <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/', 'main', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
+                        <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/games/', 'games', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
+                        <h1><a className='yestextselection coolclick' onClick={() => { setMenu(false); location.href = links.launcher }}>Launcher</a></h1>
                     </div>
 
                     <div>
-                        <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.youtube, '_blank') as Window).focus() }}>Our YouTube</a></h1>
-                        <h1><a className='coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }}>Our Discord</a></h1>
+                        <h1><a className='yestextselection coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.youtube, '_blank') as Window).focus() }}>Our YouTube</a></h1>
+                        <h1><a className='yestextselection coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }}>Our Discord</a></h1>
                         {pinardo == 13 &&
                             <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
                                 <img src={PinardoImage} style={{ width: "40%" }} />

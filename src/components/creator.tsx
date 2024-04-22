@@ -22,7 +22,7 @@ function Creator({ creatorName }: { creatorName: keyof typeof CreatorDetailList 
             }}
         >
             <img className='head' src={'/heads/' + CreatorDetailList[creatorName].minecraft + '.png'} />
-            <a className='name'>{creatorName}</a>
+            <a className='yestextselection name'>{creatorName}</a>
         </div>
     )
 }

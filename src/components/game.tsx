@@ -13,22 +13,22 @@ function Game({ localRedirect, name, date, downloads, description, image, link }
                 localRedirect(`/game/${link.game_id}/`, 'game', link.game_id, true)
             }
         }}>
-            <p className='glass title'>{name}</p>
+            <p className='yestextselection glass title'>{name}</p>
 
             <div className='details'>
                 <img className='notextselection thumbnail' src={image} />
                 {date !== null &&
-                    <p className='date'>{date.toLocaleDateString()}</p>
+                    <p className='yestextselection date'>{date.toLocaleDateString()}</p>
                 }
                 {downloads !== null &&
-                    <p className='downloads'>
-                        <img className='downloadicon' src={IconDownload} />
+                    <p className='yestextselection downloads'>
+                        <img className='notextselection downloadicon' src={IconDownload} />
                         {downloads}
                     </p>
                 }
             </div>
 
-            <p className='glass description'>{description}</p>
+            <p className='yestextselection glass description'>{description}</p>
         </div>
     )
 }

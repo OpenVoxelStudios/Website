@@ -59,6 +59,12 @@ img {
   user-select: none;
 }
 
+.yestextselection {
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 .content {
   width: 100%;
   height: fit-content;
