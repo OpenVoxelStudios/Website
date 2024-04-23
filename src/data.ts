@@ -77,7 +77,7 @@ export const CreatorDetailList: Record<CreatorList, {
     "Sammy": {
         minecraft: "d0c31c74-f1b0-4c27-a988-db9a6d95bb70",
         youtube: "@Sammy3D",
-        description: "",
+        description: "idk im not good at this stuff",
     },
     "Stevelocks": {
         minecraft: "0849bc57-4d67-414b-a371-b71c45e02a14",
