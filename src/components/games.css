@@ -118,18 +118,25 @@
 
 @media screen and (max-width: 1000px) {
     .games .subheader .sort .sortby {
-        font-size: 38px;
+        font-size: 30px;
+    }
+
+    .games .subheader .icon {
+        width: 30px;
+        height: 30px;
     }
 
     .games .subheader .search {
         width: 100%;
+        height: 60px;
     }
 
     .games .subheader .search .input {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .games .subheader .sort {
         width: 100%;
+        height: 60px;
     }
 }

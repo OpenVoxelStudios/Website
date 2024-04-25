@@ -61,9 +61,9 @@ const Games = ({ localRedirect }: { localRedirect: Function }) => {
 
         <div className="gamelist">
           <div className="notextselection sub">
-            {!Object.keys(superSearches).includes(search.toLowerCase()) &&
+            {
               gameList
-                .filter((a) => search.length == 0 || !a.downloads || !a.date)
+                .filter((a) => search.length == 0 || a.downloads || a.date)
                 .sort((a, b) => {
                   if (!a.downloads || !a.date) return 1;
                   if (!b.downloads || !b.date) return -1;
@@ -89,11 +89,10 @@ const Games = ({ localRedirect }: { localRedirect: Function }) => {
                   return (b.downloads as number) - (a.downloads as number);
                 })
                 .filter(
-                  (a) =>
-                    a.name.toLowerCase().includes(search.toLowerCase()) ||
+                  (a) => a.name.toLowerCase().includes(search.toLowerCase()) ||
                     search
                       .split(" ")
-                      .every((v) => a.tags.some((v2) => v2.includes(v))),
+                      .every((v) => a.tags.some((v2) => v2.includes(v)))
                 )
                 .map((v, index) => {
                   return (

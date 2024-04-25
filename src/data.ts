@@ -77,13 +77,16 @@ export const CreatorDetailList: Record<CreatorList, {
     "Sammy": {
         minecraft: "d0c31c74-f1b0-4c27-a988-db9a6d95bb70",
         youtube: "@Sammy3D",
-        description: "idk im not good at this stuff",
+        description: "idk im not good at this stuff"
+        + "\n\n# My Socials"
+        + "\n\n**Youtube**: [@Sammy3D](https://youtube.com/@Sammy3D)"
+        + "\n\n**Discord**: [sammy2d](https://discordapp.com/users/552465226583506945)"
+        + "\n\n**Minecraft**: Sammy2D",
     },
     "Stevelocks": {
         minecraft: "0849bc57-4d67-414b-a371-b71c45e02a14",
         youtube: "@Stevelocks100",
         description: "Heyo I'm Stevelocks! I am a Canadian who likes to code stuff, but can also model and animate. I've worked make a few maps, and I hope to continue making more with Openvoxel Studios!"
-            + "\n\n"
             + "\n\n# My Socials"
             + "\n\n**Youtube**: [@Stevelocks100](https://youtube.com/@stevelocks100)"
             + "\n\n**Discord**: [stevelocks](https://discordapp.com/users/709164804144758814)"
