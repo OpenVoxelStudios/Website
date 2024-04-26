@@ -42,8 +42,8 @@ function GamePage({ game }: { game: string }) {
 
             <div className='details'>
                 <div className='glass selector'>
-                    <a className={'coolclick description' + (description ? ' active' : '')} style={{ fontWeight: description ? 'bold' : undefined, textDecorationLine: description ? 'underline' : 'none' }} href='#' onClick={() => setDescription(true)}>Description</a>
-                    <a className={'coolclick versions' + (description ? '' : ' active')} style={{ fontWeight: description ? undefined : 'bold', textDecorationLine: description ? 'none' : 'underline' }} href='#' onClick={() => setDescription(false)}>Versions</a>
+                    <a className={'coolclick description' + (description ? ' active' : '')} style={{ fontWeight: undefined, textDecorationLine: 'none' }} href='#' onClick={() => setDescription(true)}>Description</a>
+                    <a className={'coolclick versions' + (description ? '' : ' active')} style={{ fontWeight: undefined, textDecorationLine: 'none' }} href='#' onClick={() => setDescription(false)}>Versions</a>
                 </div>
 
                 <div className={description ? 'glass moreinfos' : 'moreinfos moreinfos-changelog'}>
