@@ -20,3 +20,6 @@ Don't forget to install all the dependencies with `bun i` or `npm i` (`i` stands
 
 
 Oh also, this project uses Minecraft heads for some pages so there is a script to download them all. To run that script you can either run `bun beforeRun.ts` or run `bun i`.
+
+
+> Copyright 2024 OpenVoxel Studios
