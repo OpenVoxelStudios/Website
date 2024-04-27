@@ -11,7 +11,7 @@ var config: UserConfig = {
   root,
   plugins: [react()],
   build: {
-    outDir: resolve(__dirname, 'dist'),
+    outDir: resolve(__dirname, 'openvoxel.studio'),
     emptyOutDir: true,
     rollupOptions: {
       input: {

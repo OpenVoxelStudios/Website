@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './datastuff.css';
-import LoadingImg from '/logo.gif';
+import OVChestOpen from '/logo.mp4';
 
 const DataStuff = ({ hidden, sethidden }: { hidden: boolean, sethidden: Function }) => {
     useEffect(() => {
@@ -19,7 +19,11 @@ const DataStuff = ({ hidden, sethidden }: { hidden: boolean, sethidden: Function
 
     return (
         <div className='datastuff' style={{ display: hidden ? "flex" : "none" }}>
-            <img src={LoadingImg} />
+
+            <video className='notextselection' autoPlay={true} muted={true} playsInline={true} loop={true}>
+                <source className='notextselection' type="video/mp4;" src={OVChestOpen}></source>
+            </video>
+
             <h1>Loading...</h1>
         </div>
     )

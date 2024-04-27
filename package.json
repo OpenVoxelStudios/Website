@@ -39,7 +39,8 @@
     "dev": "bunx vite",
     "build": "bunx vite build",
     "preview": "bunx vite preview",
-    "test": "bunx vite build && bunx vite preview"
+    "test": "bunx vite build && bunx vite preview",
+    "preprod": "bunx vite build && zip -r openvoxel.studio.zip openvoxel.studio"
   },
   "dependencies": {
     "chalk": "^5.3.0",

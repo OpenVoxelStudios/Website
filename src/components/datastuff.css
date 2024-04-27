@@ -8,7 +8,7 @@
     justify-content: center;
 }
 
-.datastuff img {
+.datastuff video {
     height: 80%;
     object-fit: cover;
 }
