@@ -1,6 +1,8 @@
 import './header.css';
 import IconList from '/icons/List.svg';
 import IconDiscord from '/icons/Discord.svg';
+import IconGithub from '/icons/Github.svg';
+import IconYoutube from '/icons/Youtube.svg';
 import Icon from '/logo.png';
 import { useState } from 'react';
 import { links } from '../data.ts';
@@ -39,12 +41,16 @@ const Header = ({ localRedirect }: { localRedirect: Function }) => {
                     <div>
                         <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/', 'main', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
                         <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/games/', 'games', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
-                        <h1><a className='yestextselection coolclick' onClick={() => { setMenu(false); location.href = links.launcher }}>Launcher</a></h1>
+                        <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/launcher/', 'launcher', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Launcher</a></h1>
                     </div>
 
                     <div>
-                        <h1><a className='yestextselection coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.youtube, '_blank') as Window).focus() }}>Our YouTube</a></h1>
-                        <h1><a className='yestextselection coolclick' href="#" onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }}>Our Discord</a></h1>
+                        <div className='icon-row'>
+                            <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }} src={IconDiscord} />
+                            <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.youtube, '_blank') as Window).focus() }} src={IconYoutube} />
+                            <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.github, '_blank') as Window).focus() }} src={IconGithub} />
+                        </div>
+
                         {pinardo == 13 &&
                             <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
                                 <img src={PinardoImage} style={{ width: "40%" }} />

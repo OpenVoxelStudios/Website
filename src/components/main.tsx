@@ -14,7 +14,8 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
     function scrollSetFrame() {
         let vid = document.getElementById('v0') as HTMLVideoElement;
         setTimeout(() => {
-            if (vid && vid.getBoundingClientRect().bottom > 0) vid.currentTime = ((-vid.getBoundingClientRect().top + 150) / vid.getBoundingClientRect().bottom / 3 * 2) * vid.duration;
+            let val = ((-vid.getBoundingClientRect().top + 150) / vid.getBoundingClientRect().bottom / 3 * 2) * vid.duration;
+            if (vid && vid.getBoundingClientRect().bottom > 0) vid.currentTime = isNaN(val) ? 0 : val;
 
             requestAnimationFrame(scrollSetFrame);
         }, 1000 / 30)
@@ -35,7 +36,7 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
                         View Maps
                     </div>
 
-                    <video className='notextselection' id="v0" autoPlay={true} muted={true} playsInline={true} onPlay={(e) => e.currentTarget.pause()}>
+                    <video className='notextselection' id="v0" autoPlay={true} muted={true} playsInline={true} onPlay={(e) => e.currentTarget.pause()} controls={false}>
                         <source className='notextselection' type="video/mp4;" src={OVChestOpen}></source>
                     </video>
                 </div>

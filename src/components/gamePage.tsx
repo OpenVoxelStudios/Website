@@ -1,12 +1,13 @@
 import './gamePage.css';
 import IconDownload from '/icons/Download.svg';
+import IconOpen from '/icons/Open.svg';
 import { gameList } from '../data.ts';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Creator from './creator.tsx';
 
-function GamePage({ game }: { game: string }) {
+function GamePage({ game, localRedirect }: { game: string, localRedirect: Function }) {
     const GAME = gameList.find(l => typeof l.link === 'object' && l.link.game_id == game) as typeof gameList[0];
     const [description, setDescription] = useState(true);
 
@@ -14,6 +15,21 @@ function GamePage({ game }: { game: string }) {
 
     return (
         <div className='gamepage'>
+            <div className='openlauncher' id='openlauncher' onClick={(ev) => {
+                if (ev.target == (document.getElementById('openlauncher') as HTMLDivElement)) (document.getElementById('openlauncher') as HTMLDivElement).style.display = 'none';
+            }}>
+                <div className='moreinfos info glass'>
+                    <h1>You're Almost There!</h1>
+                    <a>Allow this Website to open <b>OpenVoxel Launcher</b>.<br />Or if you don't have the Launcher, click below!</a>
+
+                    <div className='coolclick glass downloadLatest' onClick={() => localRedirect('/launcher', 'launcher', undefined, true)}>
+                        <img className='icon' src={IconDownload} />
+                        <a className='yestextselection text'>Download Launcher</a>
+                    </div>
+                </div>
+            </div>
+
+
             <div className='notextselection glass info'>
                 <div className='name'>
                     <img src={GAME.icon} className='icon' />
@@ -24,6 +40,21 @@ function GamePage({ game }: { game: string }) {
                 </p>
 
                 <div className='separator'></div>
+
+                <div className='coolclick glass downloadLatest' onClick={() => {
+                    let gameid = (GAME.link as { game_id: string }).game_id;
+                    (document.getElementById('openlauncher') as HTMLDivElement).style.display = 'flex';
+
+                    const iframe = document.createElement('iframe');
+                    iframe.style.display = 'none';
+                    iframe.src = `openvoxel://game/${gameid}`;
+                    console.log(gameid)
+
+                    document.body.appendChild(iframe);
+                }}>
+                    <img className='icon' src={IconOpen} />
+                    <a className='yestextselection text'>Open In Launcher</a>
+                </div>
 
                 <div className='coolclick glass downloadLatest' onClick={() => (window.open(GAME.versions.filter(v => v.type == "release")[0].download, '_blank') as Window).focus()}>
                     <img className='icon' src={IconDownload} />

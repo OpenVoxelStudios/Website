@@ -3,8 +3,9 @@
 */
 export const links = {
     discord: "https://discord.com/invite/Xhvb2wujVh",
-    launcher: "https://launcher.openvoxel.studio/",
+    launcherwiki: "https://launcher.openvoxel.studio/",
     youtube: "https://www.youtube.com/@OpenVoxel",
+    github: "https://github.com/OpenVoxelStudios"
 }
 
 export type CreatorList = "CMANIF" | "ChoosingBerry" | "Kubik" | "Monster Art" | "S0FL" | "Sammy" | "Stevelocks";
@@ -142,7 +143,7 @@ export const gameList: {
                 {
                     changes: "yes more things surprisingly!\n\n* Fixed bug where generator has a max of 19 fuel (sometimes happens, unpredictable). This could mean more bugs appear, but this is probably going to stay\n* Nerfed the Anomaly when the player is outside, or when fuel is low",
                     date: new Date(1707519600000),
-                    download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.3/oakhousemurder.zip",
+                    download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.3/oak-house-murder.zip",
                     name: "Version 1.3",
                     supports: "1.20.2-1.20.4",
                     type: "release",
@@ -150,7 +151,7 @@ export const gameList: {
                 {
                     changes: "Fixed some more bugs!\n\n* removed obtainable cosmetics because it caused too many problems\n* supposedly fixed a bug where the anomaly could get stuck on the ladder, but I couldn't replicate this\n* Fixed the somewhat buggy animations of the creature when the animations change\n* this map now works on 1.20.3 and beyond! names no longer appear at the door and the wires :)\n* fixed a visual bug with the fuel",
                     date: new Date(1704236400000),
-                    download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.2/oakhousemurder.zip",
+                    download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.2/oak-house-murder.zip",
                     name: "Version 1.2",
                     supports: "1.20.2-1.20.4",
                     type: "release",
@@ -158,7 +159,7 @@ export const gameList: {
                 {
                     changes: "Just fixed a few bugs!\nalso when you beat the game you get access to cosmetics :)\n* You could climb part of the house\n* The trapdoor near the computer could be opened\n* Walking on the bed teleports the player downwards\n* Fuel was very large when holding it\n* Ladder vanishes when holding an item in your main hand\n* You keep items when \"combat logging\"\n* You could get more than 19 fuel by keeping it in a different slot.",
                     date: new Date(1733353200000),
-                    download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.1/oakhousemurder.zip",
+                    download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.1/oak-house-murder.zip",
                     name: "Version 1.1",
                     supports: "1.20.2-1.20.4",
                     type: "release",

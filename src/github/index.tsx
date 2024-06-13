@@ -5,6 +5,6 @@ import { links } from '../data.ts'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App page="redirect" redirect_to={links.launcher} />
+        <App page="redirect" redirect_to={links.github} />
     </React.StrictMode>,
 )

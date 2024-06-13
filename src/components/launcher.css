@@ -1,0 +1,165 @@
+.maintitle {
+    font-size: 64px;
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.splash {
+    width: 100%;
+    height: calc(50vh);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.splash .download-recommended {
+    max-width: 40%;
+    max-height: 100%;
+    width: fit-content;
+    height: fit-content;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+.splash .download-recommended h1 {
+    text-align: center;
+}
+
+.splash img {
+    max-height: 80%;
+    max-width: 50%;
+    image-rendering: pixelated;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.splash .download-recommended .download,
+.downloader .os .download,
+.yaybutton {
+    text-decoration: none;
+    font-size: 24px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.downloader {
+    width: calc(100% - 40px);
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px
+}
+
+.downloader .os {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+
+    max-width: 500px;
+    position: relative;
+}
+
+.downloader .os * {
+    z-index: 1;
+}
+
+.downloader .os .bg {
+    top: 0;
+    z-index: 0;
+    border-radius: 16px;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    filter: blur(6px);
+}
+
+.downloader .os h1 {
+    text-shadow: 0px 0px 10px black;
+}
+
+.downloader .os img {
+    height: 150px;
+    filter: drop-shadow(0px 0px 5px white);
+}
+
+.downloader .os .download.half-left {
+    border-radius: 16px 0 0 16px;
+}
+
+.downloader .os .download.half-right {
+    border-radius: 0 16px 16px 0;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .splash {
+        position: relative;
+    }
+
+    .splash img {
+        cursor: default;
+        position: absolute;
+        z-index: 1;
+        max-width: 100%;
+        filter: blur(4px);
+        animation: smallfloat 6s ease-in-out infinite;
+    }
+
+    .splash .download-recommended {
+        z-index: 2;
+    }
+
+    .maintitle {
+        margin-top: 75px;
+        margin-bottom: 50px;
+    }
+
+    .downloader {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .downloader .os {
+        width: 100%;
+    }
+}
+
+@keyframes smallfloat {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(-5px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(40px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(-5px);
+    }
+}

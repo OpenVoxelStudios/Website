@@ -17,7 +17,7 @@ var config: UserConfig = {
       input: {
         main: resolve(root, 'index.html'),
         games: resolve(root, 'games', 'index.html'),
-
+        launcher: resolve(root, 'launcher', 'index.html'),
       },
     },
   },
@@ -30,7 +30,7 @@ Object.keys(links).forEach(link => {
 
 // Game specific pages
 gameList.filter(g => g.active !== false && typeof g.link != "string").forEach(game => {
-  const game_id = game.link.game_id;
+  const game_id = (game.link as { game_id: string }).game_id;
   const game_root = resolve(root, 'game', game_id);
 
   if (!existsSync(game_root)) {
@@ -39,7 +39,7 @@ gameList.filter(g => g.active !== false && typeof g.link != "string").forEach(ga
     writeFileSync(resolve(game_root, 'game.tsx'), readFileSync(resolve(root, 'gamelist', 'game.tsx'), { encoding: 'utf-8' }).replace(/\$GAME_NAME\$/g, game.name).replace(/\$GAME_ID\$/g, game_id));
   };
 
-  ; (((config.build as BuildOptions).rollupOptions as RollupOptions).input as { [entryAlias: string]: string; })[game.link.game_id] = resolve(game_root, 'index.html');
+  ; (((config.build as BuildOptions).rollupOptions as RollupOptions).input as { [entryAlias: string]: string; })[game_id] = resolve(game_root, 'index.html');
 })
 
 export default defineConfig(config);

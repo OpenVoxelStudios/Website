@@ -6,6 +6,7 @@ import Games from './components/games';
 import Header from './components/header';
 import MainPage from './components/main';
 import DataStuff from './components/datastuff';
+import Launcher from './components/launcher';
 
 function App({ page, game_id, redirect_to }: { page: string, game_id?: string, redirect_to?: string }) {
   const [PAGE, setPAGE] = useState(page);
@@ -58,7 +59,11 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
         }
 
         {PAGE == "game" &&
-          <GamePage game={GAME_ID as string} />
+          <GamePage game={GAME_ID as string} localRedirect={localRedirect} />
+        }
+
+        {PAGE == "launcher" &&
+          <Launcher />
         }
 
         {PAGE == "redirect" &&
