@@ -41,7 +41,7 @@
     justify-content: center;
 
     flex: 1;
-    height: calc(100% - 100px);
+    height: calc(100% - 170px);
 
     background-size: contain;
     background-repeat: no-repeat;
