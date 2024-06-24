@@ -39,8 +39,9 @@ const musicList: {
 
 
 const BreadMusic = ({ openLink }: { openLink(url: string): void }) => {
+    const [isSafari, _setIsSafari] = useState(/constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification)))
     const [volume, setVolume] = useState(parseFloat(localStorage.getItem('bread:music/volume') || '0.2'));
-    const [musicEnabled, setMusicEnabled] = useState((localStorage.getItem('bread:music/enabled') == null ? 'true' : localStorage.getItem('bread:music/enabled')) == 'true');
+    const [musicEnabled, setMusicEnabled] = useState(isSafari ? false : (localStorage.getItem('bread:music/enabled') == null ? 'true' : localStorage.getItem('bread:music/enabled')) == 'true');
     const [currentMusic, setCurrentMusic] = useState(musicList[Math.round(Math.random() * (musicList.length - 1))]);
 
     useEffect(() => {
