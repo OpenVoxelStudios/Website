@@ -139,6 +139,13 @@
         width: 100%;
         margin-top: 75px;
     }
+
+    .header .icon {
+        width: 50px;
+        height: 50px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
 
 
@@ -147,13 +154,6 @@
         font-size: 20px;
         display: inline-block;
         max-width: 100px;
-    }
-
-    .header .icon {
-        width: 50px;
-        height: 50px;
-        margin-left: 5px;
-        margin-right: 5px;
     }
 
     .header .brand .logo {

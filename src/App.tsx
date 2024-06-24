@@ -7,23 +7,34 @@ import Header from './components/header';
 import MainPage from './components/main';
 import DataStuff from './components/datastuff';
 import Launcher from './components/launcher';
+import BakingBread from './components/bakingbread';
 
-function App({ page, game_id, redirect_to }: { page: string, game_id?: string, redirect_to?: string }) {
+type overridesType = {
+  noheader?: boolean,
+  nofooter?: boolean,
+};
+
+function App({ page, game_id, redirect_to, overrides }: { page: string, game_id?: string, redirect_to?: string, overrides?: overridesType }) {
   const [PAGE, setPAGE] = useState(page);
   const [GAME_ID, setGAME_ID] = useState(game_id);
   const [hidden, sethidden] = useState(true);
+  const [overs, setOvers] = useState(overrides);
 
-  function localRedirect(PATH: string, newPage?: string, newGame_id?: string, replace?: boolean) {
+  function localRedirect(PATH: string, newPage?: string, newGame_id?: string, replace?: boolean, overrides: overridesType = { nofooter: false, noheader: false }) {
     location.hash = "";
-    location.hash = "content";
+    requestAnimationFrame(() => {
+      location.hash = "content";
+    });
+
     if (newPage == PAGE && (!newGame_id || (newGame_id && newGame_id == GAME_ID))) return;
 
     sethidden(true);
 
     if (newPage) setPAGE(newPage);
     if (newGame_id) setGAME_ID(newGame_id);
+    setOvers(overrides);
 
-    window.history[replace ? 'replaceState' : 'pushState']({ "page": PAGE, "game_id": GAME_ID }, document.title, PATH);
+    window.history[replace ? 'replaceState' : 'pushState']({ "page": PAGE, "game_id": GAME_ID, "overrides": overrides }, document.title, PATH);
   };
 
   useEffect(() => {
@@ -31,6 +42,7 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
       if (event.state) {
         setPAGE(event.state.page);
         setGAME_ID(event.state.game_id);
+        setOvers(event.state.overrides);
       };
     };
 
@@ -42,11 +54,13 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
   }, [page, game_id]);
 
   // Updates current state
-  window.history.replaceState({ "page": PAGE, "game_id": GAME_ID }, document.title, location.href);
+  window.history.replaceState({ "page": PAGE, "game_id": GAME_ID, "overrides": overs }, document.title, location.href);
 
   return (
     <>
-      <Header localRedirect={localRedirect} />
+      {!overs?.noheader &&
+        <Header localRedirect={localRedirect} PAGE={PAGE} />
+      }
       <DataStuff hidden={hidden} sethidden={sethidden} />
 
       <div className='content' id='content' hidden={hidden}>
@@ -70,9 +84,16 @@ function App({ page, game_id, redirect_to }: { page: string, game_id?: string, r
           <a href={redirect_to}><h1>Redirecting to {redirect_to}... (click here if nothing happend)</h1></a>
           && (location.href = redirect_to as string)
         }
+
+        {/* We will never know what that is */}
+        {PAGE == 'bakingbread' &&
+          <BakingBread hidden={false} openLink={(link: string) => (window.open(link, '_blank') as Window).focus()} />
+        }
       </div>
 
-      <Footer />
+      {!overs?.nofooter &&
+        <Footer localRedirect={localRedirect} />
+      }
     </>
   )
 }

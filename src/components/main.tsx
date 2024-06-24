@@ -12,10 +12,13 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
     document.title = "OpenVoxel Studios";
 
     function scrollSetFrame() {
-        let vid = document.getElementById('v0') as HTMLVideoElement;
         setTimeout(() => {
-            let val = ((-vid.getBoundingClientRect().top + 150) / vid.getBoundingClientRect().bottom / 3 * 2) * vid.duration;
-            if (vid && vid.getBoundingClientRect().bottom > 0) vid.currentTime = isNaN(val) ? 0 : val;
+            let vid = document.getElementById('v0') as HTMLVideoElement;
+            let box = vid?.getBoundingClientRect();
+            if (!box) return;
+
+            let val = ((-box.top + 150) / box.bottom / 3 * 2) * vid.duration;
+            if (vid && box.bottom > 0) vid.currentTime = isNaN(val) ? 0 : val;
 
             requestAnimationFrame(scrollSetFrame);
         }, 1000 / 30)

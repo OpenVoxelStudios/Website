@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { links } from '../data.ts';
 import PinardoImage from '/images/pinardo.png'
 
-const Header = ({ localRedirect }: { localRedirect: Function }) => {
+const Header = ({ localRedirect, PAGE }: { localRedirect: Function, PAGE: string }) => {
     const [menu, setMenu] = useState(false);
     const [pinardo, setPinardo] = useState(0);
 
@@ -23,14 +23,26 @@ const Header = ({ localRedirect }: { localRedirect: Function }) => {
     return (
         <>
             <header className="header" id='header'>
-                <img className='coolclick notextselection icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => {
-                    setMenu(!menu);
-                    if (!menu) setPinardo((pinardo + 1) % 14);
-                }} />
+                <div>
+                    <img className='coolclick notextselection icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => {
+                        setMenu(!menu);
+                        if (!menu) setPinardo((pinardo + 1) % 14);
+                    }} />
+
+                    {PAGE == 'bakingbread' &&
+                        <>
+                            <img className='coolclick notextselection icon' src='/bread/rebirth.svg' onClick={(ev) => {
+                                ev.stopPropagation();
+                                ev.preventDefault();
+                                ; (document.getElementById('breadreset') as HTMLDivElement).style.display = 'flex';
+                            }} />
+                        </>
+                    }
+                </div>
 
                 <div className='brand'>
-                    <img className='coolclick notextselection logo' src={Icon} onClick={() => localRedirect('/', 'main', undefined, true)} />
-                    <a className='title'>OpenVoxel Studios</a>
+                    <img className='coolclick notextselection logo' id='headerlogo' src={Icon} onClick={() => localRedirect('/', 'main', undefined, true)} />
+                    <a className='title' id='headertitle'>OpenVoxel Studios</a>
                 </div>
 
                 <img onClick={() => (window.open(links.discord, '_blank') as Window).focus()} className='coolclick notextselection icon' src={IconDiscord} />

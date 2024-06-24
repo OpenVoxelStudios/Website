@@ -48,7 +48,6 @@ function GamePage({ game, localRedirect }: { game: string, localRedirect: Functi
                     const iframe = document.createElement('iframe');
                     iframe.style.display = 'none';
                     iframe.src = `openvoxel://game/${gameid}`;
-                    console.log(gameid)
 
                     document.body.appendChild(iframe);
                 }}>
