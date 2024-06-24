@@ -72,7 +72,7 @@ const BreadMusic = ({ openLink }: { openLink(url: string): void }) => {
 
                     if ((document.getElementById('music') as HTMLAudioElement).paused) setMusicEnabled(true)
                     else setMusicEnabled(false);
-                }} style={{ backgroundImage: `url("/bread/volume-${musicEnabled ? 'on' : 'off'}.svg")` }}></a>
+                }} style={{ backgroundImage: `url("/bread/${musicEnabled ? 'pause' : 'play'}.svg")` }}></a>
 
                 <a className='unbreading coolclick' id="skip" onClick={(ev) => {
                     ev.preventDefault();
