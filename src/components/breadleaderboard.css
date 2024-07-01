@@ -1,0 +1,129 @@
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: calc(100% - 10px);
+    height: calc(100vh - 140px);
+
+    padding: 5px;
+    overflow: hidden;
+}
+
+.leaderboard>.consent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.leaderboard>.consent>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 35px;
+    background: rgba(177, 255, 94, 0.2);
+}
+
+.leaderboard>.consent>div.no {
+    background: rgba(255, 94, 94, 0.2);
+}
+
+.leaderboard>.scores {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow-y: scroll;
+    width: 100%;
+    flex: 1;
+    gap: 25px;
+}
+
+.leaderboard>.scores>div {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    gap: 25px;
+}
+
+.leaderboard>.scores>div>img {
+    height: 90px;
+    width: 90px;
+    border-radius: 25px;
+}
+
+.leaderboard>.scores>div>div * {
+    margin: 0;
+}
+
+.leaderboard>.scores>div>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+}
+
+.leaderboard>.scores>div>h1 {
+    flex: 1;
+    text-align: end;
+    margin-right: 5px;
+}
+
+.leaderboard .first {
+    background: rgba(255, 215, 84, 0.6);
+}
+
+.leaderboard .second {
+    background: rgba(224, 224, 224, 0.6);
+}
+
+.leaderboard .third {
+    background: rgba(255, 146, 57, 0.6);
+}
+
+.leaderboard .cloud {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.leaderboard .cloud>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 35px;
+    background: rgba(177, 255, 94, 0.2);
+}
+
+.leaderboard .cloud>div>a {
+    width: 100%;
+    text-align: center;
+}
+
+.leaderboard .cloud>div:nth-child(3) {
+    background: rgba(255, 94, 94, 0.2);
+}
+
+
+@media screen and (max-width: 1000px) {
+    .leaderboard {
+        height: calc(100vh - 200px);
+    }
+}

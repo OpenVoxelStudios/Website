@@ -48,12 +48,24 @@
     background-position: center;
 }
 
-.bakingbread>.middle:active>.bread:not(:active) {
+.bakingbread>.middle:active>.bread {
     transform: translateY(3px);
 }
 
+.bakingbread>.middle:hover>.bread {
+    transform: scale(1.06);
+}
+
+.bakingbread>.middle:hover:active>.bread {
+    transform: scale(1.06) translateY(3px);
+}
+
+.bakingbread .trollface {
+    background-image: url('/bread/trollface.png');
+}
+
 .bakingbread .logo {
-    background-image: url('/bread/logo.png');
+    background-image: url('/bread/logo.svg');
 }
 
 .bakingbread .logo5 {
@@ -82,6 +94,18 @@
 
 .bakingbread .logo35 {
     background-image: url('/bread/logo-35.png');
+}
+
+.bakingbread .logo40 {
+    background-image: url('/bread/logo-40.png');
+}
+
+.bakingbread .logo45 {
+    background-image: url('/bread/logo-45.png');
+}
+
+.bakingbread .logo50 {
+    background-image: url('/bread/logo-50.png');
 }
 
 .bakingbread>.middle>.bread:hover {
@@ -249,6 +273,12 @@
     background: #4CAF50;
     border-radius: 50%;
     cursor: pointer;
+
+    transition: all 0.1s ease-in;
+}
+
+.music>input::-webkit-slider-thumb:hover {
+    transform: scale(1.06);
 }
 
 .music>.musiccontrol {

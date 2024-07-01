@@ -30,6 +30,9 @@ const questList: quest[] = [
             return parseInt(localStorage.getItem("bread:buildings/Auto Clicker") as string) >= 5;
         },
         icon: '/bread/cursor.svg',
+
+        newprice: 1,
+        newefficiency: 1,
     },
     {
         name: '2 - Bread Chef!',
@@ -75,6 +78,7 @@ const questList: quest[] = [
         },
         icon: '/bread/cursor.svg',
     },
+    // 5th quest
     {
         name: 'BONUS - Faster Ovens!',
         description: 'Produces 1 second faster',
@@ -140,6 +144,7 @@ const questList: quest[] = [
         },
         icon: '/bread/flask.svg',
     },
+    // 11th quest
     {
         name: 'BONUS - Bigger Ovens!',
         description: '20% more value on sell',
@@ -205,6 +210,7 @@ const questList: quest[] = [
         },
         icon: '/bread/cursor.svg',
     },
+    // 17th quest
     {
         name: 'BONUS - Cheaper Flour!',
         description: 'Reduce buidling cost by 5%',
@@ -268,6 +274,7 @@ const questList: quest[] = [
         },
         icon: '/bread/badge-20.svg',
     },
+    // 23th quest
     {
         name: 'BONUS - Even Faster Ovens!',
         description: 'Produces 2 seconds faster',
@@ -325,14 +332,15 @@ const questList: quest[] = [
     {
         name: '25 - [THE END?]',
         description: 'Muahaha you will never reach that one',
-        lockname: '25 - Reach 7.5M Loafs',
+        lockname: '25 - Reach 5M Loafs',
         clickvalue: 128,
         price: 200000,
         unlock() {
-            return parseInt(localStorage.getItem("bread:score") as string) >= 7_500_000;
+            return parseInt(localStorage.getItem("bread:score") as string) >= 5_000_000;
         },
         icon: '/bread/coin.svg',
     },
+    // 29th quest
     {
         name: 'BONUS - Huge Burning Ovens!',
         description: 'NO- U- My game- YOU BEAT IT! NOOOO-',
@@ -345,7 +353,6 @@ const questList: quest[] = [
 
         rebirths: 1,
     },
-    // 30th quest
     {
         name: '26 - Bread War III',
         description: 'im back lil man!',
@@ -401,6 +408,7 @@ const questList: quest[] = [
         },
         icon: '/bread/bank.svg',
     },
+    // 35th quest
     {
         name: 'BONUS - Even Cheaper Flour!',
         description: 'Reduce buidling cost by 15%',
@@ -466,19 +474,219 @@ const questList: quest[] = [
         },
         icon: '/bread/badge-25.svg',
     },
+    // 41st quest
     {
         name: 'BONUS - 20% off',
         description: 'argh- u are going too far!',
         lockname: 'HoW Do u SeE ThIs TExT???',
-        clickvalue: 200,
+        clickvalue: 800,
         newprice: 1 - 20 / 100,
-        price: 600000,
+        price: 650000,
         unlock() { return true },
         icon: '/bread/building-add.svg',
 
         rebirths: 2,
     },
-    // 42th quest
+    {
+        name: '36 - Ya Cooking!',
+        description: '',
+        lockname: '36 - Own 50 Chefs',
+        clickvalue: 1024,
+        price: 750000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 50;
+        },
+        icon: '/bread/cookie.svg',
+    },
+    {
+        name: '37 - Smells like Bread',
+        description: '',
+        lockname: '37 - Own 45 Bread Bakeries',
+        clickvalue: 1024,
+        price: 750000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 45;
+        },
+        icon: '/bread/flask.svg',
+    },
+    {
+        name: '38 - Bread Pollution',
+        description: '',
+        lockname: '38 - Own 35 Bread Factories and Paradises',
+        clickvalue: 1024,
+        price: 800000,
+        unlock() {
+            return (parseInt(localStorage.getItem("bread:buildings/Bread Factory") as string) >= 35) && parseInt(localStorage.getItem("bread:buildings/Bread Paradise") as string) >= 35;
+        },
+        icon: '/bread/factory.svg',
+    },
+    {
+        name: '39 - Baking Bread - The Game',
+        description: '',
+        lockname: '39 - Own 50 Bread Bakeries',
+        clickvalue: 1024,
+        price: 1000000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 50;
+        },
+        icon: '/bread/flask.svg',
+    },
+    {
+        name: '40 - Milky Bready Wayi',
+        description: '',
+        lockname: '40 - Own 30 Loafly Ways',
+        clickvalue: 1024,
+        price: 1250000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Loafly Way") as string) >= 30;
+        },
+        icon: '/bread/stars.svg',
+    },
+    // 47th quest
+    {
+        name: 'BONUS - Let\'s Double the Value!',
+        description: '',
+        lockname: 'WOOOOOOOEEEE!',
+        clickvalue: 1800,
+        newefficiency: 2,
+        price: 1_500_000,
+        unlock() { return true },
+        icon: '/bread/building-add.svg',
+    },
+    {
+        name: '41 - Okie Banky!',
+        description: '',
+        lockname: '41 - Own 40 Bread Banks',
+        clickvalue: 2048,
+        price: 2_000_000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Bread Bank") as string) >= 40;
+        },
+        icon: '/bread/bank.svg',
+    },
+    {
+        name: '42 - Quite Easy Quest here',
+        description: '',
+        lockname: '42 - Own 60 Auto Clicker',
+        clickvalue: 2048,
+        price: 2_500_000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Auto Clicker") as string) >= 60;
+        },
+        icon: '/bread/cursor.svg',
+    },
+    {
+        name: '43 - Intense Bread Factory.',
+        description: '',
+        lockname: '43 - Own 40 Bread Factories',
+        clickvalue: 2048,
+        price: 3_000_000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Bread Factory") as string) >= 40;
+        },
+        icon: '/bread/factory.svg',
+    },
+    {
+        name: '44 - Paradise gone brr',
+        description: 'the worst is yet to come.',
+        lockname: '44 - Own 40 Bread Paradises',
+        clickvalue: 2048,
+        price: 4_000_000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Bread Paradise") as string) >= 40;
+        },
+        icon: '/bread/airplane.svg',
+    },
+    {
+        name: '45 - You did it!',
+        description: 'You should be AFK a bit for this quest.',
+        lockname: '45 - Own 30 of Every Building',
+        clickvalue: 2048,
+        price: 5_000_000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Universal Bakery") as string) >= 30;
+        },
+        icon: '/bread/badge-30.svg',
+    },
+    // 53th quest
+    {
+        name: 'BONUS - Sound-speed Bread!',
+        description: 'Produces 3 seconds faster',
+        lockname: 'Sonic Bread!',
+        clickvalue: 2048,
+        newspeed: 3,
+        price: 5_000_000,
+        unlock() { return true },
+        icon: '/bread/stopwatch.svg',
+    },
+    {
+        name: '46 - And the Bread shall Fly',
+        description: 'Wow you got a new Building!',
+        lockname: '46 - Own 15 Bread Tornados',
+        clickvalue: 2048,
+        price: 3_000_000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Bread Tornado") as string) >= 15;
+        },
+        icon: '/bread/tornado.svg',
+    },
+    {
+        name: '47 - 55 is not a magic number',
+        description: 'Have you counted how many clicks you\'ve done??',
+        lockname: '47 - Own 55 Chefs and Bread Bakeries',
+        clickvalue: 2048,
+        price: 6_000_000,
+        unlock() {
+            return (parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 55) && (parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 55);
+        },
+        icon: '/bread/cookie.svg',
+    },
+    {
+        name: '48 - Bread too Powerful.',
+        description: 'Bread tornaaadooooo',
+        lockname: '48 - Own 25 Bread Tornados',
+        clickvalue: 2048,
+        price: 7_500_000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Bread Tornado") as string) >= 25;
+        },
+        icon: '/bread/tornado.svg',
+    },
+    {
+        name: '49 - Bread Bank Empire',
+        description: 'cheating is bad - do not cheat :)',
+        lockname: '49 - Own 45 Bread Banks',
+        clickvalue: 2048,
+        price: 8_500_000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:buildings/Bread Bank") as string) >= 45;
+        },
+        icon: '/bread/bank.svg',
+    },
+    {
+        name: '50 - [THE END AGAIN?]',
+        description: 'imagine you actually reach the real end one day',
+        lockname: '50 - Reach 250M Loafs',
+        clickvalue: 2048,
+        price: 10_000_000,
+        unlock() {
+            return parseInt(localStorage.getItem("bread:score") as string) >= 250_000_000;
+        },
+        icon: '/bread/coin.svg',
+    },
+    // 59th quest
+    {
+        name: 'BONUS - Even More Value',
+        description: 'you will never reach it.',
+        lockname: 'why u see this :sob:',
+        clickvalue: 4000,
+        newefficiency: 2 + 50 / 100,
+        price: 5_000_000,
+        unlock() { return true },
+        icon: '/bread/building-add.svg',
+
+        rebirths: 3,
+    },
 ];
 
 
@@ -499,9 +707,17 @@ const BreadQuest = ({ setScore, setClickValue }: { setScore: [number, React.Disp
         if (!isUnlocked || questList[questIndex].price > setScore[0]) return;
         let current = questList[questIndex];
 
-        if (current.newefficiency) localStorage.setItem('bread:modifiers/efficiency', String(current.newefficiency));
         if (current.newspeed) localStorage.setItem('bread:modifiers/speed', String(current.newspeed));
-        if (current.newprice) localStorage.setItem('bread:modifiers/price', String(current.newprice));
+        if (current.newefficiency) localStorage.setItem('bread:modifiers/efficiency', String(current.newefficiency * Math.min(
+            parseInt(localStorage.getItem('bread:rebirth') || '0') > 0 ?
+                1 + (parseInt(localStorage.getItem('bread:rebirth') || '0') * 5 / 100)
+                : 1
+            , 75)));
+        if (current.newprice) localStorage.setItem('bread:modifiers/price', String(current.newprice * Math.min(
+            parseInt(localStorage.getItem('bread:rebirth') || '0') > 0 ?
+                (parseInt(localStorage.getItem('bread:rebirth') || '0') * 10 / 100)
+                : 1
+            , 75)));
 
         setClickValue(val => val + current.clickvalue)
         setScore[1](score => score - current.price);

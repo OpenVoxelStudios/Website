@@ -7,7 +7,7 @@ import Header from './components/header';
 import MainPage from './components/main';
 import DataStuff from './components/datastuff';
 import Launcher from './components/launcher';
-import BakingBread from './components/bakingbread';
+import Bread from './components/bread';
 
 type overridesType = {
   noheader?: boolean,
@@ -19,6 +19,7 @@ function App({ page, game_id, redirect_to, overrides }: { page: string, game_id?
   const [GAME_ID, setGAME_ID] = useState(game_id);
   const [hidden, sethidden] = useState(true);
   const [overs, setOvers] = useState(overrides);
+  const [showBreadLeaderboard, setShowBreadLeaderboard] = useState(false);
 
   function localRedirect(PATH: string, newPage?: string, newGame_id?: string, replace?: boolean, overrides: overridesType = { nofooter: false, noheader: false }) {
     location.hash = "";
@@ -53,13 +54,15 @@ function App({ page, game_id, redirect_to, overrides }: { page: string, game_id?
     };
   }, [page, game_id]);
 
-  // Updates current state
-  window.history.replaceState({ "page": PAGE, "game_id": GAME_ID, "overrides": overs }, document.title, location.href);
+  useEffect(() => {
+    // Updates current state
+    window.history.replaceState({ "page": PAGE, "game_id": GAME_ID, "overrides": overs }, document.title, location.href);
+  }, [PAGE, GAME_ID, overs]);
 
   return (
     <>
       {!overs?.noheader &&
-        <Header localRedirect={localRedirect} PAGE={PAGE} />
+        <Header localRedirect={localRedirect} PAGE={PAGE} showLeaderboard={showBreadLeaderboard} setShowLeaderboard={setShowBreadLeaderboard} />
       }
       <DataStuff hidden={hidden} sethidden={sethidden} />
 
@@ -87,7 +90,7 @@ function App({ page, game_id, redirect_to, overrides }: { page: string, game_id?
 
         {/* We will never know what that is */}
         {PAGE == 'bakingbread' &&
-          <BakingBread hidden={false} openLink={(link: string) => (window.open(link, '_blank') as Window).focus()} />
+          <Bread showLeaderboard={showBreadLeaderboard} />
         }
       </div>
 

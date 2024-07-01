@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { links } from '../data.ts';
 import PinardoImage from '/images/pinardo.png'
 
-const Header = ({ localRedirect, PAGE }: { localRedirect: Function, PAGE: string }) => {
+const Header = ({ localRedirect, PAGE, showLeaderboard, setShowLeaderboard }: { localRedirect: Function, PAGE: string, showLeaderboard: boolean, setShowLeaderboard: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const [menu, setMenu] = useState(false);
     const [pinardo, setPinardo] = useState(0);
 
@@ -32,8 +32,8 @@ const Header = ({ localRedirect, PAGE }: { localRedirect: Function, PAGE: string
                     {PAGE == 'bakingbread' &&
                         <>
                             <img className='coolclick notextselection icon' src='/bread/rebirth.svg' onClick={(ev) => {
-                                ev.stopPropagation();
-                                ev.preventDefault();
+                                ev.stopPropagation(); ev.preventDefault()
+                                setShowLeaderboard(false);
                                 ; (document.getElementById('breadreset') as HTMLDivElement).style.display = 'flex';
                             }} />
                         </>
@@ -45,7 +45,12 @@ const Header = ({ localRedirect, PAGE }: { localRedirect: Function, PAGE: string
                     <a className='title' id='headertitle'>OpenVoxel Studios</a>
                 </div>
 
-                <img onClick={() => (window.open(links.discord, '_blank') as Window).focus()} className='coolclick notextselection icon' src={IconDiscord} />
+                {PAGE == 'bakingbread' &&
+                    <img onClick={() => { setShowLeaderboard(lb => !lb) }} className='coolclick notextselection icon' src={showLeaderboard ? (localStorage.getItem('user:avatar') as string) : '/bread/trophy.svg'} style={{ borderRadius: '16px' }} />
+                }
+                {PAGE != 'bakingbread' &&
+                    <img onClick={() => (window.open(links.discord, '_blank') as Window).focus()} className='coolclick notextselection icon' src={IconDiscord} />
+                }
             </header>
 
             <nav className="notextselection menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
