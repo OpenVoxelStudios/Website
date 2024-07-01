@@ -62,7 +62,7 @@ const Leaderboard = ({ hidden, auth, setAuth }: { hidden: boolean, auth: authTyp
 
     return (
         <div className='leaderboard' style={{ display: hidden ? 'none' : 'flex' }}>
-            <div className='consent'>
+            {/* <div className='consent'>
                 <h3>Do you want to be part of the Leaderboard?<br />(This will show your Avatar, Username and In-Game Data)</h3>
 
                 <div className={'coolclick glass' + (auth?.publicProfile ? ' no' : '')} onClick={() => {
@@ -197,7 +197,9 @@ const Leaderboard = ({ hidden, auth, setAuth }: { hidden: boolean, auth: authTyp
                         </div>
                     </>
                 }
-            </div>
+            </div> */}
+            <h1>Whoops! Leaderboard is not available yet!</h1>
+            <h3>It's all ready to be there but it needs to be hosted on a server. Should be the case around end july or something :)</h3>
         </div>
     )
 }
