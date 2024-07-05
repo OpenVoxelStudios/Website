@@ -24,14 +24,16 @@ const Header = ({ localRedirect, PAGE, showLeaderboard, setShowLeaderboard }: { 
         <>
             <header className="header" id='header'>
                 <div>
-                    <img className='coolclick notextselection icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => {
-                        setMenu(!menu);
-                        if (!menu) setPinardo((pinardo + 1) % 14);
-                    }} />
+                    {PAGE != 'bakingbread' &&
+                        <img className='coolclick notextselection icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => {
+                            setMenu(!menu);
+                            if (!menu) setPinardo((pinardo + 1) % 14);
+                        }} />
+                    }
 
                     {PAGE == 'bakingbread' &&
                         <>
-                            <img className='coolclick notextselection icon' src='/bread/rebirth.svg' onClick={(ev) => {
+                            <img className='coolclick notextselection icon' src='/bakingbread/rebirth.svg' onClick={(ev) => {
                                 ev.stopPropagation(); ev.preventDefault()
                                 setShowLeaderboard(false);
                                 ; (document.getElementById('breadreset') as HTMLDivElement).style.display = 'flex';
@@ -41,41 +43,43 @@ const Header = ({ localRedirect, PAGE, showLeaderboard, setShowLeaderboard }: { 
                 </div>
 
                 <div className='brand'>
-                    <img className='coolclick notextselection logo' id='headerlogo' src={Icon} onClick={() => localRedirect('/', 'main', undefined, true)} />
+                    <img className='coolclick notextselection logo' id='headerlogo' src={Icon} onClick={() => PAGE == 'bakingbread' || localRedirect('/', 'main', undefined, true)} />
                     <a className='title' id='headertitle'>OpenVoxel Studios</a>
                 </div>
 
                 {PAGE == 'bakingbread' &&
-                    <img onClick={() => { setShowLeaderboard(lb => !lb) }} className='coolclick notextselection icon' src={showLeaderboard ? (localStorage.getItem('user:avatar') as string) : '/bread/trophy.svg'} style={{ borderRadius: '16px' }} />
+                    <img onClick={() => { setShowLeaderboard(lb => !lb) }} className='coolclick notextselection icon' src={showLeaderboard ? (localStorage.getItem('user:avatar') as string) : '/bakingbread/trophy.svg'} style={{ borderRadius: '16px' }} />
                 }
                 {PAGE != 'bakingbread' &&
                     <img onClick={() => (window.open(links.discord, '_blank') as Window).focus()} className='coolclick notextselection icon' src={IconDiscord} />
                 }
             </header>
 
-            <nav className="notextselection menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
-                <div className='submenu'>
-                    <div>
-                        <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/', 'main', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
-                        <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/games/', 'games', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
-                        <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/launcher/', 'launcher', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Launcher</a></h1>
-                    </div>
-
-                    <div>
-                        <div className='icon-row'>
-                            <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }} src={IconDiscord} />
-                            <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.youtube, '_blank') as Window).focus() }} src={IconYoutube} />
-                            <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.github, '_blank') as Window).focus() }} src={IconGithub} />
+            {PAGE != 'bakingbread' &&
+                <nav className="notextselection menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
+                    <div className='submenu'>
+                        <div>
+                            <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/', 'main', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
+                            <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/games/', 'games', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
+                            <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/launcher/', 'launcher', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Launcher</a></h1>
                         </div>
 
-                        {pinardo == 13 &&
-                            <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
-                                <img src={PinardoImage} style={{ width: "40%" }} />
-                            </h1>
-                        }
+                        <div>
+                            <div className='icon-row'>
+                                <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }} src={IconDiscord} />
+                                <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.youtube, '_blank') as Window).focus() }} src={IconYoutube} />
+                                <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.github, '_blank') as Window).focus() }} src={IconGithub} />
+                            </div>
+
+                            {pinardo == 13 &&
+                                <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
+                                    <img src={PinardoImage} style={{ width: "40%" }} />
+                                </h1>
+                            }
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            }
         </>
     )
 }

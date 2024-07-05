@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/bread/logo.png" />
-  <link rel="mask-icon" href="/bread/logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/bakingbread/logo.png" />
+  <link rel="mask-icon" href="/bakingbread/logo.png">
 
   <title>Baking Bread - OpenVoxel Studios</title>
   <meta name="description"
@@ -22,15 +21,36 @@
   <meta name="twitter:url" content="https://openvoxel.studio/bakingbread/" />
   <meta name="og:url" content="https://openvoxel.studio/bakingbread/" />
 
-  <meta name="og:image" content="/bread/logo.png" />
-  <meta name="twitter:image:src" content="/bread/logo.png" />
+  <meta name="og:image" content="/bakingbread/logo.png" />
+  <meta name="twitter:image:src" content="/bakingbread/logo.png" />
 
-  <meta name="theme-color" content="#ad8244">
+  <meta name="theme-color" content="#3e4152">
+
+
+  <link rel="manifest" href="/bakingbread/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Bread">
+  <meta name="apple-mobile-web-app-title" content="Bread">
+  <meta name="msapplication-starturl" content="/bakingbread/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="./bakingbread.tsx"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/bakingbread/service-worker.js').then(registration => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>

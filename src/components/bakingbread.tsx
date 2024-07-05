@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from 'react';
 import './bakingbread.css';
-import BreadIcon from '/bread/logo.png';
-import BreadHead from '/bread/head.png';
+import BreadIcon from '/bakingbread/logo.png';
+import BreadHead from '/bakingbread/head.png';
 import BreadBuilding, { building } from './breadbuilding';
 import BreadQuest from './breadquest';
 import formatNumber from '../functions/formatNumber';
@@ -19,7 +19,7 @@ const initialBuildings: building[] = [
 
         quantity: 0,
         last_clicked: 1,
-        icon: '/bread/cursor.svg',
+        icon: '/bakingbread/cursor.svg',
     },
     {
         name: 'Chef',
@@ -30,7 +30,7 @@ const initialBuildings: building[] = [
 
         last_clicked: 1,
         quantity: 0,
-        icon: '/bread/cookie.svg',
+        icon: '/bakingbread/cookie.svg',
     },
     {
         name: 'Bread Bakery',
@@ -41,7 +41,7 @@ const initialBuildings: building[] = [
 
         last_clicked: 1,
         quantity: 0,
-        icon: '/bread/flask.svg',
+        icon: '/bakingbread/flask.svg',
     },
     {
         name: 'Bread Bank',
@@ -52,7 +52,7 @@ const initialBuildings: building[] = [
 
         last_clicked: 1,
         quantity: 0,
-        icon: '/bread/bank.svg',
+        icon: '/bakingbread/bank.svg',
     },
     {
         name: 'Bread Factory',
@@ -63,7 +63,7 @@ const initialBuildings: building[] = [
 
         last_clicked: 1,
         quantity: 0,
-        icon: '/bread/factory.svg',
+        icon: '/bakingbread/factory.svg',
     },
     {
         name: 'Bread Paradise',
@@ -74,7 +74,7 @@ const initialBuildings: building[] = [
 
         last_clicked: 1,
         quantity: 0,
-        icon: '/bread/airplane.svg',
+        icon: '/bakingbread/airplane.svg',
 
         showCondition() {
             return parseInt(localStorage.getItem('bread:questIndexBackup') || '1') > 11
@@ -89,7 +89,7 @@ const initialBuildings: building[] = [
 
         last_clicked: 1,
         quantity: 0,
-        icon: '/bread/stars.svg',
+        icon: '/bakingbread/stars.svg',
 
         showCondition() {
             return parseInt(localStorage.getItem('bread:questIndexBackup') || '1') > 23
@@ -104,7 +104,7 @@ const initialBuildings: building[] = [
 
         last_clicked: 1,
         quantity: 0,
-        icon: '/bread/globe.svg',
+        icon: '/bakingbread/globe.svg',
 
         showCondition() {
             return parseInt(localStorage.getItem('bread:questIndexBackup') || '1') > 29 && parseInt(localStorage.getItem('bread:rebirth') || '0') >= 1
@@ -119,7 +119,7 @@ const initialBuildings: building[] = [
 
         last_clicked: 1,
         quantity: 0,
-        icon: '/bread/tornado.svg',
+        icon: '/bakingbread/tornado.svg',
 
         showCondition() {
             return parseInt(localStorage.getItem('bread:questIndexBackup') || '1') > 53 && parseInt(localStorage.getItem('bread:rebirth') || '0') >= 2

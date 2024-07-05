@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './footer.css';
 import Icon from '/logo.png';
 
-const Footer = ({ localRedirect }: { localRedirect: Function }) => {
+const Footer = () => {
     const [BREADMAN, _] = useState(Math.round(Math.random() * 20) == 1);
 
     return (
@@ -14,10 +14,10 @@ const Footer = ({ localRedirect }: { localRedirect: Function }) => {
                             ev.preventDefault();
                             ev.stopPropagation();
 
-                            localRedirect('/bakingbread/', 'bakingbread', undefined, true, { nofooter: true });
+                            location.href = '/bakingbread/';
                         }
                     }}>
-                        <img className='notextselection logo' src={!BREADMAN ? Icon : '/bread/breadman.png'} />
+                        <img className='notextselection logo' src={!BREADMAN ? Icon : '/bakingbread/breadman.png'} />
                         <a className='title'>{!BREADMAN ? 'OpenVoxel Studios' : 'BreadVoxel??'}</a>
                     </div>
 

@@ -11,47 +11,47 @@ const musicList: {
         {
             name: 'Bread by Lukrembo',
             redirect: 'https://freetouse.com/music/lukrembo/bread',
-            url: '/bread/musics/bread.mp3',
+            url: '/bakingbread/musics/bread.mp3',
         },
         {
             name: 'Moonsong',
             redirect: 'https://www.youtube.com/watch?v=MtkECyiRExE',
-            url: '/bread/musics/moonsong.mp3',
+            url: '/bakingbread/musics/moonsong.mp3',
         },
         {
             name: 'Can\'t it be true by Zris',
             redirect: 'https://www.youtube.com/watch?v=iai-gZ1IonE',
-            url: '/bread/musics/cant-it-be-true.mp3',
+            url: '/bakingbread/musics/cant-it-be-true.mp3',
         },
         {
             name: 'Time (Aviators Remix)',
             redirect: 'https://www.youtube.com/watch?v=kfMQcUTtzKg',
-            url: '/bread/musics/time.mp3',
+            url: '/bakingbread/musics/time.mp3',
         },
         {
             name: 'without form and void by uamee',
             redirect: 'https://www.youtube.com/watch?v=9n7wW95rmPI',
-            url: '/bread/musics/without-form-and-void.mp3',
+            url: '/bakingbread/musics/without-form-and-void.mp3',
         },
         {
             name: 'Biscuit by Lukrembo',
             redirect: 'https://freetouse.com/music/lukrembo/biscuit',
-            url: '/bread/musics/biscuit.mp3',
+            url: '/bakingbread/musics/biscuit.mp3',
         },
         {
             name: 'Salomon\'s Theme - BF3',
             redirect: 'https://www.youtube.com/watch?v=bps8tOTMWEk',
-            url: '/bread/musics/salomon.mp3'
+            url: '/bakingbread/musics/salomon.mp3'
         },
         {
             name: 'This Is For You by Lukrembo',
             redirect: 'https://freetouse.com/music/lukrembo/this-is-for-you',
-            url: '/bread/musics/this-is-for-you.mp3'
+            url: '/bakingbread/musics/this-is-for-you.mp3'
         },
         {
             name: 'Lofi Of Bread by oh wowie!427',
             redirect: 'https://soundcloud.com/cookie-kinsun/lofi-of-bread',
-            url: '/bread/musics/lofi-bread.mp3'
+            url: '/bakingbread/musics/lofi-bread.mp3'
         }
     ];
 
@@ -59,7 +59,7 @@ const musicList: {
 
 const BreadMusic = ({ openLink }: { openLink(url: string): void }) => {
     const [volume, setVolume] = useState(parseFloat(localStorage.getItem('bread:music/volume') == null ? '0.2' : localStorage.getItem('bread:music/volume') as unknown as string));
-    const [musicEnabled, setMusicEnabled] = useState((localStorage.getItem('bread:music/enabled') == null ? 'true' : localStorage.getItem('bread:music/enabled')) == 'true');
+    const [musicEnabled, setMusicEnabled] = useState(false);
     const [currentMusic, setCurrentMusic] = useState(musicList[Math.round(Math.random() * (musicList.length - 1))]);
     const [listenMode, setListenMode] = useState<'solo' | 'group'>('solo')//(localStorage.getItem('bread:music/listenmode') as 'solo' | 'group' || 'solo');
     const intentional = useRef(false);
@@ -174,7 +174,7 @@ const BreadMusic = ({ openLink }: { openLink(url: string): void }) => {
 
                     // setListenMode(v => v == 'solo' ? 'group' : 'solo');
                     setListenMode('solo');
-                }} style={{ backgroundImage: `url("/bread/${listenMode == 'solo' ? 'person' : 'persons'}.svg")` }}></a>
+                }} style={{ backgroundImage: `url("/bakingbread/${listenMode == 'solo' ? 'person' : 'persons'}.svg")` }}></a>
 
                 <a className='unbreading coolclick' id="play" onClick={(ev) => {
                     ev.preventDefault();
@@ -186,14 +186,14 @@ const BreadMusic = ({ openLink }: { openLink(url: string): void }) => {
 
                     if (isPaused.paused) setMusicEnabled(true)
                     else setMusicEnabled(false);
-                }} style={{ backgroundImage: `url("/bread/${musicEnabled ? 'pause' : 'play'}.svg")` }}></a>
+                }} style={{ backgroundImage: `url("/bakingbread/${musicEnabled ? 'pause' : 'play'}.svg")` }}></a>
 
                 <a className='unbreading coolclick' id="skip" onClick={(ev) => {
                     ev.preventDefault();
                     ev.stopPropagation();
 
                     songEnded();
-                }} style={{ backgroundImage: `url("/bread/skip.svg")` }}></a>
+                }} style={{ backgroundImage: `url("/bakingbread/skip.svg")` }}></a>
             </div>
 
             <input className='unbreading' type="range" min="0" max="1" defaultValue={parseFloat(localStorage.getItem('bread:music/volume') || '0.2')} step="0.01" id="music-volume" onInput={(ev) => {

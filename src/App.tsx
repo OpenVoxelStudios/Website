@@ -121,7 +121,7 @@ function App({ page, game_id, redirect_to, overrides }: { page: string, game_id?
       </div>
 
       {!overs?.nofooter &&
-        <Footer localRedirect={localRedirect} />
+        <Footer />
       }
     </>
   )

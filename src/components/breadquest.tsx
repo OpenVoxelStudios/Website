@@ -29,7 +29,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Auto Clicker") as string) >= 5;
         },
-        icon: '/bread/cursor.svg',
+        icon: '/bakingbread/cursor.svg',
 
         newprice: 1,
         newefficiency: 1,
@@ -43,7 +43,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 3;
         },
-        icon: '/bread/cookie.svg',
+        icon: '/bakingbread/cookie.svg',
     },
     {
         name: '3 - Cheater?!',
@@ -54,7 +54,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Auto Clicker") as string) >= 10;
         },
-        icon: '/bread/cursor.svg',
+        icon: '/bakingbread/cursor.svg',
     },
     {
         name: '4 - Bakerindustry',
@@ -65,7 +65,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 5;
         },
-        icon: '/bread/flask.svg',
+        icon: '/bakingbread/flask.svg',
     },
     {
         name: '5 - Chef Army',
@@ -76,7 +76,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 15;
         },
-        icon: '/bread/cursor.svg',
+        icon: '/bakingbread/cursor.svg',
     },
     // 5th quest
     {
@@ -87,7 +87,7 @@ const questList: quest[] = [
         newspeed: 1,
         price: 2000,
         unlock() { return true },
-        icon: '/bread/stopwatch.svg',
+        icon: '/bakingbread/stopwatch.svg',
     },
     {
         name: '6 - Bakery Business',
@@ -98,7 +98,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 10;
         },
-        icon: '/bread/flask.svg',
+        icon: '/bakingbread/flask.svg',
     },
     {
         name: '7 - Bread Clicker',
@@ -109,7 +109,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Auto Clicker") as string) >= 20;
         },
-        icon: '/bread/cursor.svg',
+        icon: '/bakingbread/cursor.svg',
     },
     {
         name: '8 - Bread Banker',
@@ -120,7 +120,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bank") as string) >= 5;
         },
-        icon: '/bread/bank.svg',
+        icon: '/bakingbread/bank.svg',
     },
     {
         name: '9 - Factoring Bread',
@@ -131,7 +131,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Factory") as string) >= 5;
         },
-        icon: '/bread/factory.svg',
+        icon: '/bakingbread/factory.svg',
     },
     {
         name: '10 - Pro Baker',
@@ -142,7 +142,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 15;
         },
-        icon: '/bread/flask.svg',
+        icon: '/bakingbread/flask.svg',
     },
     // 11th quest
     {
@@ -153,7 +153,7 @@ const questList: quest[] = [
         newefficiency: 1 + 20 / 100,
         price: 6500,
         unlock() { return true },
-        icon: '/bread/building-add.svg',
+        icon: '/bakingbread/building-add.svg',
     },
     {
         name: '11 - ALL 10!',
@@ -164,7 +164,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Factory") as string) >= 10;
         },
-        icon: '/bread/badge-10.svg',
+        icon: '/bakingbread/badge-10.svg',
     },
     {
         name: '12 - Loafly Paradise',
@@ -175,7 +175,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Paradise") as string) >= 10;
         },
-        icon: '/bread/airplane.svg',
+        icon: '/bakingbread/airplane.svg',
     },
     {
         name: '13 - Why so much bread?',
@@ -186,7 +186,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:score") as string) >= 100000;
         },
-        icon: '/bread/coin.svg',
+        icon: '/bakingbread/coin.svg',
     },
     {
         name: '14 - Loafly Paradise',
@@ -197,7 +197,7 @@ const questList: quest[] = [
         unlock() {
             return (parseInt(localStorage.getItem("bread:buildings/Bread Bank") as string) >= 15) && (parseInt(localStorage.getItem("bread:buildings/Bread Factory") as string) >= 15);
         },
-        icon: '/bread/bank.svg',
+        icon: '/bakingbread/bank.svg',
     },
     {
         name: '15 - Thats a lot of Clicks',
@@ -208,7 +208,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Auto Clicker") as string) >= 35;
         },
-        icon: '/bread/cursor.svg',
+        icon: '/bakingbread/cursor.svg',
     },
     // 17th quest
     {
@@ -219,7 +219,7 @@ const questList: quest[] = [
         newprice: 1 - 5 / 100,
         price: 50000,
         unlock() { return true },
-        icon: '/bread/building-add.svg',
+        icon: '/bakingbread/building-add.svg',
     },
     {
         name: '16 - 15 them all!!',
@@ -230,7 +230,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Paradise") as string) >= 15;
         },
-        icon: '/bread/badge-15.svg',
+        icon: '/bakingbread/badge-15.svg',
     },
     {
         name: '17 - Im Baking Chef!',
@@ -241,7 +241,7 @@ const questList: quest[] = [
         unlock() {
             return (parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 20) && (parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 20);
         },
-        icon: '/bread/cookie.svg',
+        icon: '/bakingbread/cookie.svg',
     },
     {
         name: '18 - Bank Milestone',
@@ -251,7 +251,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bank") as string) >= 20;
         },
-        icon: '/bread/bank.svg',
+        icon: '/bakingbread/bank.svg',
     },
     {
         name: '19 - Factories Department',
@@ -261,7 +261,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Factory") as string) >= 20;
         },
-        icon: '/bread/factory.svg',
+        icon: '/bakingbread/factory.svg',
     },
     {
         name: '20 - 20 20 20 20',
@@ -272,7 +272,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Paradise") as string) >= 20;
         },
-        icon: '/bread/badge-20.svg',
+        icon: '/bakingbread/badge-20.svg',
     },
     // 23th quest
     {
@@ -283,7 +283,7 @@ const questList: quest[] = [
         newspeed: 2,
         price: 125000,
         unlock() { return true },
-        icon: '/bread/stopwatch.svg',
+        icon: '/bakingbread/stopwatch.svg',
     },
     {
         name: '21 - What a Milky Loaf Way!',
@@ -294,7 +294,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Loafly Way") as string) >= 5;
         },
-        icon: '/bread/stars.svg',
+        icon: '/bakingbread/stars.svg',
     },
     {
         name: '22 - 25 + 25 is 50!',
@@ -305,7 +305,7 @@ const questList: quest[] = [
         unlock() {
             return (parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 25) && (parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 25);
         },
-        icon: '/bread/cookie.svg',
+        icon: '/bakingbread/cookie.svg',
     },
     {
         name: '23 - What a Milky Loaf Way!',
@@ -316,7 +316,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Loafly Way") as string) >= 10;
         },
-        icon: '/bread/stars.svg',
+        icon: '/bakingbread/stars.svg',
     },
     {
         name: '24 - Maxed Factory',
@@ -327,7 +327,7 @@ const questList: quest[] = [
         unlock() {
             return (parseInt(localStorage.getItem("bread:buildings/Bread Bank") as string) >= 25) && (parseInt(localStorage.getItem("bread:buildings/Bread Factory") as string) >= 25);
         },
-        icon: '/bread/stars.svg',
+        icon: '/bakingbread/stars.svg',
     },
     {
         name: '25 - [THE END?]',
@@ -338,7 +338,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:score") as string) >= 5_000_000;
         },
-        icon: '/bread/coin.svg',
+        icon: '/bakingbread/coin.svg',
     },
     // 29th quest
     {
@@ -349,7 +349,7 @@ const questList: quest[] = [
         newefficiency: 1 + 50 / 100,
         price: 250000,
         unlock() { return true },
-        icon: '/bread/building-add.svg',
+        icon: '/bakingbread/building-add.svg',
 
         rebirths: 1,
     },
@@ -362,7 +362,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Universal Bakery") as string) >= 10;
         },
-        icon: '/bread/globe.svg',
+        icon: '/bakingbread/globe.svg',
     },
     {
         name: '27 - Clickily',
@@ -373,7 +373,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Auto Clicker") as string) >= 40;
         },
-        icon: '/bread/cursor.svg',
+        icon: '/bakingbread/cursor.svg',
     },
     {
         name: '28 - Lemme Bake',
@@ -384,7 +384,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 35;
         },
-        icon: '/bread/cookie.svg',
+        icon: '/bakingbread/cookie.svg',
     },
     {
         name: '29 - Lemme Bake Again',
@@ -395,7 +395,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 35;
         },
-        icon: '/bread/flask.svg',
+        icon: '/bakingbread/flask.svg',
     },
     {
         name: '30 - Lemme Bake Again',
@@ -406,7 +406,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bank") as string) >= 30;
         },
-        icon: '/bread/bank.svg',
+        icon: '/bakingbread/bank.svg',
     },
     // 35th quest
     {
@@ -417,7 +417,7 @@ const questList: quest[] = [
         newprice: 1 - 15 / 100,
         price: 350000,
         unlock() { return true },
-        icon: '/bread/building-add.svg',
+        icon: '/bakingbread/building-add.svg',
     },
     {
         name: '31 - AUTOCLICKKKKEEEEE-',
@@ -428,7 +428,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Auto Clicker") as string) >= 50;
         },
-        icon: '/bread/cursor.svg',
+        icon: '/bakingbread/cursor.svg',
     },
     {
         name: '32 - Multiverse Bakery?',
@@ -439,7 +439,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Universal Bakery") as string) >= 15;
         },
-        icon: '/bread/globe.svg',
+        icon: '/bakingbread/globe.svg',
     },
     {
         name: '33 - Your Bakery Is Crazy?',
@@ -450,7 +450,7 @@ const questList: quest[] = [
         unlock() {
             return (parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 40) && (parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 40);
         },
-        icon: '/bread/cookie.svg',
+        icon: '/bakingbread/cookie.svg',
     },
     {
         name: '34 - Galaxy-wide Bakery Industry',
@@ -461,7 +461,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Universal Bakery") as string) >= 20;
         },
-        icon: '/bread/globe.svg',
+        icon: '/bakingbread/globe.svg',
     },
     {
         name: '35 - Hard Quest Sorry',
@@ -472,7 +472,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Universal Bakery") as string) >= 25;
         },
-        icon: '/bread/badge-25.svg',
+        icon: '/bakingbread/badge-25.svg',
     },
     // 41st quest
     {
@@ -483,7 +483,7 @@ const questList: quest[] = [
         newprice: 1 - 20 / 100,
         price: 650000,
         unlock() { return true },
-        icon: '/bread/building-add.svg',
+        icon: '/bakingbread/building-add.svg',
 
         rebirths: 2,
     },
@@ -496,7 +496,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 50;
         },
-        icon: '/bread/cookie.svg',
+        icon: '/bakingbread/cookie.svg',
     },
     {
         name: '37 - Smells like Bread',
@@ -507,7 +507,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 45;
         },
-        icon: '/bread/flask.svg',
+        icon: '/bakingbread/flask.svg',
     },
     {
         name: '38 - Bread Pollution',
@@ -518,7 +518,7 @@ const questList: quest[] = [
         unlock() {
             return (parseInt(localStorage.getItem("bread:buildings/Bread Factory") as string) >= 35) && parseInt(localStorage.getItem("bread:buildings/Bread Paradise") as string) >= 35;
         },
-        icon: '/bread/factory.svg',
+        icon: '/bakingbread/factory.svg',
     },
     {
         name: '39 - Baking Bread - The Game',
@@ -529,7 +529,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 50;
         },
-        icon: '/bread/flask.svg',
+        icon: '/bakingbread/flask.svg',
     },
     {
         name: '40 - Milky Bready Wayi',
@@ -540,7 +540,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Loafly Way") as string) >= 30;
         },
-        icon: '/bread/stars.svg',
+        icon: '/bakingbread/stars.svg',
     },
     // 47th quest
     {
@@ -551,7 +551,7 @@ const questList: quest[] = [
         newefficiency: 2,
         price: 1_500_000,
         unlock() { return true },
-        icon: '/bread/building-add.svg',
+        icon: '/bakingbread/building-add.svg',
     },
     {
         name: '41 - Okie Banky!',
@@ -562,7 +562,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bank") as string) >= 40;
         },
-        icon: '/bread/bank.svg',
+        icon: '/bakingbread/bank.svg',
     },
     {
         name: '42 - Quite Easy Quest here',
@@ -573,7 +573,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Auto Clicker") as string) >= 60;
         },
-        icon: '/bread/cursor.svg',
+        icon: '/bakingbread/cursor.svg',
     },
     {
         name: '43 - Intense Bread Factory.',
@@ -584,7 +584,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Factory") as string) >= 40;
         },
-        icon: '/bread/factory.svg',
+        icon: '/bakingbread/factory.svg',
     },
     {
         name: '44 - Paradise gone brr',
@@ -595,7 +595,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Paradise") as string) >= 40;
         },
-        icon: '/bread/airplane.svg',
+        icon: '/bakingbread/airplane.svg',
     },
     {
         name: '45 - You did it!',
@@ -606,7 +606,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Universal Bakery") as string) >= 30;
         },
-        icon: '/bread/badge-30.svg',
+        icon: '/bakingbread/badge-30.svg',
     },
     // 53th quest
     {
@@ -617,7 +617,7 @@ const questList: quest[] = [
         newspeed: 3,
         price: 5_000_000,
         unlock() { return true },
-        icon: '/bread/stopwatch.svg',
+        icon: '/bakingbread/stopwatch.svg',
     },
     {
         name: '46 - And the Bread shall Fly',
@@ -628,7 +628,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Tornado") as string) >= 15;
         },
-        icon: '/bread/tornado.svg',
+        icon: '/bakingbread/tornado.svg',
     },
     {
         name: '47 - 55 is not a magic number',
@@ -639,7 +639,7 @@ const questList: quest[] = [
         unlock() {
             return (parseInt(localStorage.getItem("bread:buildings/Chef") as string) >= 55) && (parseInt(localStorage.getItem("bread:buildings/Bread Bakery") as string) >= 55);
         },
-        icon: '/bread/cookie.svg',
+        icon: '/bakingbread/cookie.svg',
     },
     {
         name: '48 - Bread too Powerful.',
@@ -650,7 +650,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Tornado") as string) >= 25;
         },
-        icon: '/bread/tornado.svg',
+        icon: '/bakingbread/tornado.svg',
     },
     {
         name: '49 - Bread Bank Empire',
@@ -661,7 +661,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:buildings/Bread Bank") as string) >= 45;
         },
-        icon: '/bread/bank.svg',
+        icon: '/bakingbread/bank.svg',
     },
     {
         name: '50 - [THE END AGAIN?]',
@@ -672,7 +672,7 @@ const questList: quest[] = [
         unlock() {
             return parseInt(localStorage.getItem("bread:score") as string) >= 250_000_000;
         },
-        icon: '/bread/coin.svg',
+        icon: '/bakingbread/coin.svg',
     },
     // 59th quest
     {
@@ -683,7 +683,7 @@ const questList: quest[] = [
         newefficiency: 2 + 50 / 100,
         price: 5_000_000,
         unlock() { return true },
-        icon: '/bread/building-add.svg',
+        icon: '/bakingbread/building-add.svg',
 
         rebirths: 3,
     },
@@ -728,7 +728,7 @@ const BreadQuest = ({ setScore, setClickValue }: { setScore: [number, React.Disp
     return (
         <div className={'quest glass ' + ((isUnlocked && setScore[0] >= (questList[questIndex].price || 0)) ? 'coolclick greenish' : 'uncoolclick')} onClick={(ev) => click_quest(ev)}>
             <div>
-                <img className="questicon" src={isUnlocked ? (questList[questIndex]?.icon || '/bread/logo.png') : '/bread/lock.svg'} />
+                <img className="questicon" src={isUnlocked ? (questList[questIndex]?.icon || '/bakingbread/logo.png') : '/bakingbread/lock.svg'} />
                 <h2>{(isUnlocked ? questList[questIndex]?.name : questList[questIndex]?.lockname) || 'Rebirth For More Quests!'}</h2>
             </div>
             <a>{questList[questIndex]?.price ? formatNumber(questList[questIndex].price) : '∞'}{(questList[questIndex]?.description) ? ` - ${questList[questIndex]?.description}` : ''}</a>

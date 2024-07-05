@@ -75,11 +75,11 @@ const BreadBuilding = ({ buildData, setScore, clickicon }: { buildData: building
     return (
         <div className={'glass ' + ((Math.round(buildPrice * parseFloat(localStorage.getItem('bread:modifiers/price') || '1')) <= setScore[0]) ? 'coolclick greenish' : 'uncoolclick')} onClick={(ev) => buy_building(ev)} style={{ overflow: 'hidden' }}>
             <div>
-                <img className="questicon" src={buildData.icon || '/bread/logo.png'} />
+                <img className="questicon" src={buildData.icon || '/bakingbread/logo.png'} />
                 <h2>{buildData.name} (x{buildQuantity})</h2>
             </div>
             <div>
-                <img src={'/bread/logo.png'} style={{ height: '20px', width: '20px' }} />
+                <img src={'/bakingbread/logo.png'} style={{ height: '20px', width: '20px' }} />
                 <a>{formatNumber(Math.round(buildQuantity * buildData.gives * parseFloat(localStorage.getItem('bread:modifiers/efficiency') || '1')))} - {formatNumber(Math.round(buildPrice * parseFloat(localStorage.getItem('bread:modifiers/price') || '1')))}</a>
             </div>
             <div className="glass progress" id={`buildprogress-${buildData.name}`} />

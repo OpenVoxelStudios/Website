@@ -1,0 +1,28 @@
+{
+    "name": "Baking Bread",
+    "description": "Help out The Bread Giver with his bakery! He needs all the help and Clickily we need!",
+    "short_name": "Bread",
+    "start_url": ".",
+    "scope": "/bakingbread/",
+    "lang": "en-US",
+    "display": "standalone",
+    "orientation": "any",
+    "theme_color": "#3e4152",
+    "icons": [
+        {
+            "src": "/bakingbread/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/bakingbread/logo192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/bakingbread/logo512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
