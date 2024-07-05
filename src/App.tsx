@@ -90,7 +90,33 @@ function App({ page, game_id, redirect_to, overrides }: { page: string, game_id?
 
         {/* We will never know what that is */}
         {PAGE == 'bakingbread' &&
-          <Bread showLeaderboard={showBreadLeaderboard} />
+          <>
+            <style>{`
+              * {
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                -webkit-user-drag: none;
+                -khtml-user-drag: none;
+                -moz-user-drag: none;
+                -o-user-drag: none;
+                user-drag: none;
+
+                -webkit-tap-highlight-color: transparent;
+                touch-action: manipulation;
+                -webkit-touch-callout: none;
+              }
+
+              #root {
+                zoom: 1;
+
+                overflow-x: hidden;
+                overflow-y: hidden;
+              }
+            `}</style>
+            <Bread showLeaderboard={showBreadLeaderboard} />
+          </>
         }
       </div>
 
