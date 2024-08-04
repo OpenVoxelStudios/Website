@@ -18,7 +18,7 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
             if (!box) return;
 
             let val = ((-box.top + 150) / box.bottom / 3 * 2) * vid.duration;
-            if (vid && box.bottom > 0) vid.currentTime = isNaN(val) ? 0 : val;
+            if (vid && box.bottom > 0) vid.currentTime = (isNaN(val) || val < 0) ? 0 : val;
 
             requestAnimationFrame(scrollSetFrame);
         }, 1000 / 30)

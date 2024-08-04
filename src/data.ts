@@ -79,10 +79,10 @@ export const CreatorDetailList: Record<CreatorList, {
         minecraft: "d0c31c74-f1b0-4c27-a988-db9a6d95bb70",
         youtube: "@Sammy3D",
         description: "idk im not good at this stuff"
-        + "\n\n# My Socials"
-        + "\n\n**Youtube**: [@Sammy3D](https://youtube.com/@Sammy3D)"
-        + "\n\n**Discord**: [sammy2d](https://discordapp.com/users/552465226583506945)"
-        + "\n\n**Minecraft**: Sammy2D",
+            + "\n\n# My Socials"
+            + "\n\n**Youtube**: [@Sammy3D](https://youtube.com/@Sammy3D)"
+            + "\n\n**Discord**: [sammy2d](https://discordapp.com/users/552465226583506945)"
+            + "\n\n**Minecraft**: Sammy2D",
     },
     "Stevelocks": {
         minecraft: "0849bc57-4d67-414b-a371-b71c45e02a14",
@@ -102,6 +102,7 @@ export const gameList: {
     extended_description?: string,
     fulldetails?: string,
     creators: CreatorList[],
+    collaboration?: { name: string; url?: string }[],
     link: string | {
         game_id: string,
     },
@@ -119,6 +120,7 @@ export const gameList: {
         download: string,
         supports: string,
     }[],
+    islauncher?: boolean;
 }[] = [
         {
             name: "Oak House Murder",
@@ -212,6 +214,31 @@ export const gameList: {
                     type: "release",
                 }
             ],
+        },
+        {
+            name: "The Mewoster",
+            description: "A fan-made Mysticat Boss with awesome animations!",
+            extended_description: "Kubik's first complex Boss! A cool battle fight in an arena between you... and The Mewoster - a Mysticat Boss made in 3 days :D",
+            creators: ["Kubik", "ChoosingBerry"],
+            collaboration: [{ name: "The Bread Giver", url: "https://x.com/The_Bread_Giver" }],
+            link: { game_id: "the-mewoster" },
+            date: new Date(1722775848971),
+            image: "/games/banners/the-mewoster.png",
+            icon: "/games/icons/the-mewoster.png",
+            downloads: null,
+            tags: ["the", "mewoster", "mewoster", "boss", "fight", "arena", "mysti", "cat", "mysticat"],
+            fulldetails: "![](/images/mewoster_banner.png)\n\n\n\nMade in 3 days for the [Silly Mysticat Challenge](https://www.youtube.com/watch?v=f3B0o8uBadc) - And we [won the competition](https://x.com/mysticatMEWO/status/1819856378413945105)!\n### ⚠️ WARNING: You have to leave and rejoin the first time you play on the map! ⚠️\n\nVery cool gameplay. Very cool arena. Awesome animations. Yeah! Don't get killed by Mister Mewoster or you'll be dead :p\n\nmewo!",
+            versions: [
+                {
+                    changes: "Initial release!\n4 cool attacks:\n* Cat-Bomb throwing\n* Charge\n* Comically Large Hammer\n* Triangle Shape thingy",
+                    date: new Date(1722775848971),
+                    download: "https://github.com/OpenVoxelStudios/Maps/releases/download/v1.0/the-mewoster.zip",
+                    name: "Version 1.0",
+                    supports: "1.21",
+                    type: "release",
+                }
+            ],
+            islauncher: false,
         },
         {
             name: "More Maps Soon!",

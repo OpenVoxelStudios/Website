@@ -36,6 +36,15 @@ const Footer = () => {
 
                     <br />
                     <p className='yestextselection actuallybigger'>Copyright © OpenVoxel Studios 2024</p>
+                    <p className='yestextselection contactmail' onClick={(ev) => {
+                        ev.preventDefault();
+                        ev.stopPropagation();
+
+                        location.href = 'mailto:contact@openvoxel.studio'
+                    }} style={{
+                        textDecoration: 'underline',
+                        cursor: 'pointer'
+                    }}>contact@openvoxel.studio</p>
                     <br />
                     <div className='yestextselection'>NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</div>
                 </a>

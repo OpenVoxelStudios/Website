@@ -55,6 +55,11 @@
     margin: 0;
 }
 
+.footer .small .contactmail {
+    font-size: 20px;
+    margin: 0;
+}
+
 .footer .backtotop {
     width: 50px;
     height: 50px;

@@ -41,19 +41,21 @@ function GamePage({ game, localRedirect }: { game: string, localRedirect: Functi
 
                 <div className='separator'></div>
 
-                <div className='coolclick glass downloadLatest' onClick={() => {
-                    let gameid = (GAME.link as { game_id: string }).game_id;
-                    (document.getElementById('openlauncher') as HTMLDivElement).style.display = 'flex';
+                {GAME.islauncher !== false &&
+                    <div className='coolclick glass downloadLatest' onClick={() => {
+                        let gameid = (GAME.link as { game_id: string }).game_id;
+                        (document.getElementById('openlauncher') as HTMLDivElement).style.display = 'flex';
 
-                    const iframe = document.createElement('iframe');
-                    iframe.style.display = 'none';
-                    iframe.src = `openvoxel://game/${gameid}`;
+                        const iframe = document.createElement('iframe');
+                        iframe.style.display = 'none';
+                        iframe.src = `openvoxel://game/${gameid}`;
 
-                    document.body.appendChild(iframe);
-                }}>
-                    <img className='icon' src={IconOpen} />
-                    <a className='yestextselection text'>Open In Launcher</a>
-                </div>
+                        document.body.appendChild(iframe);
+                    }}>
+                        <img className='icon' src={IconOpen} />
+                        <a className='yestextselection text'>Open In Launcher</a>
+                    </div>
+                }
 
                 <div className='coolclick glass downloadLatest' onClick={() => (window.open(GAME.versions.filter(v => v.type == "release")[0].download, '_blank') as Window).focus()}>
                     <img className='icon' src={IconDownload} />
@@ -68,6 +70,24 @@ function GamePage({ game, localRedirect }: { game: string, localRedirect: Functi
                         return <Creator creatorName={creatorName} key={i} />
                     })}
                 </div>
+
+                {GAME.collaboration &&
+                    <div className='creators'>
+                        <a className='yestextselection title'>In Collaboration with:</a>
+
+                        {GAME.collaboration.map((collab, i) => {
+                            return <div key={i} className='coolclick glass creator' onClick={() => { if (collab.url) (window.open(collab.url, '_blank') as Window).focus() }} style={{
+                                height: '50px',
+                                justifyContent: 'center',
+                            }}>
+                                <a className='yestextselection name' style={{
+                                    marginLeft: 0,
+                                    width: 'fit-content',
+                                }}>{collab.name}</a>
+                            </div>
+                        })}
+                    </div>
+                }
             </div>
 
             <div className='details'>

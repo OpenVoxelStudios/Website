@@ -221,7 +221,7 @@
     align-items: center;
 }
 
-.gamepage .info .creators .creator .head {
+.gamepage .info .creators .head {
     margin-left: 15px;
     height: 75px;
     width: 75px;
@@ -241,7 +241,7 @@
     width: 90vw;
 }
 
-.gamepage .info .creators .creator .name {
+.gamepage .info .creators .name {
     font-size: 32px;
     font-weight: bold;
     margin-left: 15px;
@@ -297,12 +297,12 @@
         font-size: 28px;
     }
 
-    .gamepage .info .creators .creator .head {
+    .gamepage .info .creators .head {
         width: 50px;
         height: 50px;
     }
 
-    .gamepage .info .creators .creator .name {
+    .gamepage .info .creators .name {
         font-size: 26px;
     }
 }
