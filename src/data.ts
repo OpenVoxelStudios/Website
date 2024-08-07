@@ -8,13 +8,22 @@ export const links = {
     github: "https://github.com/OpenVoxelStudios"
 }
 
-export type CreatorList = "CMANIF" | "ChoosingBerry" | "Kubik" | "Monster Art" | "S0FL" | "Sammy" | "Stevelocks";
+export type CreatorList = "ChoosingBerry" | "CMANIF" | "Cryptic Knight" | "Kubik" | "Monster Art" | "RoseRocket" | "S0FL" | "Sammy" | "Stevelocks" | "The Bread Giver";
 
 export const CreatorDetailList: Record<CreatorList, {
     minecraft: string;
     youtube: string;
     description: string;
 }> = {
+    "ChoosingBerry": {
+        minecraft: "82aa54c4-c65a-4a66-8ef8-39388a612480",
+        youtube: "@ChoosingBerry29",
+        description: "Hi I'm **ChoosingBerry**! I am a Youtuber who is making models for this amazing dev group don't ask how I got here it just sort of happened when I was in Stevelocks's Server"
+            + "\n\n# My Socials"
+            + "\n\n**Youtube**: [@ChoosingBerry29](https://www.youtube.com/@ChoosingBerry29)"
+            + "\n\n**Discord**: [choosingberry29](https://discordapp.com/users/724906882380202006)"
+            + "\n\n**Minecraft**: ChoosingBerry29",
+    },
     "CMANIF": {
         minecraft: "786e1712-c2a2-405b-8b78-3cc58bd953f9",
         youtube: "@CMANIF",
@@ -24,14 +33,14 @@ export const CreatorDetailList: Record<CreatorList, {
             + "\n\n**Discord**: [cmanif](https://discordapp.com/users/728545314507849748)"
             + "\n\n**Minecraft**: CMANIF",
     },
-    "ChoosingBerry": {
-        minecraft: "82aa54c4-c65a-4a66-8ef8-39388a612480",
-        youtube: "@ChoosingBerry29",
-        description: "Hi I'm **ChoosingBerry**! I am a Youtuber who is making models for this amazing dev group don't ask how I got here it just sort of happened when I was in Stevelocks's Server"
+    "Cryptic Knight": {
+        minecraft: '0476a2ea-3ee2-4fcf-8089-18d70c1046f0',
+        youtube: '@CrypticKnightv1',
+        description: "A music man that struggles to meet deadlines (I stream sometimes)"
             + "\n\n# My Socials"
-            + "\n\n**Youtube**: [@ChoosingBerry29](https://www.youtube.com/@ChoosingBerry29)"
-            + "\n\n**Discord**: [choosingberry29](https://discordapp.com/users/724906882380202006)"
-            + "\n\n**Minecraft**: ChoosingBerry29",
+            + "\n\n**Youtube**: [@CrypticKnightv1](https://youtube.com/@CrypticKnightv1)"
+            + "\n\n**Discord**: [cryptic_knight](https://discordapp.com/users/931873876797980692)"
+            + "\n\n**Minecraft**: Crypticknightv1",
     },
     "Kubik": {
         minecraft: "f26a09dd-c01d-4885-91e3-32110c8fab38",
@@ -57,6 +66,17 @@ export const CreatorDetailList: Record<CreatorList, {
             + "\n\n**Youtube**: [@Monster_Art](https://www.youtube.com/@Monster_Art)"
             + "\n\n**Discord**: [monsterart](https://discordapp.com/users/655453962874388482)"
             + "\n\n**Minecraft**: Monster_Art",
+        },
+        "RoseRocket": {
+            minecraft: "1fdfe537-c249-4597-b8e3-40d8ef95d069",
+            youtube: "@RoseRocket",
+            description: "Howdy I'm RoseRocket! Just a silly American YouTuber who likes modeling, animating, coding and building.\n\nAbout me, Before I was invited here I created a Zombie Apocalypse survival server called Supway centered around food and zombies. It is a completely vanilla friendly (Datapack server). I've always been a huge fan of mapmaking, command blocks, mcfunction and anything to do with programming in Minecraft for a few years now. I may not be the best at it yet, but I'm hoping to improve my craft as I help out with Voxel Studios. Whatever they need help with I'll be sure to give a helping hand. B)"
+            + "\n\n# My Socials"
+            + "\n\n**Youtube**: [@RoseRocket](https://youtube.com/@RoseRocket)"
+            + "\n\n**Discord**: [roserocket](https://discordapp.com/users/495062018425094145)"
+            + "\n\n**Supway**: https://discord.gg/FpFSzndrZc"
+            + "\n\n**Minecraft**: RoseRocketYT"
+            + "\n\n**Business Email**: rocketparadisetm@gmail.com",
     },
     "S0FL": {
         minecraft: "68c5c95f-80e9-499e-9128-d4d597633afc",
@@ -78,7 +98,7 @@ export const CreatorDetailList: Record<CreatorList, {
     "Sammy": {
         minecraft: "d0c31c74-f1b0-4c27-a988-db9a6d95bb70",
         youtube: "@Sammy3D",
-        description: "idk im not good at this stuff"
+        description: "I don't know... I'm still not good at this stuff"
             + "\n\n# My Socials"
             + "\n\n**Youtube**: [@Sammy3D](https://youtube.com/@Sammy3D)"
             + "\n\n**Discord**: [sammy2d](https://discordapp.com/users/552465226583506945)"
@@ -93,6 +113,16 @@ export const CreatorDetailList: Record<CreatorList, {
             + "\n\n**Discord**: [stevelocks](https://discordapp.com/users/709164804144758814)"
             + "\n\n**Minecraft**: Stevelocks100"
             + "\n\n**Business Email**: stevelocks@openvoxel.studio",
+    },
+    "The Bread Giver": {
+        minecraft: "b8ad7774-8183-4d9d-bb98-1f5a07998d3f",
+        youtube: "@thebreadgiver",
+        description: "Salutations fellow Minecrafters and Voxelings alike!\nI am The Bread Giver! 🍞 I Give bread to my fellow Devs as support\n\nBut what do i do? hmm that's a good question, i can do pixel art but also those item display thingies?\ntbh i might learn a lot more cuz i joined this group so we'll see. (don't mind me when i'm yapping)\n\nI'm also the cause of the creation of the soon to be hit game (or already hit game depending on when you read this)\n**BAKING BREAD!!!** 🍞🍞🍞\nAnywho, thanks for reading and open your window for a loaf of bread 😉"
+            + "\n\n# My Socials"
+            + "\n\n**Youtube**: [@thebreadgiver](https://youtube.com/@thebreadgiver)"
+            + "\n\n**Minecraft Youtube**: [@LimeGearStudios](https://youtube.com/@LimeGearStudios)"
+            + "\n\n**Discord**: [thebreadgiver.](https://discordapp.com/users/761898818982772747)"
+            + "\n\n**Minecraft**: AndersenChamp",
     },
 };
 
@@ -219,8 +249,7 @@ export const gameList: {
             name: "The Mewoster",
             description: "A fan-made Mysticat Boss with awesome animations!",
             extended_description: "Kubik's first complex Boss! A cool battle fight in an arena between you... and The Mewoster - a Mysticat Boss made in 3 days :D",
-            creators: ["Kubik", "ChoosingBerry"],
-            collaboration: [{ name: "The Bread Giver", url: "https://x.com/The_Bread_Giver" }],
+            creators: ["Kubik", "ChoosingBerry", "The Bread Giver"],
             link: { game_id: "the-mewoster" },
             date: new Date(1722775848971),
             image: "/games/banners/the-mewoster.png",

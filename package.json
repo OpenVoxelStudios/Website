@@ -40,7 +40,7 @@
     "build": "bunx vite build",
     "preview": "bunx vite preview",
     "test": "bunx vite build && bunx vite preview",
-    "preprod": "bunx vite build && zip -r openvoxel.studio.zip openvoxel.studio && zip -r openvoxel.studio-nomusic.zip openvoxel.studio -x \"openvoxel.studio/bakingbread/musics/*\""
+    "preprod": "bun beforeRun.ts && bunx vite build && zip -r openvoxel.studio.zip openvoxel.studio && zip -r openvoxel.studio-nomusic.zip openvoxel.studio -x \"openvoxel.studio/bakingbread/musics/*\""
   },
   "dependencies": {
     "chalk": "^5.3.0",
