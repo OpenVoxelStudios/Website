@@ -6,9 +6,8 @@ const urlsToCache = [
     '/bakingbread/bakingbread.html'
 ]
     .concat([
-        '/assets/App-CYRF0v1F.js',
-        '/assets/App-hagJ5nVr.css',
-        '/assets/bakingbread-DDTbsKDv.js',
+        '/assets/App.css',
+        '/assets/bakingbread.js',
     ])
     .concat([
         "/bakingbread/airplane.svg", "/bakingbread/badge-10.svg", "/bakingbread/badge-15.svg",

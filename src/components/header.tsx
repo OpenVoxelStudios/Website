@@ -73,7 +73,7 @@ const Header = ({ localRedirect, PAGE, showLeaderboard, setShowLeaderboard }: { 
 
                             {pinardo == 13 &&
                                 <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
-                                    <img src={PinardoImage} style={{ width: "40%" }} />
+                                    <img src={PinardoImage} style={{ width: "40%" }} loading='lazy' />
                                 </h1>
                             }
                         </div>

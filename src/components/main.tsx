@@ -67,18 +67,18 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
                 </div>
             </div>
 
-            <div className='team'>
+            <div className='team' id='team'>
                 <div className='notextselection glass heads'>
                     {Object.keys(CreatorDetailList).map((creator, index) =>
                         <div className={(profile == creator ? 'glass ' : '') + 'head'} key={index} onClick={() => setProfile(creator)}>
-                            <img src={`/heads/${CreatorDetailList[creator as CreatorList].minecraft}.png`} />
+                            <img src={`/heads/${CreatorDetailList[creator as CreatorList].minecraft}.png`} loading='lazy' />
                         </div>
                     )}
                 </div>
 
                 <div className='glass notextselection description'>
                     <div className='notextselection top'>
-                        <img className='notextselection' src={`/heads/${CreatorDetailList[profile as CreatorList].minecraft}.png`} />
+                        <img className='notextselection' src={`/heads/${CreatorDetailList[profile as CreatorList].minecraft}.png`} loading='lazy' />
                         <h1 className='yestextselection'>{profile}</h1>
                     </div>
                     <div className='nottop'>

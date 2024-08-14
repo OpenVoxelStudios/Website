@@ -45,11 +45,11 @@ export const CreatorDetailList: Record<CreatorList, {
     "Kubik": {
         minecraft: "f26a09dd-c01d-4885-91e3-32110c8fab38",
         youtube: "@KodeurKubik",
-        description: "Hi! I'm **Kubik** (_aka Kodeur_Kubik_) and I really enjoy programming! When I joined this team, I was so bad in Minecraft command blocks but now, I am a lot better with that stuff!"
+        description: "Hi! I'm **Kubik** (_aka Kodeur_Kubik_) and I really enjoy programming! I'm doing datapacks and SOMETIMES models but they are quite bad so I stay on code :p"
             + "\n\n"
-            + "I also like programming in [Node.JS](https://nodejs.org/). I've also done the Launcher, this Website and I usually program Discord Bots."
+            + "I also like programming in NodeJS. I've also done the Launcher, this Website and I usually program Discord Bots."
             + "\n\n"
-            + "`I'm not crazy. (i think)`"
+            + "**>>>** *By the way I'm searching for devs to build an Open-Source Discord bot in JS/TS + Dashboard (probably React or smth), if you are interested DM me on Discord @kodeurkubik or by email*"
             + "\n\n# My Socials"
             + "\n\n**Youtube**: [@KodeurKubik](https://www.youtube.com/@KodeurKubik)"
             + "\n\n**Discord**: [kodeurkubik](https://discordapp.com/users/685739284287848458)"
@@ -66,11 +66,11 @@ export const CreatorDetailList: Record<CreatorList, {
             + "\n\n**Youtube**: [@Monster_Art](https://www.youtube.com/@Monster_Art)"
             + "\n\n**Discord**: [monsterart](https://discordapp.com/users/655453962874388482)"
             + "\n\n**Minecraft**: Monster_Art",
-        },
-        "RoseRocket": {
-            minecraft: "1fdfe537-c249-4597-b8e3-40d8ef95d069",
-            youtube: "@RoseRocket",
-            description: "Howdy I'm RoseRocket! Just a silly American YouTuber who likes modeling, animating, coding and building.\n\nAbout me, Before I was invited here I created a Zombie Apocalypse survival server called Supway centered around food and zombies. It is a completely vanilla friendly (Datapack server). I've always been a huge fan of mapmaking, command blocks, mcfunction and anything to do with programming in Minecraft for a few years now. I may not be the best at it yet, but I'm hoping to improve my craft as I help out with Voxel Studios. Whatever they need help with I'll be sure to give a helping hand. B)"
+    },
+    "RoseRocket": {
+        minecraft: "1fdfe537-c249-4597-b8e3-40d8ef95d069",
+        youtube: "@RoseRocket",
+        description: "Howdy I'm **RoseRocket**! Just a silly American YouTuber who likes modeling, animating, coding and building.\n\nAbout me, Before I was invited here I created a Zombie Apocalypse survival server called Supway centered around food and zombies. It is a completely vanilla friendly (Datapack server). I've always been a huge fan of mapmaking, command blocks, mcfunction and anything to do with programming in Minecraft for a few years now. I may not be the best at it yet, but I'm hoping to improve my craft as I help out with Voxel Studios. Whatever they need help with I'll be sure to give a helping hand. B)"
             + "\n\n# My Socials"
             + "\n\n**Youtube**: [@RoseRocket](https://youtube.com/@RoseRocket)"
             + "\n\n**Discord**: [roserocket](https://discordapp.com/users/495062018425094145)"
@@ -81,7 +81,7 @@ export const CreatorDetailList: Record<CreatorList, {
     "S0FL": {
         minecraft: "68c5c95f-80e9-499e-9128-d4d597633afc",
         youtube: "@s0fl813",
-        description: "Hey, I'm S0FL, the most (highly) inactive dev on the team. I only know programming and math. Nothing else."
+        description: "Hey, I'm **S0FL**, the most (highly) inactive dev on the team. I only know programming and math. Nothing else."
             + "\n\nAlso I'm Brazilian (suddenlycaralho)."
             + "\n\n"
             + "I originally created a discord server to make Roblox Doors alongside Stevelocks but I went away because of school, and when I got back it turned into OpenVoxel Studios! (Sick)"
@@ -107,7 +107,7 @@ export const CreatorDetailList: Record<CreatorList, {
     "Stevelocks": {
         minecraft: "0849bc57-4d67-414b-a371-b71c45e02a14",
         youtube: "@Stevelocks100",
-        description: "Heyo I'm Stevelocks! I am a Canadian who likes to code stuff, but can also model and animate. I've worked make a few maps, and I hope to continue making more with Openvoxel Studios!"
+        description: "Heyo I'm **Stevelocks**! I am a Canadian who likes to code stuff, but can also model and animate. I've worked make a few maps, and I hope to continue making more with Openvoxel Studios!"
             + "\n\n# My Socials"
             + "\n\n**Youtube**: [@Stevelocks100](https://youtube.com/@stevelocks100)"
             + "\n\n**Discord**: [stevelocks](https://discordapp.com/users/709164804144758814)"
@@ -117,7 +117,7 @@ export const CreatorDetailList: Record<CreatorList, {
     "The Bread Giver": {
         minecraft: "b8ad7774-8183-4d9d-bb98-1f5a07998d3f",
         youtube: "@thebreadgiver",
-        description: "Salutations fellow Minecrafters and Voxelings alike!\nI am The Bread Giver! 🍞 I Give bread to my fellow Devs as support\n\nBut what do i do? hmm that's a good question, i can do pixel art but also those item display thingies?\ntbh i might learn a lot more cuz i joined this group so we'll see. (don't mind me when i'm yapping)\n\nI'm also the cause of the creation of the soon to be hit game (or already hit game depending on when you read this)\n**BAKING BREAD!!!** 🍞🍞🍞\nAnywho, thanks for reading and open your window for a loaf of bread 😉"
+        description: "Salutations fellow Minecrafters and Voxelings alike!\nI am **The Bread Giver**! 🍞 I Give bread to my fellow Devs as support\n\nBut what do i do? hmm that's a good question, i can do pixel art but also those item display thingies?\ntbh i might learn a lot more cuz i joined this group so we'll see. (don't mind me when i'm yapping)\n\nI'm also the cause of the creation of the soon to be hit game (or already hit game depending on when you read this)\n**BAKING BREAD!!!** 🍞🍞🍞\nAnywho, thanks for reading and open your window for a loaf of bread 😉"
             + "\n\n# My Socials"
             + "\n\n**Youtube**: [@thebreadgiver](https://youtube.com/@thebreadgiver)"
             + "\n\n**Minecraft Youtube**: [@LimeGearStudios](https://youtube.com/@LimeGearStudios)"

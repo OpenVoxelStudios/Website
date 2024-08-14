@@ -199,7 +199,7 @@ const Leaderboard = ({ hidden, auth, setAuth }: { hidden: boolean, auth: authTyp
                 }
             </div> */}
             <h1>Whoops! Leaderboard is not available yet!</h1>
-            <h3>It's all ready to be there but it needs to be hosted on a server. Should be the case around end july or something :)</h3>
+            <h3>It's all ready to be there but it needs to be hosted on a server. Should be the case around end August or something :)</h3>
         </div>
     )
 }

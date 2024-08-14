@@ -6,12 +6,13 @@ import type { RollupOptions } from './node_modules/rollup/dist/rollup.d.ts';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 
 const root = resolve(__dirname, 'src');
+const outDir = resolve(__dirname, 'openvoxel.studio');
 
 var config: UserConfig = {
   root,
   plugins: [react()],
   build: {
-    outDir: resolve(__dirname, 'openvoxel.studio'),
+    outDir: outDir,
     emptyOutDir: true,
     rollupOptions: {
       input: {
@@ -20,6 +21,16 @@ var config: UserConfig = {
         launcher: resolve(root, 'launcher', 'index.html'),
         bakingbread: resolve(root, 'bakingbread', 'index.html'),
       },
+      output: {
+        assetFileNames: (assetInfo) => {
+          console.log(assetInfo.name);
+          return 'assets/' + assetInfo.name as string;
+        },
+        entryFileNames: (chunkInfo) => {
+          return 'assets/' + chunkInfo.name + '.js';
+        },
+        chunkFileNames: `assets/App.js`,
+      }
     },
   },
 };
@@ -27,7 +38,7 @@ var config: UserConfig = {
 // Redirections
 Object.keys(links).forEach(link => {
   ; (((config.build as BuildOptions).rollupOptions as RollupOptions).input as { [entryAlias: string]: string; })[`redirect_${link}`] = resolve(root, link, 'index.html');
-})
+});
 
 // Game specific pages
 gameList.filter(g => g.active !== false && typeof g.link != "string").forEach(game => {
@@ -41,6 +52,6 @@ gameList.filter(g => g.active !== false && typeof g.link != "string").forEach(ga
   };
 
   ; (((config.build as BuildOptions).rollupOptions as RollupOptions).input as { [entryAlias: string]: string; })[game_id] = resolve(game_root, 'index.html');
-})
+});
 
 export default defineConfig(config);
