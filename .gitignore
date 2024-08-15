@@ -26,3 +26,5 @@ bun.lockb
 openvoxel.studio.zip
 openvoxel.studio/
 openvoxel.studio-nomusic.zip
+.env
+.php-tmp
