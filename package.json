@@ -39,8 +39,8 @@
     "dev": "bunx vite",
     "build": "bunx vite build && bun run ./script/afterRun.ts",
     "preview": "bunx vite preview",
-    "test": "bunx vite build && bunx vite preview",
-    "preprod": "bun ./script/beforeRun.ts && bunx vite build && bun ./script/preprod.ts",
+    "test": "bun run build && bunx vite preview",
+    "preprod": "bun ./script/beforeRun.ts && bun run build && bun ./script/preprod.ts",
     "cleanup": "rm -rf openvoxel.studio && rm -f openvoxel.studio.zip && rm -f openvoxel.studio-nomusic.zip"
   },
   "dependencies": {
