@@ -1,7 +1,7 @@
 /* 
  * Each of this link is a page on the website that will redirect as well as a variable to use
 */
-export const links = {
+export const links: { [key: string]: string | undefined } = {
     discord: "https://discord.com/invite/Xhvb2wujVh",
     launcherwiki: "https://launcher.openvoxel.studio/",
     youtube: "https://www.youtube.com/@OpenVoxel",
@@ -246,7 +246,7 @@ var gameListRaw: {
             date: new Date(1709679600000),
             image: "/games/banners/lethal-infestation.png",
             icon: "/games/icons/lethal-infestation.png",
-            downloads: 318,
+            downloads: 319,
             tags: ["lethal", "budget", "company", "horror", "entities", "monsters", "jester", "hoarding", "bug", "snare", "flea"],
             fulldetails: "# Welcome to Lethal Infestation\n\n## A Datapack where I put some of Lethal Company's monsters in Minecraft.\n\n\nCurrently features 3 mobs:\n\n### Jester\n> Yup! Little buddy that you can find while mining deepslate diamond ore.\n\n### Hoarding Bug\n> Cute, yet rare fellas that also appear in caves.\n> Use \"/function hb:give_spawn_egg\" to obtain a spawn egg\n\n### Snare Flea\n> I hate these. Also appears in caves\n> Use \"/function snareflea:give_spawn_egg\" to obtain a spawn egg",
             versions: [

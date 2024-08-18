@@ -14,7 +14,7 @@ type overridesType = {
   nofooter?: boolean,
 };
 
-function App({ page, game_id, redirect_to, overrides }: { page: string, game_id?: string, redirect_to?: string, overrides?: overridesType }) {
+function App({ page, game_id, overrides }: { page: string, game_id?: string, overrides?: overridesType }) {
   const [PAGE, setPAGE] = useState(page);
   const [GAME_ID, setGAME_ID] = useState(game_id);
   const [hidden, sethidden] = useState(true);
@@ -81,11 +81,6 @@ function App({ page, game_id, redirect_to, overrides }: { page: string, game_id?
 
         {PAGE == "launcher" &&
           <Launcher />
-        }
-
-        {PAGE == "redirect" &&
-          <a href={redirect_to}><h1>Redirecting to {redirect_to}... (click here if nothing happend)</h1></a>
-          && (location.href = redirect_to as string)
         }
 
         {/* We will never know what that is */}

@@ -1,7 +1,7 @@
 import { BuildOptions, UserConfig, defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'path';
-import { gameList, links } from './src/data.ts';
+import { gameList } from './src/data.ts';
 import type { RollupOptions } from './node_modules/rollup/dist/rollup.d.ts';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { root, outDir } from './config.ts';
@@ -31,11 +31,6 @@ var config: UserConfig = {
     },
   },
 };
-
-// Redirections
-Object.keys(links).forEach(link => {
-  ; (((config.build as BuildOptions).rollupOptions as RollupOptions).input as { [entryAlias: string]: string; })[`redirect_${link}`] = resolve(root, link, 'index.html');
-});
 
 // Game specific pages + Download shortcuts
 gameList.filter(g => g.active !== false && typeof g.link != "string").forEach(game => {
