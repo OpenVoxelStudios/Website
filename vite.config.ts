@@ -18,6 +18,7 @@ var config: UserConfig = {
         games: resolve(root, 'games', 'index.html'),
         launcher: resolve(root, 'launcher', 'index.html'),
         bakingbread: resolve(root, 'bakingbread', 'index.html'),
+        // when2cook: resolve(root, 'when2cook', 'index.html'),
       },
       output: {
         assetFileNames: (assetInfo) => {
