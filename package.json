@@ -35,17 +35,25 @@
   },
   "homepage": "https://openvoxel.studio",
   "scripts": {
-    "update-all": "bun update",
+    "update-all": "bun update --latest",
     "install": "bun ./script/beforeRun.ts",
     "dev": "bunx vite",
     "build": "bunx vite build && bun run ./script/afterRun.ts",
     "preview": "bunx vite preview",
     "test": "bun run build && bunx vite preview",
     "preprod": "bun run update-all && bun run build && bun ./script/preprod.ts",
-    "cleanup": "rm -rf openvoxel.studio && rm -f openvoxel.studio.zip && rm -f openvoxel.studio-nomusic.zip"
+    "cleanup": "rm -rf openvoxel.studio && rm -f openvoxel.studio.zip && rm -f openvoxel.studio-nomusic.zip",
+    "server": "NODE_ENV=production bun backend/index.ts",
+    "server.dev": "bun --watch backend/index.ts"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.0.1",
+    "@mui/x-date-pickers": "^7.15.0",
     "chalk": "^5.3.0",
+    "dayjs": "^1.11.13",
+    "elysia": "^1.1.11",
     "octokit": "^4.0.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -55,17 +63,17 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@types/bun": "^1.1.6",
-    "@types/node": "^22.4.1",
-    "@types/react": "^18.3.3",
+    "@types/bun": "^1.1.8",
+    "@types/node": "^22.5.2",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.1.0",
-    "@typescript-eslint/parser": "^8.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
     "@vitejs/plugin-react-swc": "^3.7.0",
     "eslint": "^9.9.1",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.9",
+    "eslint-plugin-react-refresh": "^0.4.11",
     "typescript": "^5.5.4",
-    "vite": "^5.4.1"
+    "vite": "^5.4.2"
   }
 }
