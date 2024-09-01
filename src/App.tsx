@@ -14,7 +14,7 @@ type overridesType = {
   nofooter?: boolean,
 };
 
-function App({ page, game_id, overrides }: { page: string, game_id?: string, overrides?: overridesType }) {
+export default function App({ page, game_id, overrides }: { page: string, game_id?: string, overrides?: overridesType }) {
   const [PAGE, setPAGE] = useState(page);
   const [GAME_ID, setGAME_ID] = useState(game_id);
   const [hidden, sethidden] = useState(true);
@@ -120,6 +120,4 @@ function App({ page, game_id, overrides }: { page: string, game_id?: string, ove
       }
     </>
   )
-}
-
-export default App;
+};

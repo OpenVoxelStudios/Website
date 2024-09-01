@@ -57,7 +57,7 @@ const musicList: {
 
 
 
-const BreadMusic = ({ openLink }: { openLink(url: string): void }) => {
+export default function BreadMusic({ openLink }: { openLink(url: string): void }) {
     const [volume, setVolume] = useState(parseFloat(localStorage.getItem('bread:music/volume') == null ? '0.2' : localStorage.getItem('bread:music/volume') as unknown as string));
     const [musicEnabled, setMusicEnabled] = useState(false);
     const [currentMusic, setCurrentMusic] = useState(musicList[Math.round(Math.random() * (musicList.length - 1))]);
@@ -211,6 +211,4 @@ const BreadMusic = ({ openLink }: { openLink(url: string): void }) => {
             }}>Music: <span style={{ textDecoration: 'underline', marginLeft: '5px' }}>{currentMusic.name}</span></a>
         </div>
     )
-}
-
-export default BreadMusic;
+};

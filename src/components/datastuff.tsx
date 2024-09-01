@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import './datastuff.css';
 import OVChestOpen from '/logo.mp4';
 
-const DataStuff = ({ hidden, sethidden }: { hidden: boolean, sethidden: Function }) => {
+export default function DataStuff({ hidden, sethidden }: { hidden: boolean, sethidden: Function }) {
     useEffect(() => {
         const onPageLoad = () => {
             sethidden(false);
@@ -27,6 +27,4 @@ const DataStuff = ({ hidden, sethidden }: { hidden: boolean, sethidden: Function
             <h1>Loading...</h1>
         </div>
     )
-}
-
-export default DataStuff;
+};

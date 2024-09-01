@@ -8,7 +8,7 @@ import OVChestOpen from '/ov_chest_open.mp4';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
+export default function MainPage ({ localRedirect }: { localRedirect: Function }) {
     document.title = "OpenVoxel Studios";
 
     function scrollSetFrame() {
@@ -88,6 +88,4 @@ const MainPage = ({ localRedirect }: { localRedirect: Function }) => {
             </div>
         </>
     )
-}
-
-export default MainPage;
+};

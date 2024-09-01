@@ -690,7 +690,7 @@ const questList: quest[] = [
 ];
 
 
-const BreadQuest = ({ setScore, setClickValue }: { setScore: [number, React.Dispatch<React.SetStateAction<number>>], setClickValue: React.Dispatch<React.SetStateAction<number>> }) => {
+export default function BreadQuest({ setScore, setClickValue }: { setScore: [number, React.Dispatch<React.SetStateAction<number>>], setClickValue: React.Dispatch<React.SetStateAction<number>> }) {
     const [questIndex, setQuestIndex] = useState(localStorage.getItem('bread:questIndex') ? parseInt(localStorage.getItem('bread:questIndex') as string) || 0 : 0);
 
     useEffect(() => {
@@ -734,6 +734,4 @@ const BreadQuest = ({ setScore, setClickValue }: { setScore: [number, React.Disp
             <a>{questList[questIndex]?.price ? formatNumber(questList[questIndex].price) : '∞'}{(questList[questIndex]?.description) ? ` - ${questList[questIndex]?.description}` : ''}</a>
         </div>
     );
-}
-
-export default BreadQuest;
+};

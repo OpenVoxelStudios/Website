@@ -7,7 +7,7 @@ import Leaderboard from './breadleaderboard';
 
 
 
-function Bread({ showLeaderboard }: { showLeaderboard: boolean }) {
+export default function Bread({ showLeaderboard }: { showLeaderboard: boolean }) {
     const [auth, setAuth] = useState<authType>(JSON.parse(localStorage.getItem('authinging') as string) as authType);
     const [isAuthing, setIsAuthing] = useState(false);
     const hasInitialized = useRef(INSTANTINIT);
@@ -137,6 +137,4 @@ function Bread({ showLeaderboard }: { showLeaderboard: boolean }) {
             <Leaderboard hidden={!showLeaderboard} auth={auth} setAuth={setAuth} />
         </>
     )
-}
-
-export default Bread;
+};

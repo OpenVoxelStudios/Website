@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './footer.css';
 import Icon from '/logo.png';
 
-const Footer = () => {
+export default function Footer() {
     const [BREADMAN, _] = useState(Math.round(Math.random() * 20) == 1);
 
     return (
@@ -51,6 +51,4 @@ const Footer = () => {
             </div>
         </>
     )
-}
-
-export default Footer
+};

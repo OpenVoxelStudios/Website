@@ -28,7 +28,7 @@ const superSearches = {
   ),
 };
 
-const Games = ({ localRedirect }: { localRedirect: Function }) => {
+export default function Games({ localRedirect }: { localRedirect: Function }) {
   document.title = "Our Games - OpenVoxel Studios";
   const filters = ["Downloads", "No Downloads", "Recent", "Old", "ABC", "ZYX"];
 
@@ -123,5 +123,3 @@ const Games = ({ localRedirect }: { localRedirect: Function }) => {
     </div>
   );
 };
-
-export default Games;

@@ -7,7 +7,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Creator from './creator.tsx';
 
-function GamePage({ game, localRedirect }: { game: string, localRedirect: Function }) {
+export default function GamePage({ game, localRedirect }: { game: string, localRedirect: Function }) {
     const GAME = gameList.find(l => typeof l.link === 'object' && l.link.game_id == game) as typeof gameList[0];
     const [description, setDescription] = useState(true);
 
@@ -126,6 +126,4 @@ function GamePage({ game, localRedirect }: { game: string, localRedirect: Functi
             </div>
         </div>
     )
-}
-
-export default GamePage;
+};

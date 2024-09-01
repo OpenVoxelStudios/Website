@@ -4,7 +4,7 @@ import { Player, authType, authTypeNOTNULL } from '../types';
 import formatNumber from '../functions/formatNumber';
 import { BACKEND } from '../functions/config';
 
-const Leaderboard = ({ hidden, auth, setAuth }: { hidden: boolean, auth: authType, setAuth: React.Dispatch<React.SetStateAction<authType>> }) => {
+export default function Leaderboard ({ hidden, auth, setAuth }: { hidden: boolean, auth: authType, setAuth: React.Dispatch<React.SetStateAction<authType>> }) {
     const [lb, setLb] = useState<Player[]>([]);
     const [rank, setRank] = useState(0);
 
@@ -202,6 +202,4 @@ const Leaderboard = ({ hidden, auth, setAuth }: { hidden: boolean, auth: authTyp
             <h3>It's all ready to be there but it needs to be hosted on a server. Should be the case around end August or something :)</h3>
         </div>
     )
-}
-
-export default Leaderboard;
+};

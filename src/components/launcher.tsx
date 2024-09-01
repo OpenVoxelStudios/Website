@@ -6,7 +6,7 @@ import LogoWindows from '/images/windows.svg';
 import LogoLinux from '/images/linux.svg';
 import { links } from '../data';
 
-const Launcher = () => {
+export default function Launcher() {
     document.title = "Launcher Download - OpenVoxel Studios";
     // Worst OS detection but hey it works lol
     // If you have better, consider doing a push request
@@ -112,6 +112,4 @@ const Launcher = () => {
             </div>
         </>
     )
-}
-
-export default Launcher;
+};

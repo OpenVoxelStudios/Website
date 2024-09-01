@@ -290,7 +290,7 @@ var gameListRaw: {
             name: "More Maps Soon!",
             description: "We are actively coding new maps for the best of the community!",
             creators: ["CMANIF", "ChoosingBerry", "Kubik", "Monster Art", "S0FL", "Sammy", "Stevelocks"],
-            link: links.discord,
+            link: links.discord as string,
             date: null,
             image: "/banner.png",
             icon: "/logo.png",

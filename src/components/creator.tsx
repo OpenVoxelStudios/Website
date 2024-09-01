@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { CreatorDetailList } from '../data.ts';
 
-function Creator({ creatorName }: { creatorName: keyof typeof CreatorDetailList }) {
+export default function Creator({ creatorName }: { creatorName: keyof typeof CreatorDetailList }) {
     const [stevegg, setStevegg] = useState(false);
 
     var audio = new Audio('/stevegg.mp3');
@@ -25,6 +25,4 @@ function Creator({ creatorName }: { creatorName: keyof typeof CreatorDetailList 
             <a className='yestextselection name'>{creatorName}</a>
         </div>
     )
-}
-
-export default Creator;
+};

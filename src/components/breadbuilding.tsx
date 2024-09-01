@@ -14,7 +14,7 @@ export type building = {
     icon?: string, // The icon when it clicks
 };
 
-const BreadBuilding = ({ buildData, setScore, clickicon }: { buildData: building, setScore: [number, React.Dispatch<React.SetStateAction<number>>], clickicon(count: string | number, icon?: string): void }) => {
+export default function BreadBuilding ({ buildData, setScore, clickicon }: { buildData: building, setScore: [number, React.Dispatch<React.SetStateAction<number>>], clickicon(count: string | number, icon?: string): void }) {
     const [initialBuildQuantity, _] = useState(localStorage.getItem(`bread:buildings/${buildData.name}`) ? parseInt(localStorage.getItem(`bread:buildings/${buildData.name}`) as string) || 0 : buildData.quantity);
 
     const [buildQuantity, setBuildQuantity] = useState(initialBuildQuantity);
@@ -85,6 +85,4 @@ const BreadBuilding = ({ buildData, setScore, clickicon }: { buildData: building
             <div className="glass progress" id={`buildprogress-${buildData.name}`} />
         </div>
     );
-}
-
-export default BreadBuilding;
+};

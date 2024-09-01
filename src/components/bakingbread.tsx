@@ -127,7 +127,7 @@ const initialBuildings: building[] = [
     },
 ];
 
-const BakingBread = ({ hidden, openLink }: { hidden: boolean, openLink(url: string): void }) => {
+export default function BakingBread ({ hidden, openLink }: { hidden: boolean, openLink(url: string): void }) {
     const [score, setScore] = useState(localStorage.getItem('bread:score') ? parseInt(localStorage.getItem('bread:score') as string) || 0 : 0);
     const [initialized, setInit] = useState(0);
     const [clickValue, setClickValue] = useState(localStorage.getItem('bread:clickvalue') ? parseInt(localStorage.getItem('bread:clickvalue') as string) || 1 : 1);
@@ -299,6 +299,4 @@ const BakingBread = ({ hidden, openLink }: { hidden: boolean, openLink(url: stri
             </div>
         </div>
     )
-}
-
-export default BakingBread;
+};

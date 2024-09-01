@@ -1,7 +1,7 @@
 import './game.css';
 import IconDownload from '/icons/Download.svg';
 
-function Game({ localRedirect, name, date, downloads, description, image, link }: { localRedirect: Function, name: string, date: Date | null, downloads: number | null, description: string, image: string, link: string | { game_id: string; } }) {
+export default function Game({ localRedirect, name, date, downloads, description, image, link }: { localRedirect: Function, name: string, date: Date | null, downloads: number | null, description: string, image: string, link: string | { game_id: string; } }) {
     return (
         <div className='coolclick game glass' onClick={(e) => {
             if (name === "More Maps Soon!") {
@@ -31,6 +31,4 @@ function Game({ localRedirect, name, date, downloads, description, image, link }
             <p className='yestextselection glass description'>{description}</p>
         </div>
     )
-}
-
-export default Game
+};

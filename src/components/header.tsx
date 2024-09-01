@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { links } from '../data.ts';
 import PinardoImage from '/images/pinardo.png'
 
-const Header = ({ localRedirect, PAGE, showLeaderboard, setShowLeaderboard }: { localRedirect: Function, PAGE: string, showLeaderboard: boolean, setShowLeaderboard: React.Dispatch<React.SetStateAction<boolean>> }) => {
+export default function Header({ localRedirect, PAGE, showLeaderboard, setShowLeaderboard }: { localRedirect: Function, PAGE: string, showLeaderboard: boolean, setShowLeaderboard: React.Dispatch<React.SetStateAction<boolean>> }) {
     const [menu, setMenu] = useState(false);
     const [pinardo, setPinardo] = useState(0);
 
@@ -82,6 +82,4 @@ const Header = ({ localRedirect, PAGE, showLeaderboard, setShowLeaderboard }: { 
             }
         </>
     )
-}
-
-export default Header
+};
