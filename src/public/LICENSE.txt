@@ -1,0 +1,56 @@
+                  ***
+            @   +++++++++++
+         @@   @@          +++
+       @@   -   @@       +++
+      @  @@   @@  @      ++
+      @    @@@    @     +++     ____                     _    __                    __
+      @  \  @  /  @     ++     / __ \ ____   ___   ____ | |  / /____   _  __ ___   / /
+       @@   @   @@     +++    / / / // __ \ / _ \ / __ \| | / // __ \ | |/_// _ \ / /
+     +   @@ @ @@   ++ +++    / /_/ // /_/ //  __// / / /| |/ // /_/ /_>  < /  __// /
+  +++      @@@      +++      \____// .___/ \___//_/ /_/ |___/ \____//_/|_| \___//_/
+ +   ++          +++  +           /_/ _____  __              __ _
+ +     ++++  ++++     +              / ___/ / /_ __  __ ____/ /(_)____   _____
+ +         ++         +              \__ \ / __// / / // __  // // __ \ / ___/
+ +          +         +             ___/ // /_ / /_/ // /_/ // // /_/ /(__  )
+ +          +        +             /____/ \__/ \__,_/ \__,_//_/ \____//____/
+  ++        +      ++                 Copyright (c) 2024 OpenVoxel Studios
+     ++     +   ++
+        +++ + ++
+           +++
+
+
+
+=== Definitions ===
+
+The **licensor** is the individual or entity offering these terms, and the **software** is the software the licensor makes available under these terms (like datapacks or mods).
+
+**You** refers to the individual or entity agreeing to these terms.
+
+**Use** means anything you do with the software.
+
+
+=== Permissions & Prohibitions ===
+
+You may not reupload, redistribute, or make the software available -- whether modified or unmodified -- unless explicitly permitted by the licensor. However, you are allowed to modify the software's code for personal use, including on your server, as long as you do not distribute the modified version.
+
+If the software is a Map, Datapack, or Resource Pack, you are permitted to host it on a Minecraft server only for non-commercial purposes. Commercial use —- defined as any activity generating revenue —- requires explicit permission from the licensor. In such cases, we may request a percentage of your revenue.
+
+You may create and share content related to the software, provided you give clear credit to the software name and the licensor. Appropriate crediting examples include:
+- "Map: Oak House Murder by OpenVoxel Studios"
+- "Map Credits: Lethal Budget - https://openvoxel.studio"
+
+We reserve the right to request the removal of your server or our software if we determine that you are violating the license terms or harming the reputation of OpenVoxel Studios.
+
+=== Notice ===
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+
+=== Grant of Rights ===
+
+The licensor grants you a free of charge, limited, non-exclusive, non-sublicensable, non-transferable license for the software to do everything you might do with the software that would otherwise infringe the licensor's copyright in it for any permitted purpose, other than distributing the software, making changes/new works based on the software or competing with the software/the licensor.
+
+
+=== No Guarantee ===
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
