@@ -8,6 +8,7 @@ import MainPage from './components/main';
 import DataStuff from './components/datastuff';
 import Launcher from './components/launcher';
 import Bread from './components/bread';
+import HallOfFame from './components/halloffame';
 
 type overridesType = {
   noheader?: boolean,
@@ -81,6 +82,10 @@ export default function App({ page, game_id, overrides }: { page: string, game_i
 
         {PAGE == "launcher" &&
           <Launcher />
+        }
+
+        {PAGE == "halloffame" &&
+          <HallOfFame />
         }
 
         {/* We will never know what that is */}
