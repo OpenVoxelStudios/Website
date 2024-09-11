@@ -1,5 +1,3 @@
-
-import { useEffect } from 'react';
 import './halloffame.css';
 
 const fames = [
@@ -24,9 +22,7 @@ const fames = [
 ]
 
 export default function HallOfFame() {
-    useEffect(() => {
-        document.title = "Hall of Fame - OpenVoxel Studios";
-    }, []);
+    document.title = "Hall of Fame - OpenVoxel Studios";
 
     return (
         <div className="halloffame">
