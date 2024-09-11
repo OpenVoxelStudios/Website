@@ -1,25 +1,35 @@
 import './halloffame.css';
 
-const fames = [
-    {
-        title: "Yahiamice Escape Room 2",
-        date: "September 4th, 2024",
-        description: <>
-            We participated and almost won (top 3) in <a href='https://www.youtube.com/watch?v=I2bOFSabiNk&t=10159s' target='_blank'>Yahiamice's Map Contest</a>! Warning: this is very silly
-        </>,
-        image: "/halloffame/yer2.png",
-        link: 'https://www.youtube.com/watch?v=I2bOFSabiNk&t=10159s',
-    },
-    {
-        title: "The Mewoster",
-        date: "August 3rd, 2024",
-        description: <>
-            We participated and won the first <a href='https://www.youtube.com/watch?v=f3B0o8uBadc' target='_blank'>Mysticat Silly Redstone Challenge</a>! All of this was made in 3 days!!
-        </>,
-        image: "/halloffame/mewoster.png",
-        link: 'https://www.youtube.com/watch?v=HvZa4lguVRE',
-    },
-]
+const fames: {
+    title: string;
+    date: string;
+    description: JSX.Element;
+    image?: string;
+    link: string;
+}[] = [
+        {
+            title: "Yahiamice Escape Room 2",
+            date: "September 4th, 2024",
+            description: <>
+                We participated and almost won (top 3) in Yahiamice's Map Contest! Warning: this is very silly!!
+                <br /><br />
+                <a href='https://www.youtube.com/watch?v=I2bOFSabiNk&t=10159s' target='_blank'>Watch Yahi's Stream by clicking here</a>
+            </>,
+            // image: "/halloffame/yer2.png",
+            link: 'https://www.youtube.com/watch?v=I2bOFSabiNk&t=10159s',
+        },
+        {
+            title: "The Mewoster",
+            date: "August 3rd, 2024",
+            description: <>
+                We participated and won the first Mysticat Silly Redstone Challenge! All of this was made in 3 days!!
+                <br /><br />
+                <a href='https://www.youtube.com/watch?v=f3B0o8uBadc' target='_blank'>Watch Mysti's Stream by clicking here</a>
+            </>,
+            image: '/halloffame/mewoster.png',
+            link: 'https://www.youtube.com/watch?v=g7jRjRDhZIM',
+        },
+    ]
 
 export default function HallOfFame() {
     document.title = "Hall of Fame - OpenVoxel Studios";
@@ -39,14 +49,17 @@ export default function HallOfFame() {
                                 <div className="event-marker" />
                                 <div className="event-description">{event.description}</div>
                             </div>
-                            <div className="illustration-container">
-                                <div className="illustration" onClick={() => window.open(event.link, '_blank')}>
-                                    <img
-                                        src={event.image}
-                                        alt={event.title}
-                                    />
+                            {event.image &&
+                                <div className="illustration-container">
+                                    <div className="illustration" onClick={(ev) => {
+                                        ev.preventDefault();
+                                        ev.stopPropagation();
+                                        window.open(event.link, '_blank');
+                                    }}>
+                                        <img src={event.image} alt={event.title} />
+                                    </div>
                                 </div>
-                            </div>
+                            }
                         </div>
                     ))}
                 </div>
