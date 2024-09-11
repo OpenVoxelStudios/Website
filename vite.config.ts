@@ -9,6 +9,11 @@ import { root, outDir } from './config.ts';
 var config: UserConfig = {
   root,
   plugins: [react()],
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, "./src"),
+    },
+  },
   build: {
     outDir: outDir,
     emptyOutDir: true,

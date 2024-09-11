@@ -8,6 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true
   },
   "include": ["vite.config.ts", "config.ts", "./src/data.ts", "./script/beforeRun.ts", "./script/afterRun.ts"],
 }
