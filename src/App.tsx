@@ -23,10 +23,7 @@ export default function App({ page, game_id, overrides }: { page: string, game_i
   const [showBreadLeaderboard, setShowBreadLeaderboard] = useState(false);
 
   function localRedirect(PATH: string, newPage?: string, newGame_id?: string, replace?: boolean, overrides: overridesType = { nofooter: false, noheader: false }) {
-    location.hash = "";
-    requestAnimationFrame(() => {
-      location.hash = "content";
-    });
+    (document.getElementById('root') as HTMLDivElement).scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
     if (newPage == PAGE && (!newGame_id || (newGame_id && newGame_id == GAME_ID))) return;
 
