@@ -28,10 +28,7 @@ export default function Footer() {
                         ev.preventDefault();
                         ev.stopPropagation();
 
-                        location.hash = "";
-                        requestAnimationFrame(() => {
-                            location.hash = "content";
-                        });
+                        (document.getElementById('root') as HTMLDivElement).scrollTo({ top: 0, left: 0, behavior: 'smooth' });
                     }}></div>
 
                     <br />

@@ -22,9 +22,7 @@ export default function App({ page, game_id, overrides }: { page: string, game_i
   const [overs, setOvers] = useState(overrides);
   const [showBreadLeaderboard, setShowBreadLeaderboard] = useState(false);
 
-  function localRedirect(PATH: string, newPage?: string, newGame_id?: string, replace?: boolean, overrides: overridesType = { nofooter: false, noheader: false }) {
-    (document.getElementById('root') as HTMLDivElement).scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-
+  function localRedirect(PATH: string, newPage?: string, newGame_id?: string, overrides: overridesType = { nofooter: false, noheader: false }) {
     if (newPage == PAGE && (!newGame_id || (newGame_id && newGame_id == GAME_ID))) return;
 
     sethidden(true);
@@ -33,7 +31,7 @@ export default function App({ page, game_id, overrides }: { page: string, game_i
     if (newGame_id) setGAME_ID(newGame_id);
     setOvers(overrides);
 
-    window.history[replace ? 'replaceState' : 'pushState']({ "page": PAGE, "game_id": GAME_ID, "overrides": overrides }, document.title, PATH);
+    window.history.pushState({ "page": PAGE, "game_id": GAME_ID, "overrides": overrides }, document.title, PATH);
   };
 
   useEffect(() => {

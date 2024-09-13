@@ -10,7 +10,7 @@ export default function Game({ localRedirect, name, date, downloads, description
             else if (typeof link == 'string') {
                 (window.open(link, '_blank') as Window).focus();
             } else {
-                localRedirect(`/game/${link.game_id}/`, 'game', link.game_id, true)
+                localRedirect(`/game/${link.game_id}/`, 'game', link.game_id)
             }
         }}>
             <p className='yestextselection glass title'>{name}</p>

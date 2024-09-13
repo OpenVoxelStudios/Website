@@ -22,7 +22,7 @@ export default function GamePage({ game, localRedirect }: { game: string, localR
                     <h1>You're Almost There!</h1>
                     <a>Allow this Website to open <b>OpenVoxel Launcher</b>.<br />Or if you don't have the Launcher, click below!</a>
 
-                    <div className='coolclick glass downloadLatest' onClick={() => localRedirect('/launcher', 'launcher', undefined, true)}>
+                    <div className='coolclick glass downloadLatest' onClick={() => localRedirect('/launcher', 'launcher', undefined)}>
                         <img className='icon' src={IconDownload} />
                         <a className='yestextselection text'>Download Launcher</a>
                     </div>

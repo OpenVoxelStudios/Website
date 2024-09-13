@@ -5,21 +5,22 @@ import { useEffect, useRef, useState } from 'react';
 
 const musicList: {
     name: string;
+    author?: string;
     redirect: string;
     url: string;
+    license?: {
+        name: string;
+        url: string;
+    };
 }[] = [
-        {
-            name: 'Bread by Lukrembo',
-            redirect: 'https://freetouse.com/music/lukrembo/bread',
-            url: '/bakingbread/musics/bread.mp3',
-        },
         {
             name: 'Moonsong',
             redirect: 'https://www.youtube.com/watch?v=MtkECyiRExE',
             url: '/bakingbread/musics/moonsong.mp3',
         },
         {
-            name: 'Can\'t it be true by Zris',
+            name: 'Can\'t it be true',
+            author: 'Zris',
             redirect: 'https://www.youtube.com/watch?v=iai-gZ1IonE',
             url: '/bakingbread/musics/cant-it-be-true.mp3',
         },
@@ -29,14 +30,10 @@ const musicList: {
             url: '/bakingbread/musics/time.mp3',
         },
         {
-            name: 'without form and void by uamee',
+            name: 'without form and void',
+            author: 'uamee',
             redirect: 'https://www.youtube.com/watch?v=9n7wW95rmPI',
             url: '/bakingbread/musics/without-form-and-void.mp3',
-        },
-        {
-            name: 'Biscuit by Lukrembo',
-            redirect: 'https://freetouse.com/music/lukrembo/biscuit',
-            url: '/bakingbread/musics/biscuit.mp3',
         },
         {
             name: 'Salomon\'s Theme - BF3',
@@ -44,15 +41,21 @@ const musicList: {
             url: '/bakingbread/musics/salomon.mp3'
         },
         {
-            name: 'This Is For You by Lukrembo',
-            redirect: 'https://freetouse.com/music/lukrembo/this-is-for-you',
-            url: '/bakingbread/musics/this-is-for-you.mp3'
-        },
-        {
-            name: 'Lofi Of Bread by oh wowie!427',
+            name: 'Lofi Of Bread',
+            author: 'oh wowie!427',
             redirect: 'https://soundcloud.com/cookie-kinsun/lofi-of-bread',
             url: '/bakingbread/musics/lofi-bread.mp3'
-        }
+        },
+        {
+            name: 'Blue Boi',
+            author: 'LAKEY INSPIRED',
+            redirect: 'https://www.youtube.com/watch?v=wAukvwLCVbM',
+            url: '/bakingbread/musics/blue-boi.mp3',
+            license: {
+                name: 'CC BY-SA 3.0',
+                url: 'https://creativecommons.org/licenses/by-sa/3.0/legalcode',
+            }
+        },
     ];
 
 
@@ -168,13 +171,13 @@ export default function BreadMusic({ openLink }: { openLink(url: string): void }
             }} />
 
             <div className='musiccontrol unbreading'>
-                <a className='unbreading coolclick' id="listenmode" onClick={(ev) => {
+                {/* <a className='unbreading coolclick' id="listenmode" onClick={(ev) => {
                     ev.preventDefault();
                     ev.stopPropagation();
 
                     // setListenMode(v => v == 'solo' ? 'group' : 'solo');
                     setListenMode('solo');
-                }} style={{ backgroundImage: `url("/bakingbread/${listenMode == 'solo' ? 'person' : 'persons'}.svg")` }}></a>
+                }} style={{ backgroundImage: `url("/bakingbread/${listenMode == 'solo' ? 'person' : 'persons'}.svg")` }}></a> */}
 
                 <a className='unbreading coolclick' id="play" onClick={(ev) => {
                     ev.preventDefault();
@@ -196,7 +199,7 @@ export default function BreadMusic({ openLink }: { openLink(url: string): void }
                 }} style={{ backgroundImage: `url("/bakingbread/skip.svg")` }}></a>
             </div>
 
-            <input className='unbreading' type="range" min="0" max="1" defaultValue={parseFloat(localStorage.getItem('bread:music/volume') || '0.2')} step="0.01" id="music-volume" onInput={(ev) => {
+            <input tabIndex={-1} className='unbreading' type="range" min="0" max="1" defaultValue={parseFloat(localStorage.getItem('bread:music/volume') || '0.2')} step="0.01" id="music-volume" onInput={(ev) => {
                 ev.preventDefault();
                 ev.stopPropagation();
 
@@ -208,7 +211,28 @@ export default function BreadMusic({ openLink }: { openLink(url: string): void }
                 ev.stopPropagation();
 
                 openLink(currentMusic.redirect);
-            }}>Music: <span style={{ textDecoration: 'underline', marginLeft: '5px' }}>{currentMusic.name}</span></a>
-        </div>
+            }}>
+                <span className={'coolclick copyright-infos copyright-moreinfos' + (!currentMusic.license ? ' copyright-lessinfos' : '')}>
+                    Music:&nbsp;<u>{currentMusic.name}{currentMusic.author ? <>&nbsp;by {currentMusic.author}</> : ''}</u>
+                </span>
+                {currentMusic.license &&
+                    <>
+                        <div className='coolclick copyright-infos copyright-moreinfos' style={{ flexBasis: '100%' }}>
+                            License:&nbsp;
+                            <u id='music-license' onClick={(ev) => {
+                                ev.preventDefault();
+                                ev.stopPropagation();
+
+                                openLink(currentMusic.license?.url as string);
+                            }}>
+                                {currentMusic.license.name}
+                            </u>
+                        </div>
+
+                        <span className='coolclick copyright-infos copyright-lessinfos'>Music:&nbsp;<u>{currentMusic.name}</u>&nbsp;- Hover for infos...</span>
+                    </>
+                }
+            </a>
+        </div >
     )
 };

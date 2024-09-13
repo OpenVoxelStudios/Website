@@ -43,7 +43,7 @@ export default function Header({ localRedirect, PAGE, showLeaderboard, setShowLe
                 </div>
 
                 <div className='brand'>
-                    <img className='coolclick notextselection logo' id='headerlogo' src={Icon} onClick={() => PAGE == 'bakingbread' || localRedirect('/', 'main', undefined, true)} />
+                    <img className='coolclick notextselection logo' id='headerlogo' src={Icon} onClick={() => PAGE == 'bakingbread' || localRedirect('/', 'main', undefined)} />
                     <a className='title' id='headertitle'>OpenVoxel Studios</a>
                 </div>
 
@@ -59,9 +59,9 @@ export default function Header({ localRedirect, PAGE, showLeaderboard, setShowLe
                 <nav className="notextselection menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
                     <div className='submenu'>
                         <div>
-                            <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/', 'main', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
-                            <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/games/', 'games', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
-                            <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/launcher/', 'launcher', undefined, true); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Launcher</a></h1>
+                            <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/', 'main', undefined); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Home</a></h1>
+                            <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/games/', 'games', undefined); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Games</a></h1>
+                            <h1><a className='yestextselection coolclick' onClick={(e) => { localRedirect('/launcher/', 'launcher', undefined); setMenu(false); e.preventDefault(); e.stopPropagation() }}>Launcher</a></h1>
                         </div>
 
                         <div>

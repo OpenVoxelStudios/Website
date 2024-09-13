@@ -6,7 +6,8 @@ export default function DataStuff({ hidden, sethidden }: { hidden: boolean, seth
     useEffect(() => {
         const onPageLoad = () => {
             sethidden(false);
-            (document.querySelector('meta[name="theme-color"]') as HTMLMetaElement)?.setAttribute('content', '#3e4152');
+
+            ; (document.querySelector('meta[name="theme-color"]') as HTMLMetaElement)?.setAttribute('content', '#3e4152');
         };
 
         if (document.readyState === 'complete') {
@@ -15,7 +16,9 @@ export default function DataStuff({ hidden, sethidden }: { hidden: boolean, seth
             window.addEventListener('load', onPageLoad, false);
             return () => window.removeEventListener('load', onPageLoad);
         };
-    });
+
+        ; (document.getElementById('root') as HTMLDivElement).scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, [hidden]);
 
     return (
         <div className='datastuff' style={{ display: hidden ? "flex" : "none" }}>

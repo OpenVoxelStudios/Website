@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CreatorDetailList, CreatorList } from '../data';
 import './main.css';
 import BannerTeam from '/banner-team.png';
@@ -15,16 +15,18 @@ export default function MainPage({ localRedirect }: { localRedirect: Function })
         setTimeout(() => {
             let vid = document.getElementById('v0') as HTMLVideoElement;
             let box = vid?.getBoundingClientRect();
-            if (!box) return;
-
-            let val = ((-box.top + 150) / box.bottom / 3 * 2) * vid.duration;
-            if (vid && box.bottom > 0) vid.currentTime = (isNaN(val) || val < 0) ? 0 : val;
+            if (box) {
+                let val = ((-box.top + 200) / box.bottom / 3 * 2) * vid.duration;
+                if (vid && box.bottom > 0) vid.currentTime = (isNaN(val) || val < 0) ? 0 : val;
+            };
 
             requestAnimationFrame(scrollSetFrame);
         }, 1000 / 30)
     };
 
-    requestAnimationFrame(scrollSetFrame);
+    useEffect(() => {
+        requestAnimationFrame(scrollSetFrame);
+    }, []);
 
     const [profile, setProfile] = useState(Object.keys(CreatorDetailList)[Math.floor(Math.random() * Object.keys(CreatorDetailList).length)])
 
@@ -34,7 +36,7 @@ export default function MainPage({ localRedirect }: { localRedirect: Function })
                 <div className='main'>
                     <h1>Minecraft Maps,</h1>
                     <h1>Without Mods.</h1>
-                    <div className='coolclick glass maps' onClick={() => localRedirect("/games/", 'games', undefined, true)}>
+                    <div className='coolclick glass maps' onClick={() => localRedirect("/games/", 'games', undefined)}>
                         <img className='notextselection' src={IconDownload} />
                         View Maps
                     </div>
@@ -63,7 +65,7 @@ export default function MainPage({ localRedirect }: { localRedirect: Function })
 
                 <div className='text'>
                     <h1>Hall of Fame.</h1>
-                    <p>Check out our <b>Hall of Fame</b> and see every contest we've taken part in and won!<br /><u style={{ cursor: 'pointer' }} onClick={() => localRedirect("/halloffame/", 'halloffame', undefined, true)}>Click here</u> to check it out!</p>
+                    <p>Check out our <b>Hall of Fame</b> and see every contest we've taken part in and won!<br /><u style={{ cursor: 'pointer' }} onClick={() => localRedirect("/halloffame/", 'halloffame', undefined)}>Click here</u> to check it out!</p>
                 </div>
             </div>
 
