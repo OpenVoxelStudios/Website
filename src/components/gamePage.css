@@ -278,6 +278,10 @@
         font-size: 26px;
     }
 
+    .gamepage .details .selector {
+        height: 50px;
+    }
+
     .gamepage .details .selector .description,
     .gamepage .details .selector .versions {
         margin: 0;
@@ -291,6 +295,10 @@
 
     .gamepage .info .downloadLatest .text {
         font-size: 22px;
+    }
+
+    .gamepage .info .creators .creator {
+        height: 70px;
     }
 
     .gamepage .info .creators .title {
