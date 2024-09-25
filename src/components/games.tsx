@@ -30,9 +30,9 @@ const superSearches = {
 
 export default function Games({ localRedirect }: { localRedirect: Function }) {
   document.title = "Our Games - OpenVoxel Studios";
-  const filters = ["Downloads", "No Downloads", "Recent", "Old", "ABC", "ZYX"];
+  const filters = ["Downloads", "No Downloads", "Recent", "Old", "ABC", "ZYX"] as const;
 
-  const [filter, setFilter] = useState(filters[0]);
+  const [filter, setFilter] = useState<typeof filters[number]>('Recent');
   const [search, setSearch] = useState("");
 
   return (
@@ -68,21 +68,15 @@ export default function Games({ localRedirect }: { localRedirect: Function }) {
               gameList
                 .filter((a) => search.length == 0 || a.downloads || a.date)
                 .sort((a, b) => {
-                  if (!a.downloads || !a.date) return 1;
-                  if (!b.downloads || !b.date) return -1;
+                  if (a.downloads === null || !a.date) return 1;
+                  if (b.downloads === null || !b.date) return -1;
 
-                  if (filter == "Downloads") {
-                    return (b.downloads as number) - (a.downloads as number);
-                  } else if (filter == "No Downloads") {
+                  if (filter == "No Downloads") {
                     return (a.downloads as number) - (b.downloads as number);
                   } else if (filter == "Recent") {
-                    return (
-                      (b.date as Date).getTime() - (a.date as Date).getTime()
-                    );
+                    return b.date.getTime() - a.date.getTime();
                   } else if (filter == "Old") {
-                    return (
-                      (a.date as Date).getTime() - (b.date as Date).getTime()
-                    );
+                    return a.date.getTime() - b.date.getTime();
                   } else if (filter == "ABC") {
                     return a.name.localeCompare(b.name);
                   } else if (filter == "ZYX") {

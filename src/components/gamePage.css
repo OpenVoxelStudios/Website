@@ -100,14 +100,12 @@
 }
 
 .gamepage .moreinfos .changelog .arrow .dot {
-    position: absolute;
     height: 20px;
     width: 20px;
     border-radius: 25px;
 }
 
 .gamepage .moreinfos .changelog .arrow .dash {
-    position: absolute;
     height: calc(100% - 20px);
     width: 5px;
     border-radius: 25px;

@@ -5,7 +5,8 @@ export const links: { [key: string]: string | undefined } = {
     discord: "https://discord.com/invite/Xhvb2wujVh",
     launcherwiki: "https://launcher.openvoxel.studio/",
     youtube: "https://www.youtube.com/@OpenVoxel",
-    github: "https://github.com/OpenVoxelStudios"
+    github: "https://github.com/OpenVoxelStudios",
+    modrinth: "https://modrinth.com/organization/OpenVoxel",
 }
 
 export type CreatorList = "ChoosingBerry" | "CMANIF" | "Cryptic Knight" | "Kubik" | "Monster Art" | "RoseRocket" | "S0FL" | "Sammy" | "Stevelocks" | "The Bread Giver";
@@ -153,6 +154,32 @@ var gameListRaw: {
     }[],
     islauncher?: boolean;
 }[] = [
+        {
+            name: 'Yahiamice Escape Room 2',
+            description: 'The sequel... But better this time (and no math)!',
+            extended_description: 'Please steve i beg i dont wanna type that extended description i dont even know what to put aaaaaaaaaaaaaaaaaa',
+            creators: ['Stevelocks', 'ChoosingBerry', 'Kubik', 'RoseRocket', 'Sammy', 'The Bread Giver'],
+            collaboration: [{ name: 'GloxoST' }, { name: 'Ichosecheese' }, { name: 'ScoobySnack' }],
+            link: { game_id: 'yer2' },
+            date: new Date(1727259800000),
+            image: '/games/banners/yer2.png',
+            icon: '/games/icons/yer2.png',
+            downloads: 0,
+            tags: ['yahiamice', 'escape', 'room', '2', 'sequel', 'yer', 'yer2'],
+            versions: [
+                {
+                    changes: 'Initial Release with all the things!',
+                    date: new Date(1727259800000),
+                    download: 'https://github.com/OpenVoxelStudios/Maps/releases/download/v1.0/yer2.zip',
+                    name: 'Version 1',
+                    supports: '1.21+',
+                    type: 'release',
+                    id: 'v1'
+                }
+            ],
+            fulldetails: 'aaa',
+            islauncher: false,
+        },
         {
             name: "Oak House Murder",
             description: "Residence Massacre in Minecraft!",

@@ -3,7 +3,7 @@ import { CreatorDetailList, CreatorList } from '../data';
 import './main.css';
 import BannerTeam from '/banner-team.png';
 import IconDownload from '/icons/Download.svg';
-// import LauncherImage from '/images/launcher.png';
+import LauncherImage from '/images/launcher.png';
 import OVChestOpen from '/ov_chest_open.mp4';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -58,7 +58,7 @@ export default function MainPage({ localRedirect }: { localRedirect: Function })
                 </div>
             </div>
 
-            <div className='arg'>
+            {/* <div className='arg'>
                 <div className='notextselection glass img'>
                     <img src={BannerTeam} />
                 </div>
@@ -67,10 +67,10 @@ export default function MainPage({ localRedirect }: { localRedirect: Function })
                     <h1>Hall of Fame.</h1>
                     <p>Check out our <b>Hall of Fame</b> and see every contest we've taken part in and won!<br /><u style={{ cursor: 'pointer' }} onClick={() => localRedirect("/halloffame/", 'halloffame', undefined)}>Click here</u> to check it out!</p>
                 </div>
-            </div>
+            </div> */}
 
-            {/* This is removed while the launcher is not reworked */}
-            {/* <div className='arg'>
+
+            <div className='arg'>
                 <div className='notextselection glass img'>
                     <img src={LauncherImage} />
                 </div>
@@ -79,7 +79,7 @@ export default function MainPage({ localRedirect }: { localRedirect: Function })
                     <h1>Custom Launcher.</h1>
                     <p><b>Play all our games effortlessly in one place!</b><br />The Launcher also comes with optimization Mods to even work on slower computers.</p>
                 </div>
-            </div> */}
+            </div>
 
             <div className='team' id='team'>
                 <div className='notextselection glass heads'>
@@ -92,7 +92,7 @@ export default function MainPage({ localRedirect }: { localRedirect: Function })
 
                 <div className='glass notextselection description'>
                     <div className='notextselection top'>
-                        <img className='notextselection' src={`/heads/${CreatorDetailList[profile as CreatorList].minecraft}.png`} loading='lazy' />
+                        <img className='notextselection' src={`/heads/${CreatorDetailList[profile as CreatorList].minecraft}.png`} loading='lazy' decoding='async' />
                         <h1 className='yestextselection'>{profile}</h1>
                     </div>
                     <div className='nottop'>
