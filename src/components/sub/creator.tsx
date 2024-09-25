@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CreatorDetailList } from '../data.ts';
+import { CreatorDetailList } from '../../data.ts';
 
 export default function Creator({ creatorName }: { creatorName: keyof typeof CreatorDetailList }) {
     const [stevegg, setStevegg] = useState(false);

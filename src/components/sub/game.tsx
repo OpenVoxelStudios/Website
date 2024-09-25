@@ -16,7 +16,7 @@ export default function Game({ localRedirect, name, date, downloads, description
             <p className='yestextselection glass title'>{name}</p>
 
             <div className='details'>
-                <img className='notextselection thumbnail' src={image} />
+                <img className='notextselection thumbnail' src={image} loading='lazy' decoding='async' />
                 {date !== null &&
                     <p className='yestextselection date'>{date.toLocaleDateString()}</p>
                 }

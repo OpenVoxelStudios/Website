@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./games.css";
-import Game from "./game";
+import Game from "./sub/game";
 import { gameList } from "../data.ts";
 
 const superSearches = {

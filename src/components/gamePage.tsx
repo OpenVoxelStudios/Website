@@ -5,7 +5,7 @@ import { gameList } from '../data.ts';
 import { useState } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import Creator from './creator.tsx';
+import Creator from './sub/creator.tsx';
 
 export default function GamePage({ game, localRedirect }: { game: string, localRedirect: Function }) {
     const GAME = gameList.find(l => typeof l.link === 'object' && l.link.game_id == game) as typeof gameList[0];

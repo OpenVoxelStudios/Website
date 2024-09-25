@@ -5,7 +5,7 @@ import GamePage from './components/gamePage';
 import Games from './components/games';
 import Header from './components/header';
 import MainPage from './components/main';
-import DataStuff from './components/datastuff';
+import DataStuff from './components/sub/datastuff';
 import Launcher from './components/launcher';
 import Bread from './components/bread';
 import HallOfFame from './components/halloffame';
