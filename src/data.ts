@@ -7,6 +7,7 @@ export const links: { [key: string]: string | undefined } = {
     youtube: "https://www.youtube.com/@OpenVoxel",
     github: "https://github.com/OpenVoxelStudios",
     modrinth: "https://modrinth.com/organization/OpenVoxel",
+    something: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
 }
 
 export type CreatorList = "ChoosingBerry" | "CMANIF" | "Cryptic Knight" | "Kubik" | "Monster Art" | "RoseRocket" | "S0FL" | "Sammy" | "Stevelocks" | "The Bread Giver";
@@ -158,8 +159,8 @@ var gameListRaw: {
             name: 'Yahiamice Escape Room 2',
             description: 'The sequel... But better this time (and no math)!',
             extended_description: 'Please steve i beg i dont wanna type that extended description i dont even know what to put aaaaaaaaaaaaaaaa',
-            creators: ['Stevelocks', 'ChoosingBerry', 'Kubik', 'RoseRocket', 'Sammy', 'The Bread Giver'],
-            collaboration: [{ name: 'GloxoST' }, { name: 'Ichosecheese' }, { name: 'ScoobySnack' }],
+            creators: ['Stevelocks', 'ChoosingBerry', 'Kubik', 'RoseRocket', 'Sammy', 'The Bread Giver', 'S0FL'],
+            collaboration: [{ name: 'GloxoST' }, { name: 'Ichosecheese', url: 'https://openvoxel.studio/something' }, { name: 'ScoobySnack' }],
             link: { game_id: 'yer2' },
             date: new Date(1727259800000),
             image: '/games/banners/yer2.png',
