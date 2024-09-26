@@ -110,15 +110,16 @@
     width: 100%;
 }
 
-.menu h1 a {
+.menu h1 p {
     display: block;
     font-size: 40px;
     padding: 10px 20px;
     text-decoration: none;
     transition: all .3s ease;
+    margin: 0;
 }
 
-.menu h1 a:hover {
+.menu h1 p:hover {
     background: rgba(255, 255, 255, .2);
 }
 

@@ -7,8 +7,10 @@ import LauncherImage from '/images/launcher.png';
 import OVChestOpen from '/ov_chest_open.mp4';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { Link } from 'react-router-dom';
+import { scrollTop } from '../router';
 
-export default function MainPage({ localRedirect }: { localRedirect: Function }) {
+export default function MainPage() {
     document.title = "OpenVoxel Studios";
 
     function scrollSetFrame() {
@@ -36,10 +38,10 @@ export default function MainPage({ localRedirect }: { localRedirect: Function })
                 <div className='main'>
                     <h1>Minecraft Maps,</h1>
                     <h1>Without Mods.</h1>
-                    <div className='coolclick glass maps' onClick={() => localRedirect("/games/", 'games', undefined)}>
+                    <Link to='/games/' onClick={scrollTop} className='coolclick glass maps'>
                         <img className='notextselection' src={IconDownload} />
                         View Maps
-                    </div>
+                    </Link>
 
                     <video className='notextselection' id="v0" autoPlay={true} muted={true} playsInline={true} onPlay={(e) => e.currentTarget.pause()} controls={false}>
                         <source className='notextselection' type="video/mp4;" src={OVChestOpen}></source>

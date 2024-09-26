@@ -157,7 +157,7 @@ var gameListRaw: {
         {
             name: 'Yahiamice Escape Room 2',
             description: 'The sequel... But better this time (and no math)!',
-            extended_description: 'Please steve i beg i dont wanna type that extended description i dont even know what to put aaaaaaaaaaaaaaaaaa',
+            extended_description: 'Please steve i beg i dont wanna type that extended description i dont even know what to put aaaaaaaaaaaaaaaa',
             creators: ['Stevelocks', 'ChoosingBerry', 'Kubik', 'RoseRocket', 'Sammy', 'The Bread Giver'],
             collaboration: [{ name: 'GloxoST' }, { name: 'Ichosecheese' }, { name: 'ScoobySnack' }],
             link: { game_id: 'yer2' },
@@ -172,12 +172,12 @@ var gameListRaw: {
                     date: new Date(1727259800000),
                     download: 'https://github.com/OpenVoxelStudios/Maps/releases/download/v1.0/yer2.zip',
                     name: 'Version 1',
-                    supports: '1.21+',
+                    supports: '1.21-1.21.1',
                     type: 'release',
                     id: 'v1'
                 }
             ],
-            fulldetails: 'aaa',
+            fulldetails: 'After leaving the simulation know as 𝔂𝓪𝓱𝓲𝓪𝓶𝓲𝓬𝓮 𝓮𝓼𝓬𝓪𝓹𝓮 𝓻𝓸𝓸𝓶, you are swept to the facility of Yahiamice Escape Room 2, where many chaotic things await!\n\n\nFeaturing:\n\n- The myth, Yahiarodent\n- the doof ripoff, the UNALIVE-INATOR\n- mama coco\nand many more!\n\nThis map was meant for the third (and probably final) Yahiamice map contest, and we placed third with it! :D\n\nbtw this map is meant to be singleplayer only. I have no idea what will happen if you try doing multiplayer, but probably not good things.\nAlso this map is 1.21-1.21.1 only. 1.21.2 breaks everything as usual',
             islauncher: false,
         },
         {
