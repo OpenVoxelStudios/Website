@@ -75,9 +75,18 @@ img {
   padding-top: 125px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .coolclick {
   transition: transform 0.15s ease;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.coolclick * {
+  text-decoration: none;
 }
 
 

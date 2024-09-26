@@ -1,16 +1,16 @@
+import { Link } from 'react-router-dom';
 import './game.css';
 import IconDownload from '/icons/Download.svg';
+import { scrollTop } from '../../router';
 
-export default function Game({ localRedirect, name, date, downloads, description, image, link }: { localRedirect: Function, name: string, date: Date | null, downloads: number | null, description: string, image: string, link: string | { game_id: string; } }) {
+export default function Game({ name, date, downloads, description, image, link }: { name: string, date: Date | null, downloads: number | null, description: string, image: string, link: string | { game_id: string; } }) {
     return (
-        <div className='coolclick game glass' onClick={(e) => {
+        <Link to={typeof link == "string" ? link : `/game/${link.game_id}/`} className='coolclick game glass' target={typeof link == "string" ? '_blank' : undefined} onClick={(e) => {
             if (name === "More Maps Soon!") {
-                if (Math.round(Math.random() * 10) == 0) ((e.currentTarget.querySelector('.details') as HTMLDivElement).querySelector('img') as HTMLImageElement).src = '/rick.gif';
+                if (Math.round(Math.random() * 6) == 0) ((e.currentTarget.querySelector('.details') as HTMLDivElement).querySelector('img') as HTMLImageElement).src = '/rick.gif';
             }
-            else if (typeof link == 'string') {
-                (window.open(link, '_blank') as Window).focus();
-            } else {
-                localRedirect(`/game/${link.game_id}/`, 'game', link.game_id)
+            else if (typeof link !== 'string') {
+                scrollTop();
             }
         }}>
             <p className='yestextselection glass title'>{name}</p>
@@ -29,6 +29,6 @@ export default function Game({ localRedirect, name, date, downloads, description
             </div>
 
             <p className='yestextselection glass description'>{description}</p>
-        </div>
+        </Link>
     )
 };

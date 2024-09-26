@@ -6,8 +6,10 @@ import { useState } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Creator from './sub/creator.tsx';
+import { Link } from 'react-router-dom';
+import { scrollTop } from '@/router.tsx';
 
-export default function GamePage({ game, localRedirect }: { game: string, localRedirect: Function }) {
+export default function GamePage({ game }: { game: string }) {
     const GAME = gameList.find(l => typeof l.link === 'object' && l.link.game_id == game) as typeof gameList[0];
     const [description, setDescription] = useState(true);
 
@@ -22,9 +24,11 @@ export default function GamePage({ game, localRedirect }: { game: string, localR
                     <h1>You're Almost There!</h1>
                     <a>Allow this Website to open <b>OpenVoxel Launcher</b>.<br />Or if you don't have the Launcher, click below!</a>
 
-                    <div className='coolclick glass downloadLatest' onClick={() => localRedirect('/launcher', 'launcher', undefined)}>
-                        <img className='icon' src={IconDownload} />
-                        <a className='yestextselection text'>Download Launcher</a>
+                    <div className='coolclick glass downloadLatest'>
+                        <Link to='/launcher' onClick={scrollTop}>
+                            <img className='icon' src={IconDownload} />
+                            <a className='yestextselection text'>Download Launcher</a>
+                        </Link>
                     </div>
                 </div>
             </div>
