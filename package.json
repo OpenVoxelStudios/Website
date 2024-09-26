@@ -3,7 +3,7 @@
   "name": "openvoxelstudio-website",
   "description": "A really cool website for OpenVoxel Studio made in React.",
   "private": false,
-  "version": "1.0.7",
+  "version": "1.1.0",
   "type": "module",
   "author": {
     "email": "kubik@openvoxel.studio",
