@@ -26,7 +26,7 @@ export default function Header() {
         <>
             <header className="header" id='header'>
                 <div>
-                    <img className='coolclick notextselection icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }} onClick={() => {
+                    <img className='coolclick notextselection icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); }} onClick={() => {
                         setMenu(!menu);
                         if (!menu) setPinardo((pinardo + 1) % 14);
                     }} />
@@ -39,7 +39,9 @@ export default function Header() {
                     <a className='title' id='headertitle'>OpenVoxel Studios</a>
                 </div>
 
-                <img onClick={() => (window.open(links.discord, '_blank') as Window).focus()} className='coolclick notextselection icon' src={IconDiscord} />
+                <Link to={links.discord as string} target='_blank'>
+                    <img className='coolclick notextselection icon' src={IconDiscord} />
+                </Link>
             </header>
 
             <nav className="notextselection menu" style={{ left: menu ? "0" : "-100%" }} onMouseDown={(ev) => { ev.stopPropagation(); ev.preventDefault() }}>
@@ -60,9 +62,15 @@ export default function Header() {
 
                     <div>
                         <div className='icon-row'>
-                            <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.discord, '_blank') as Window).focus() }} src={IconDiscord} />
-                            <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.youtube, '_blank') as Window).focus() }} src={IconYoutube} />
-                            <img className='yestextselection coolclick' onClick={() => { setMenu(false); (window.open(links.github, '_blank') as Window).focus() }} src={IconGithub} />
+                            <Link to={links.discord as string} target='_blank' className='coolclick'>
+                                <img src={IconDiscord} />
+                            </Link>
+                            <Link to={links.youtube as string} target='_blank' className='coolclick'>
+                                <img src={IconYoutube} />
+                            </Link>
+                            <Link to={links.github as string} target='_blank' className='coolclick'>
+                                <img src={IconGithub} />
+                            </Link>
                         </div>
 
                         {pinardo == 13 &&

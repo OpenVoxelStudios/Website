@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './halloffame.css';
 
 export default function HallOfFame() {
@@ -49,13 +50,9 @@ export default function HallOfFame() {
                             </div>
                             {event.image &&
                                 <div className="illustration-container">
-                                    <div className="illustration" onClick={(ev) => {
-                                        ev.preventDefault();
-                                        ev.stopPropagation();
-                                        window.open(event.link, '_blank');
-                                    }}>
+                                    <Link to={event.link} target='_blank' className="illustration">
                                         <img src={event.image} alt={event.title} />
-                                    </div>
+                                    </Link>
                                 </div>
                             }
                         </div>
