@@ -160,7 +160,7 @@ var gameListRaw: {
             description: 'The sequel... But better this time (and no math)!',
             extended_description: 'Please steve i beg i dont wanna type that extended description i dont even know what to put aaaaaaaaaaaaaaaa',
             creators: ['Stevelocks', 'ChoosingBerry', 'Kubik', 'RoseRocket', 'Sammy', 'The Bread Giver', 'S0FL'],
-            collaboration: [{ name: 'GloxoST' }, { name: 'Ichosecheese', url: 'https://openvoxel.studio/something' }, { name: 'ScoobySnack' }],
+            collaboration: [{ name: 'GloxoST' }, { name: 'Ichosecheese', url: 'https://www.youtube.com/watch?v=YEqYo5gH1gM' }, { name: 'ScoobySnack' }],
             link: { game_id: 'yer2' },
             date: new Date(1727259800000),
             image: '/games/banners/yer2.png',

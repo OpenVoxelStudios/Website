@@ -8,7 +8,6 @@ import { ScrollRestoration, useParams } from 'react-router-dom';
 
 export default function GameSpecificRoute() {
   let params = useParams();
-  console.log(params.game_id);
 
   useEffect(onLoad, []);
 

@@ -27,7 +27,7 @@ export default function GamePage({ game }: { game: string }) {
                     <div className='coolclick glass downloadLatest'>
                         <Link to='/launcher' onClick={scrollTop}>
                             <img className='icon' src={IconDownload} />
-                            <a className='yestextselection text'>Download Launcher</a>
+                            Download Launcher
                         </Link>
                     </div>
                 </div>
@@ -80,15 +80,20 @@ export default function GamePage({ game }: { game: string }) {
                         <a className='yestextselection title'>In Collaboration with:</a>
 
                         {GAME.collaboration.map((collab, i) => {
-                            return <div key={i} className='coolclick glass creator' onClick={() => { if (collab.url) (window.open(collab.url, '_blank') as Window).focus() }} style={{
-                                height: '50px',
-                                justifyContent: 'center',
-                            }}>
-                                <a className='yestextselection name' style={{
-                                    marginLeft: 0,
-                                    width: 'fit-content',
-                                }}>{collab.name}</a>
-                            </div>
+
+                            if (collab.url) {
+                                return (
+                                    <Link key={i} to={collab.url} target='_blank' className='yestextselection coolclick glass collabwith' style={{ textDecoration: 'underline' }}>
+                                        {collab.name}
+                                    </Link>
+                                )
+                            }
+
+                            else return (
+                                <a key={i} className='yestextselection coolclick glass collabwith'>
+                                    {collab.name}
+                                </a>
+                            )
                         })}
                     </div>
                 }
