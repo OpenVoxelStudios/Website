@@ -75,7 +75,7 @@ export default function Header() {
 
                         {pinardo == 13 &&
                             <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
-                                <img src={PinardoImage} style={{ width: "40%" }} loading='lazy' />
+                                <img src={PinardoImage} style={{ width: "40%" }} loading='lazy' decoding='async' />
                             </h1>
                         }
                     </div>

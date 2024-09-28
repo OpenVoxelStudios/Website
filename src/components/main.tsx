@@ -56,7 +56,7 @@ export default function MainPage() {
                 </div>
 
                 <div className='notextselection glass img'>
-                    <img src={BannerTeam} />
+                    <img src={BannerTeam} loading='lazy' decoding='async' />
                 </div>
             </div>
 
@@ -74,7 +74,7 @@ export default function MainPage() {
 
             <div className='arg'>
                 <div className='notextselection glass img'>
-                    <img src={LauncherImage} />
+                    <img src={LauncherImage} loading='lazy' decoding='async' />
                 </div>
 
                 <div className='text'>
@@ -87,7 +87,7 @@ export default function MainPage() {
                 <div className='notextselection glass heads'>
                     {Object.keys(CreatorDetailList).map((creator, index) =>
                         <div className={(profile == creator ? 'glass ' : '') + 'head'} key={index} onClick={() => setProfile(creator)}>
-                            <img src={`/heads/${CreatorDetailList[creator as CreatorList].minecraft}.png`} loading='lazy' />
+                            <img src={`/heads/${CreatorDetailList[creator as CreatorList].minecraft}.png`} loading='lazy' decoding='async' />
                         </div>
                     )}
                 </div>
