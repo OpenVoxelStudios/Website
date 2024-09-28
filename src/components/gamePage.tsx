@@ -61,10 +61,10 @@ export default function GamePage({ game }: { game: string }) {
                     </div>
                 }
 
-                <div className='coolclick glass downloadLatest' onClick={() => (window.open(GAME.versions.filter(v => v.type == "release")[0].download, '_blank') as Window).focus()}>
+                <Link to={GAME.versions.filter(v => v.type == "release")[0].download} target='_blank' className='coolclick glass downloadLatest yestextselection text'>
                     <img className='icon' src={IconDownload} />
-                    <a className='yestextselection text'>Download Latest</a>
-                </div>
+                    Download Latest
+                </Link>
 
                 <div className='separator'></div>
 
@@ -119,13 +119,11 @@ export default function GamePage({ game }: { game: string }) {
                                 </div>
 
                                 <div className='text'>
-                                    <div className='coolclick glass title' onClick={() => (window.open(v.download, '_blank') as Window).focus()}>
+                                    <Link to={v.download} target='_blank' className='coolclick glass title'>
                                         <img className='notextselection download' src={IconDownload}></img>
-                                        <p className='name'>
-                                            <a className='bold'>[{v.supports}] {v.name}</a>
-                                            <a> (on {v.date.toLocaleDateString()})</a>
-                                        </p>
-                                    </div>
+                                        <p className='bold'>[{v.supports}] {v.name}</p>
+                                        <p>(on {v.date.toLocaleDateString()})</p>
+                                    </Link>
                                     <div className='description'><Markdown remarkPlugins={[remarkGfm]}>{v.changes || "No Additional Description Provided."}</Markdown></div>
                                 </div>
                             </div>

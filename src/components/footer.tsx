@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './footer.css';
 import Icon from '/logo.png';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     const [BREADMAN, _] = useState(Math.round(Math.random() * 20) == 1);
@@ -33,17 +34,13 @@ export default function Footer() {
 
                     <br />
                     <p className='yestextselection actuallybigger'>Copyright © OpenVoxel Studios 2024</p>
-                    <p className='yestextselection contactmail' onClick={(ev) => {
-                        ev.preventDefault();
-                        ev.stopPropagation();
-
-                        location.href = 'mailto:contact@openvoxel.studio'
-                    }} style={{
+                    <Link to='mailto:contact@openvoxel.studio' className='yestextselection contactmail' style={{
                         textDecoration: 'underline',
-                        cursor: 'pointer'
-                    }}>contact@openvoxel.studio</p>
+                    }}>contact@openvoxel.studio
+                    </Link>
                     <br />
-                    <div className='yestextselection'>NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</div>
+                    <br />
+                    <a className='yestextselection'>NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</a>
                 </a>
             </div>
         </>

@@ -71,7 +71,8 @@
     align-items: center;
     cursor: pointer;
     margin: 15px;
-    padding: 10px
+    padding: 10px;
+    gap: 15px;
 }
 
 .gamepage .moreinfos .changelog .text .title .download {
@@ -82,10 +83,6 @@
 .gamepage .moreinfos .changelog .text .title .name {
     margin-left: 15px;
     font-size: 32px;
-}
-
-.gamepage .moreinfos .changelog .text .title .name .bold {
-    font-weight: bold;
 }
 
 .gamepage .moreinfos .changelog .arrow {
