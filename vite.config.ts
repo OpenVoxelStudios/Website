@@ -24,6 +24,7 @@ var config: UserConfig = {
         launcher: resolve(root, 'launcher', 'index.html'),
         bakingbread: resolve(root, 'bakingbread', 'index.html'),
         halloffame: resolve(root, 'halloffame', 'index.html'),
+        404: resolve(root, '404', 'index.html'),
         // when2cook: resolve(root, 'when2cook', 'index.html'),
       },
       output: {

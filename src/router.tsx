@@ -49,5 +49,9 @@ export const router = createBrowserRouter([
     {
         path: '/halloffame',
         element: <HallOfFameRoute />
+    },
+    {
+        path: '/404',
+        element: <ErrorRoute status={404} statusText='Not Found' message={<>Seems like you tried to go so far that we can't find anything for you!<br />Maybe you should check out our Discord if you think this is a mistake?</>} />,
     }
 ]);
