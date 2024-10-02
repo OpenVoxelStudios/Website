@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+src/public/bakingbread/musics/*
 
 # Editor directories and files
 .vscode/*
