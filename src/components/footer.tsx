@@ -24,7 +24,7 @@ export default function Footer() {
 
                     <a className='subtitle'>Minecraft Maps, without Mods.</a>
                 </div>
-                <a className='notextselection small'>
+                <div className='notextselection small'>
                     <div className='notextselection coolclick glass backtotop' id='scrollToTopBtn' onClick={(ev) => {
                         ev.preventDefault();
                         ev.stopPropagation();
@@ -33,7 +33,8 @@ export default function Footer() {
                     }}></div>
 
                     <br />
-                    <p className='yestextselection actuallybigger'>Copyright © OpenVoxel Studios 2024</p>
+                    <a className='yestextselection actuallybigger'>Copyright © OpenVoxel Studios 2024</a>
+                    <br />
                     <Link to='mailto:contact@openvoxel.studio' className='yestextselection contactmail' style={{
                         textDecoration: 'underline',
                     }}>contact@openvoxel.studio
@@ -41,7 +42,7 @@ export default function Footer() {
                     <br />
                     <br />
                     <a className='yestextselection'>NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</a>
-                </a>
+                </div>
             </div>
         </>
     )

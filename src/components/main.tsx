@@ -9,6 +9,7 @@ import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Link } from 'react-router-dom';
 import { scrollTop } from '../router';
+import { motion } from 'framer-motion';
 
 export default function MainPage() {
     document.title = "OpenVoxel Studios";
