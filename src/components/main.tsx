@@ -35,7 +35,11 @@ export default function MainPage() {
 
     return (
         <>
-            <div className='mainpage'>
+            <motion.div className='mainpage'
+                initial={{ opacity: 0.7, scale: 0.8, y: '5%' }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 2, type: 'spring', bounce: 0.3 }}
+            >
                 <div className='main'>
                     <h1>Minecraft Maps,</h1>
                     <h1>Without Mods.</h1>
@@ -48,7 +52,7 @@ export default function MainPage() {
                         <source className='notextselection' type="video/mp4;" src={OVChestOpen}></source>
                     </video>
                 </div>
-            </div>
+            </motion.div>
 
             <div className='arg'>
                 <div className='text'>
@@ -87,9 +91,14 @@ export default function MainPage() {
             <div className='team' id='team'>
                 <div className='notextselection glass heads'>
                     {Object.keys(CreatorDetailList).map((creator, index) =>
-                        <div className={(profile == creator ? 'glass ' : '') + 'head'} key={index} onClick={() => setProfile(creator)}>
+                        <motion.div className={(profile == creator ? 'glass ' : '') + 'head'} key={index} onClick={() => setProfile(creator)}
+                            initial={{ scale: 0.6, opacity: 0.6 }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.2, delay: 0.1 }}
+                        >
                             <img src={`/heads/${CreatorDetailList[creator as CreatorList].minecraft}.png`} loading='lazy' decoding='async' />
-                        </div>
+                        </motion.div>
                     )}
                 </div>
 
