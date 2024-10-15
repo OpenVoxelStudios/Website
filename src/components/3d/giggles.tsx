@@ -10,11 +10,10 @@ export default function Model(props) {
   const { nodes, materials, animations } = useGLTF('/3d/giggles.glb')
   const { actions } = useAnimations(animations, group)
 
-  console.log(animations);
   useEffect(() => {
     actions.Falling.play();
   }, [actions]);
-  
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="blockbench_export">
@@ -23,7 +22,8 @@ export default function Model(props) {
           geometry={nodes.giggles.geometry}
           material={nodes.giggles.material}
           skeleton={nodes.giggles.skeleton}
-          position={[0, 0, -0.0406]}>
+          position={[0, 0, -0.0406]}
+          scale={[5, 5, 5]}>
           <primitive object={nodes.giggles_1} />
         </skinnedMesh>
       </group>
