@@ -1,59 +1,64 @@
 import * as THREE from 'three'
-import { useEffect, useRef, useState } from 'react'
-import { Canvas, extend, useFrame, useThree } from '@react-three/fiber'
-import { useCursor, MeshPortalMaterial, CameraControls, Gltf, Text, Preload } from '@react-three/drei'
-import { useRoute, useLocation } from 'wouter'
-import { easing, geometry } from 'maath'
-import { suspend } from 'suspend-react'
+import { Suspense, useEffect, useRef, useState } from 'react'
+import { Canvas, useThree } from '@react-three/fiber'
+import { Environment, Preload } from '@react-three/drei'
 import Header from '@/components/header'
 import { onLoad } from '@/router'
 import { ScrollRestoration } from 'react-router-dom'
+import { useGLTF, useAnimations } from '@react-three/drei'
+import { GLTF } from 'three-stdlib'
 
-extend(geometry)
-const regular = import('/font/Rubik-Regular.ttf')
-const medium = import('/font/Rubik-Bold.ttf')
 
-function Frame({ id, name, author, bg, width = 1, height = 1.61803398875, children, ...props }) {
-  const portal = useRef()
-  const [, setLocation] = useLocation()
-  const [, params] = useRoute('/item/:id')
-  const [hovered, hover] = useState(false)
-  useCursor(hovered)
-  useFrame((state, dt) => easing.damp(portal.current, 'blend', params?.id === id ? 1 : 0, 0.2, dt))
+export function Giggles(props: JSX.IntrinsicElements['group']) {
+  const group = useRef<THREE.Group>()
+  const { nodes, animations } = useGLTF('/3d/giggles.glb') as GLTF & {
+    nodes: {
+      giggles: THREE.SkinnedMesh
+      giggles_1: THREE.Bone
+    }
+    materials: {}
+  }
+
+  const { actions } = useAnimations(animations, group)
+
+  useEffect(() => {
+    actions?.Falling?.play();
+  })
+
   return (
-    <group {...props}>
-      <Text font={suspend(medium).default} fontSize={0.3} anchorY="top" anchorX="left" lineHeight={0.8} position={[-0.375, 0.715, 0.01]} material-toneMapped={false}>
-        {name}
-      </Text>
-      <Text font={suspend(regular).default} fontSize={0.1} anchorX="right" position={[0.4, -0.659, 0.01]} material-toneMapped={false}>
-        /{id}
-      </Text>
-      <Text font={suspend(regular).default} fontSize={0.04} anchorX="right" position={[0.0, -0.677, 0.01]} material-toneMapped={false}>
-        {author}
-      </Text>
-      <mesh name={id} onDoubleClick={(e) => (e.stopPropagation(), setLocation('/item/' + e.object.name))} onPointerOver={(e) => hover(true)} onPointerOut={() => hover(false)}>
-        <roundedPlaneGeometry args={[width, height, 0.1]} />
-        <MeshPortalMaterial ref={portal} events={params?.id === id} side={THREE.DoubleSide}>
-          <color attach="background" args={[bg]} />
-          {children}
-        </MeshPortalMaterial>
-      </mesh>
+    <group ref={group} {...props} dispose={null}>
+      <group name="blockbench_export">
+        <skinnedMesh
+          name="giggles"
+          geometry={nodes.giggles.geometry}
+          material={nodes.giggles.material}
+          skeleton={nodes.giggles.skeleton}
+          position={[0, 0, -0.041]}>
+          <primitive object={nodes.giggles_1} />
+        </skinnedMesh>
+      </group>
     </group>
   )
 }
 
-function Rig({ position = new THREE.Vector3(0, 0, 2), focus = new THREE.Vector3(0, 0, 0) }) {
-  const { controls, scene } = useThree()
-  const [, params] = useRoute('/item/:id')
-  useEffect(() => {
-    const active = scene.getObjectByName(params?.id)
-    if (active) {
-      active.parent.localToWorld(position.set(0, 0.5, 0.25))
-      active.parent.localToWorld(focus.set(0, 0, -2))
-    }
-    controls?.setLookAt(...position.toArray(), ...focus.toArray(), true)
-  })
-  return <CameraControls makeDefault minPolarAngle={0} maxPolarAngle={Math.PI / 2} />
+
+function Rig() {
+  const [mouseIn, setMouseIn] = useState<boolean>(false);
+  const canvas = (document.getElementById('canvas1') as HTMLCanvasElement);
+  const { camera } = useThree();
+
+  // camera.rotateX()
+
+  canvas.onmouseenter = (_e) => setMouseIn(true);
+  canvas.onmouseleave = (_e) => setMouseIn(false);
+  canvas.onmousemove = (e) => {
+    if (!mouseIn) return;
+    let bounds = canvas.getBoundingClientRect();
+
+    camera.rotateY(Math.PI / 100 * (bounds.left - e.clientX));
+  };
+
+  return <></>;
 }
 
 
@@ -65,17 +70,18 @@ export default function ThreeDRoute() {
     <>
       <Header />
 
-      <Canvas className='content' id='content' style={{ height: '80vh' }} flat camera={{ fov: 75, position: [0, 0, 20] }} eventSource={document.getElementById('root')} eventPrefix="client">
-        <color attach="background" args={['#f0f0f0']} />
-        <Frame id="02" name="tea" author="Omar Faruq Tawsif">
-          <Gltf src="/3d/mewoster.glb" position={[0, -2, -3]} />
-        </Frame>
-        <Frame id="03" name="still" author="Omar Faruq Tawsif" bg="#d1d1ca" position={[1.15, 0, 0]} rotation={[0, -0.5, 0]}>
-          <Gltf src="/3d/giggles.glb" scale={2} position={[0, -0.8, -4]} />
-        </Frame>
-        <Rig />
-        <Preload all />
-      </Canvas>
+      <div id='content' className='content'>
+
+        <Canvas shadows className='glass' id='canvas1' style={{ height: '300px', width: '800px' }} flat camera={{ fov: 75, position: [0, 0, 5] }}>
+          <Suspense fallback={null}>
+            <Giggles scale={[2, 2, 2]} />
+
+            <Rig />
+            <Environment preset="warehouse" background={false} />
+            <Preload all />
+          </Suspense>
+        </Canvas>
+      </div>
 
       <ScrollRestoration />
     </>
