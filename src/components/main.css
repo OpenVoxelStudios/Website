@@ -76,7 +76,8 @@
 
 .arg .img {
     width: 50%;
-    height: fit-content;
+    max-height: 75vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     animation: float 6s ease-in-out infinite;
@@ -86,10 +87,10 @@
     transform-style: preserve-3d;
 }
 
-.arg .img>img {
+.arg .img>* {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     image-rendering: pixelated;
     border-radius: 16px;
 }
@@ -273,12 +274,10 @@
     }
 
     .arg .img {
+        width: 100%;
+        cursor: default;
         animation: smallfloat 6s ease-in-out infinite;
         z-index: 0;
-    }
-
-    .arg .img>img {
-        object-fit: cover;
     }
 
     .arg .text {
@@ -299,9 +298,9 @@
         font-size: 40px;
     }
 
-    .arg .text,
-    .arg .img {
+    .arg .text {
         position: absolute;
-        width: 90%;
+        width: 70%;
+        padding: 20px;
     }
 }

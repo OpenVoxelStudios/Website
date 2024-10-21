@@ -53,6 +53,7 @@
     "@mui/x-date-pickers": "^7.20.0",
     "@react-three/drei": "^9.114.3",
     "@react-three/fiber": "^8.17.10",
+    "@types/ua-parser-js": "^0.7.39",
     "chalk": "^5.3.0",
     "dayjs": "^1.11.13",
     "elysia": "^1.1.22",
@@ -66,7 +67,8 @@
     "rehype-raw": "^7.0.0",
     "remark-gfm": "^4.0.0",
     "sharp": "^0.33.5",
-    "three": "^0.169.0"
+    "three": "^0.169.0",
+    "ua-parser-js": "^1.0.39"
   },
   "devDependencies": {
     "@types/bun": "^1.1.11",
