@@ -80,7 +80,6 @@
     height: 75vh;
     display: flex;
     align-items: center;
-    animation: float 6s ease-in-out infinite;
 
     position: relative;
     transition: all 0.2s ease;

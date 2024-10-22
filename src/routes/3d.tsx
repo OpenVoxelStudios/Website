@@ -28,8 +28,8 @@ function Scene() {
   return (
     <>
       <Suspense fallback={<Loader />}>
-        <Animations scale={[1, 1, 1]} position={[-1, -1.5, 0]} />
-        <spotLight position={[-5.5, 10, 0]} rotation={[0, 0, -Math.PI / 2]} angle={Math.PI / 13} penumbra={0.6} decay={0} intensity={Math.PI * 4} />
+        <Animations scale={[1, 1, 1]} position={[-1, -1.5, 0]} rotation={[0, -Math.PI / 2, 0]} />
+        <pointLight position={[-1.5, 2.75, 1]} intensity={13} distance={6} decay={0.2} color="#fff" />
         <CameraRig />
         <Environment preset="night" background={false} />
         <Preload all />
@@ -56,14 +56,14 @@ export default function ThreeDRoute() {
             <p>We brought <b>amazing animations</b> into vanilla Minecraft using <a href='https://animated-java.dev' target='_blank'>Animated Java</a> and <a href='https://www.blockbench.net' target='_blank'>Blockbench</a>!<br />An <b>exhibition room</b> is in the works! You will be able to see the models in 3D and download some of them!</p>
           </div>
 
-          <div className='notextselection glass img'>
+          <div className='notextselection glass img' style={{ animation: isDesktop ? '' : 'float 6s ease-in-out infinite' }}>
             {isDesktop &&
               <Canvas shadows id='canvas1' flat camera={{ fov: 75, position: [0, 0, 1] }} style={{ cursor: 'none' }}>
                 <Scene />
               </Canvas>
             }
             {!isDesktop &&
-              <img src='/banner-team.png' loading='lazy' decoding='async' style={{ filter: 'blur(4px)' }} />
+              <img src='/banner-team.png' loading='lazy' decoding='async' />
             }
           </div>
         </div>

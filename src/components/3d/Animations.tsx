@@ -70,9 +70,13 @@ type GLTFResult = GLTF & {
         cube_39: THREE.Mesh
         cube_40: THREE.Mesh
         cube_41: THREE.Mesh
-        cube_42: THREE.Mesh
+        mesh_65: THREE.Mesh
+        mesh_65_1: THREE.Mesh
+        mesh_65_2: THREE.Mesh
         cube_43: THREE.Mesh
-        cube_44: THREE.Mesh
+        mesh_67: THREE.Mesh
+        mesh_67_1: THREE.Mesh
+        mesh_67_2: THREE.Mesh
         cube_45: THREE.Mesh
         cube_46: THREE.Mesh
         cube_47: THREE.Mesh
@@ -100,16 +104,16 @@ type GLTFResult = GLTF & {
         cube_69: THREE.Mesh
         cube_70: THREE.Mesh
         cube_71: THREE.Mesh
-        mesh_95: THREE.Mesh
-        mesh_95_1: THREE.Mesh
-        mesh_95_2: THREE.Mesh
+        cube_72: THREE.Mesh
         cube_73: THREE.Mesh
-        mesh_97: THREE.Mesh
-        mesh_97_1: THREE.Mesh
-        mesh_97_2: THREE.Mesh
-        cube_75: THREE.Mesh
+        cube_74: THREE.Mesh
+        mesh_98: THREE.Mesh
+        mesh_98_1: THREE.Mesh
+        mesh_98_2: THREE.Mesh
         cube_76: THREE.Mesh
-        cube_77: THREE.Mesh
+        mesh_100: THREE.Mesh
+        mesh_100_1: THREE.Mesh
+        mesh_100_2: THREE.Mesh
         cube_78: THREE.Mesh
         cube_79: THREE.Mesh
         cube_80: THREE.Mesh
@@ -194,6 +198,9 @@ type GLTFResult = GLTF & {
         cube_159: THREE.Mesh
         cube_160: THREE.Mesh
         cube_161: THREE.Mesh
+        cube_162: THREE.Mesh
+        cube_163: THREE.Mesh
+        cube_164: THREE.Mesh
     }
     materials: {}
 }
@@ -250,7 +257,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.camera.geometry}
                                         material={nodes.camera.material}
-                                        position={[0, 0.25, 0.188]}
+                                        position={[0, -1.5, -1]}
                                     />
                                 </group>
                                 <group name="RightArm" position={[0.313, 0.625, 0]}>
@@ -752,14 +759,13 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                             />
                         </group>
                         <group name="Scene" position={[-3.438, 3, -0.438]}>
-                            <group name="RemovedWall" position={[8, -4, -3]}>
+                            <group name="otherwall" position={[5, -4, -5]}>
                                 <mesh
                                     name="cube_40"
                                     castShadow
                                     receiveShadow
                                     geometry={nodes.cube_40.geometry}
                                     material={nodes.cube_40.material}
-                                    position={[0, 0, 6]}
                                 />
                                 <mesh
                                     name="cube_41"
@@ -767,45 +773,73 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_41.geometry}
                                     material={nodes.cube_41.material}
+                                    position={[0, 0, -2]}
                                 />
+                                <group name="cube_42" position={[0, 0, -3]}>
+                                    <mesh
+                                        name="mesh_65"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.mesh_65.geometry}
+                                        material={nodes.mesh_65.material}
+                                    />
+                                    <mesh
+                                        name="mesh_65_1"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.mesh_65_1.geometry}
+                                        material={nodes.mesh_65_1.material}
+                                    />
+                                    <mesh
+                                        name="mesh_65_2"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.mesh_65_2.geometry}
+                                        material={nodes.mesh_65_2.material}
+                                    />
+                                </group>
+                                <mesh
+                                    name="cube_43"
+                                    castShadow
+                                    receiveShadow
+                                    geometry={nodes.cube_43.geometry}
+                                    material={nodes.cube_43.material}
+                                    position={[0, 0, 4]}
+                                />
+                                <group name="cube_44" position={[0, 0, 8]}>
+                                    <mesh
+                                        name="mesh_67"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.mesh_67.geometry}
+                                        material={nodes.mesh_67.material}
+                                    />
+                                    <mesh
+                                        name="mesh_67_1"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.mesh_67_1.geometry}
+                                        material={nodes.mesh_67_1.material}
+                                    />
+                                    <mesh
+                                        name="mesh_67_2"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.mesh_67_2.geometry}
+                                        material={nodes.mesh_67_2.material}
+                                    />
+                                </group>
                             </group>
                             <group name="doors" position={[3.438, -3, 3.438]}>
                                 <group name="door" position={[-0.6, 1.35, 0]}>
                                     <group name="handle" position={[1.016, -0.188, 0.15]}>
-                                        <mesh
-                                            name="cube_42"
-                                            castShadow
-                                            receiveShadow
-                                            geometry={nodes.cube_42.geometry}
-                                            material={nodes.cube_42.material}
-                                            position={[-0.416, -1.125, -0.15]}
-                                        />
-                                        <mesh
-                                            name="cube_43"
-                                            castShadow
-                                            receiveShadow
-                                            geometry={nodes.cube_43.geometry}
-                                            material={nodes.cube_43.material}
-                                            position={[-0.416, -1.125, -0.15]}
-                                        />
-                                    </group>
-                                    <group name="door_label" position={[0.3, 0.488, 0.127]}>
-                                        <mesh
-                                            name="cube_44"
-                                            castShadow
-                                            receiveShadow
-                                            geometry={nodes.cube_44.geometry}
-                                            material={nodes.cube_44.material}
-                                            position={[0.3, -1.838, -0.15]}
-                                        />
                                         <mesh
                                             name="cube_45"
                                             castShadow
                                             receiveShadow
                                             geometry={nodes.cube_45.geometry}
                                             material={nodes.cube_45.material}
-                                            position={[0.525, 0.134, 0]}
-                                            rotation={[0, 0, Math.PI / 4]}
+                                            position={[-0.416, -1.125, -0.15]}
                                         />
                                         <mesh
                                             name="cube_46"
@@ -813,16 +847,17 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                             receiveShadow
                                             geometry={nodes.cube_46.geometry}
                                             material={nodes.cube_46.material}
-                                            position={[0.225, -1.838, -0.15]}
+                                            position={[-0.416, -1.125, -0.15]}
                                         />
+                                    </group>
+                                    <group name="door_label" position={[0.3, 0.488, 0.127]}>
                                         <mesh
                                             name="cube_47"
                                             castShadow
                                             receiveShadow
                                             geometry={nodes.cube_47.geometry}
                                             material={nodes.cube_47.material}
-                                            position={[0.526, -0.134, 0]}
-                                            rotation={[0, 0, -Math.PI / 4]}
+                                            position={[0.3, -1.838, -0.15]}
                                         />
                                         <mesh
                                             name="cube_48"
@@ -830,7 +865,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                             receiveShadow
                                             geometry={nodes.cube_48.geometry}
                                             material={nodes.cube_48.material}
-                                            position={[0.074, -0.134, 0]}
+                                            position={[0.525, 0.134, 0]}
                                             rotation={[0, 0, Math.PI / 4]}
                                         />
                                         <mesh
@@ -839,8 +874,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                             receiveShadow
                                             geometry={nodes.cube_49.geometry}
                                             material={nodes.cube_49.material}
-                                            position={[0.075, 0.134, 0]}
-                                            rotation={[0, 0, -Math.PI / 4]}
+                                            position={[0.225, -1.838, -0.15]}
                                         />
                                         <mesh
                                             name="cube_50"
@@ -848,7 +882,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                             receiveShadow
                                             geometry={nodes.cube_50.geometry}
                                             material={nodes.cube_50.material}
-                                            position={[0.375, -1.838, -0.15]}
+                                            position={[0.526, -0.134, 0]}
+                                            rotation={[0, 0, -Math.PI / 4]}
                                         />
                                         <mesh
                                             name="cube_51"
@@ -856,42 +891,42 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                             receiveShadow
                                             geometry={nodes.cube_51.geometry}
                                             material={nodes.cube_51.material}
+                                            position={[0.074, -0.134, 0]}
+                                            rotation={[0, 0, Math.PI / 4]}
+                                        />
+                                        <mesh
+                                            name="cube_52"
+                                            castShadow
+                                            receiveShadow
+                                            geometry={nodes.cube_52.geometry}
+                                            material={nodes.cube_52.material}
+                                            position={[0.075, 0.134, 0]}
+                                            rotation={[0, 0, -Math.PI / 4]}
+                                        />
+                                        <mesh
+                                            name="cube_53"
+                                            castShadow
+                                            receiveShadow
+                                            geometry={nodes.cube_53.geometry}
+                                            material={nodes.cube_53.material}
+                                            position={[0.375, -1.838, -0.15]}
+                                        />
+                                        <mesh
+                                            name="cube_54"
+                                            castShadow
+                                            receiveShadow
+                                            geometry={nodes.cube_54.geometry}
+                                            material={nodes.cube_54.material}
                                             position={[0.269, -0.353, 0.141]}
                                         />
                                     </group>
-                                    <mesh
-                                        name="cube_52"
-                                        castShadow
-                                        receiveShadow
-                                        geometry={nodes.cube_52.geometry}
-                                        material={nodes.cube_52.material}
-                                        position={[0.6, -1.35, 0]}
-                                    />
-                                    <mesh
-                                        name="cube_53"
-                                        castShadow
-                                        receiveShadow
-                                        geometry={nodes.cube_53.geometry}
-                                        material={nodes.cube_53.material}
-                                        position={[0.6, -1.35, 0]}
-                                    />
-                                    <mesh
-                                        name="cube_54"
-                                        castShadow
-                                        receiveShadow
-                                        geometry={nodes.cube_54.geometry}
-                                        material={nodes.cube_54.material}
-                                        position={[0.6, -1.315, -0.752]}
-                                        rotation={[Math.PI / 4, 0, 0]}
-                                    />
                                     <mesh
                                         name="cube_55"
                                         castShadow
                                         receiveShadow
                                         geometry={nodes.cube_55.geometry}
                                         material={nodes.cube_55.material}
-                                        position={[1.002, -0.787, 0.017]}
-                                        rotation={[0, Math.PI / 4, 0]}
+                                        position={[0.6, -1.35, 0]}
                                     />
                                     <mesh
                                         name="cube_56"
@@ -899,8 +934,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_56.geometry}
                                         material={nodes.cube_56.material}
-                                        position={[-0.04, 0.15, -0.752]}
-                                        rotation={[0, -Math.PI / 4, 0]}
+                                        position={[0.6, -1.35, 0]}
                                     />
                                     <mesh
                                         name="cube_57"
@@ -908,8 +942,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_57.geometry}
                                         material={nodes.cube_57.material}
-                                        position={[0.6, -0.26, -0.752]}
-                                        rotation={[-Math.PI / 4, 0, 0]}
+                                        position={[0.6, -1.315, -0.752]}
+                                        rotation={[Math.PI / 4, 0, 0]}
                                     />
                                     <mesh
                                         name="cube_58"
@@ -917,8 +951,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_58.geometry}
                                         material={nodes.cube_58.material}
-                                        position={[0.6, 1.015, -0.752]}
-                                        rotation={[-Math.PI / 4, 0, 0]}
+                                        position={[1.002, -0.787, 0.017]}
+                                        rotation={[0, Math.PI / 4, 0]}
                                     />
                                     <mesh
                                         name="cube_59"
@@ -926,7 +960,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_59.geometry}
                                         material={nodes.cube_59.material}
-                                        position={[-0.04, 1.425, -0.752]}
+                                        position={[-0.04, 0.15, -0.752]}
                                         rotation={[0, -Math.PI / 4, 0]}
                                     />
                                     <mesh
@@ -935,8 +969,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_60.geometry}
                                         material={nodes.cube_60.material}
-                                        position={[0.6, -0.04, -0.752]}
-                                        rotation={[Math.PI / 4, 0, 0]}
+                                        position={[0.6, -0.26, -0.752]}
+                                        rotation={[-Math.PI / 4, 0, 0]}
                                     />
                                     <mesh
                                         name="cube_61"
@@ -944,8 +978,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_61.geometry}
                                         material={nodes.cube_61.material}
-                                        position={[1.002, 0.488, 0.017]}
-                                        rotation={[0, Math.PI / 4, 0]}
+                                        position={[0.6, 1.015, -0.752]}
+                                        rotation={[-Math.PI / 4, 0, 0]}
                                     />
                                     <mesh
                                         name="cube_62"
@@ -953,7 +987,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_62.geometry}
                                         material={nodes.cube_62.material}
-                                        position={[0.6, -0.075, 0]}
+                                        position={[-0.04, 1.425, -0.752]}
+                                        rotation={[0, -Math.PI / 4, 0]}
                                     />
                                     <mesh
                                         name="cube_63"
@@ -961,7 +996,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_63.geometry}
                                         material={nodes.cube_63.material}
-                                        position={[0.6, -1.35, 0]}
+                                        position={[0.6, -0.04, -0.752]}
+                                        rotation={[Math.PI / 4, 0, 0]}
                                     />
                                     <mesh
                                         name="cube_64"
@@ -969,7 +1005,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_64.geometry}
                                         material={nodes.cube_64.material}
-                                        position={[0.6, -0.128, 0.035]}
+                                        position={[1.002, 0.488, 0.017]}
+                                        rotation={[0, Math.PI / 4, 0]}
                                     />
                                     <mesh
                                         name="cube_65"
@@ -977,16 +1014,15 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_65.geometry}
                                         material={nodes.cube_65.material}
-                                        position={[0.6, -1.344, 0.035]}
+                                        position={[0.6, -0.075, 0]}
                                     />
-                                </group>
-                                <group name="door_frame">
                                     <mesh
                                         name="cube_66"
                                         castShadow
                                         receiveShadow
                                         geometry={nodes.cube_66.geometry}
                                         material={nodes.cube_66.material}
+                                        position={[0.6, -1.35, 0]}
                                     />
                                     <mesh
                                         name="cube_67"
@@ -994,6 +1030,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_67.geometry}
                                         material={nodes.cube_67.material}
+                                        position={[0.6, -0.128, 0.035]}
                                     />
                                     <mesh
                                         name="cube_68"
@@ -1001,7 +1038,10 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_68.geometry}
                                         material={nodes.cube_68.material}
+                                        position={[0.6, -1.344, 0.035]}
                                     />
+                                </group>
+                                <group name="door_frame">
                                     <mesh
                                         name="cube_69"
                                         castShadow
@@ -1016,104 +1056,99 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         geometry={nodes.cube_70.geometry}
                                         material={nodes.cube_70.material}
                                     />
+                                    <mesh
+                                        name="cube_71"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.cube_71.geometry}
+                                        material={nodes.cube_71.material}
+                                    />
+                                    <mesh
+                                        name="cube_72"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.cube_72.geometry}
+                                        material={nodes.cube_72.material}
+                                    />
+                                    <mesh
+                                        name="cube_73"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.cube_73.geometry}
+                                        material={nodes.cube_73.material}
+                                    />
                                 </group>
                             </group>
                             <mesh
-                                name="cube_71"
+                                name="cube_74"
                                 castShadow
                                 receiveShadow
-                                geometry={nodes.cube_71.geometry}
-                                material={nodes.cube_71.material}
+                                geometry={nodes.cube_74.geometry}
+                                material={nodes.cube_74.material}
                                 position={[4, -4, 3]}
                             />
-                            <group name="cube_72" position={[0, -4, 3]}>
+                            <group name="cube_75" position={[0, -4, 3]}>
                                 <mesh
-                                    name="mesh_95"
+                                    name="mesh_98"
                                     castShadow
                                     receiveShadow
-                                    geometry={nodes.mesh_95.geometry}
-                                    material={nodes.mesh_95.material}
+                                    geometry={nodes.mesh_98.geometry}
+                                    material={nodes.mesh_98.material}
                                 />
                                 <mesh
-                                    name="mesh_95_1"
+                                    name="mesh_98_1"
                                     castShadow
                                     receiveShadow
-                                    geometry={nodes.mesh_95_1.geometry}
-                                    material={nodes.mesh_95_1.material}
+                                    geometry={nodes.mesh_98_1.geometry}
+                                    material={nodes.mesh_98_1.material}
                                 />
                                 <mesh
-                                    name="mesh_95_2"
+                                    name="mesh_98_2"
                                     castShadow
                                     receiveShadow
-                                    geometry={nodes.mesh_95_2.geometry}
-                                    material={nodes.mesh_95_2.material}
-                                />
-                            </group>
-                            <mesh
-                                name="cube_73"
-                                castShadow
-                                receiveShadow
-                                geometry={nodes.cube_73.geometry}
-                                material={nodes.cube_73.material}
-                                position={[0, -4, -1]}
-                            />
-                            <group name="cube_74" position={[0, -4, -8]}>
-                                <mesh
-                                    name="mesh_97"
-                                    castShadow
-                                    receiveShadow
-                                    geometry={nodes.mesh_97.geometry}
-                                    material={nodes.mesh_97.material}
-                                />
-                                <mesh
-                                    name="mesh_97_1"
-                                    castShadow
-                                    receiveShadow
-                                    geometry={nodes.mesh_97_1.geometry}
-                                    material={nodes.mesh_97_1.material}
-                                />
-                                <mesh
-                                    name="mesh_97_2"
-                                    castShadow
-                                    receiveShadow
-                                    geometry={nodes.mesh_97_2.geometry}
-                                    material={nodes.mesh_97_2.material}
+                                    geometry={nodes.mesh_98_2.geometry}
+                                    material={nodes.mesh_98_2.material}
                                 />
                             </group>
-                            <mesh
-                                name="cube_75"
-                                castShadow
-                                receiveShadow
-                                geometry={nodes.cube_75.geometry}
-                                material={nodes.cube_75.material}
-                                position={[4.875, -4, 3]}
-                                rotation={[0, -Math.PI / 2, 0]}
-                            />
                             <mesh
                                 name="cube_76"
                                 castShadow
                                 receiveShadow
                                 geometry={nodes.cube_76.geometry}
                                 material={nodes.cube_76.material}
-                                position={[8.063, -4, 3]}
-                                rotation={[0, -Math.PI / 2, 0]}
+                                position={[0, -4, -1]}
                             />
-                            <mesh
-                                name="cube_77"
-                                castShadow
-                                receiveShadow
-                                geometry={nodes.cube_77.geometry}
-                                material={nodes.cube_77.material}
-                                position={[7.25, -4, 3]}
-                                rotation={[0, -Math.PI / 2, 0]}
-                            />
+                            <group name="cube_77" position={[0, -4, -8]}>
+                                <mesh
+                                    name="mesh_100"
+                                    castShadow
+                                    receiveShadow
+                                    geometry={nodes.mesh_100.geometry}
+                                    material={nodes.mesh_100.material}
+                                />
+                                <mesh
+                                    name="mesh_100_1"
+                                    castShadow
+                                    receiveShadow
+                                    geometry={nodes.mesh_100_1.geometry}
+                                    material={nodes.mesh_100_1.material}
+                                />
+                                <mesh
+                                    name="mesh_100_2"
+                                    castShadow
+                                    receiveShadow
+                                    geometry={nodes.mesh_100_2.geometry}
+                                    material={nodes.mesh_100_2.material}
+                                />
+                            </group>
                             <mesh
                                 name="cube_78"
                                 castShadow
                                 receiveShadow
                                 geometry={nodes.cube_78.geometry}
                                 material={nodes.cube_78.material}
-                                position={[4, -4, -3]}
+                                position={[4.875, -4, 3]}
+                                rotation={[0, -Math.PI / 2, 0]}
                             />
                             <mesh
                                 name="cube_79"
@@ -1121,7 +1156,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_79.geometry}
                                 material={nodes.cube_79.material}
-                                position={[0, -4, -7]}
+                                position={[8.063, -4, 3]}
+                                rotation={[0, -Math.PI / 2, 0]}
                             />
                             <mesh
                                 name="cube_80"
@@ -1129,7 +1165,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_80.geometry}
                                 material={nodes.cube_80.material}
-                                position={[0, -4, -5]}
+                                position={[7.25, -4, 3]}
+                                rotation={[0, -Math.PI / 2, 0]}
                             />
                             <mesh
                                 name="cube_81"
@@ -1137,8 +1174,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_81.geometry}
                                 material={nodes.cube_81.material}
-                                position={[7.25, -4, -8]}
-                                rotation={[0, -Math.PI / 2, 0]}
+                                position={[4, -4, -3]}
                             />
                             <mesh
                                 name="cube_82"
@@ -1146,8 +1182,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_82.geometry}
                                 material={nodes.cube_82.material}
-                                position={[8.063, -4, -8]}
-                                rotation={[0, -Math.PI / 2, 0]}
+                                position={[0, -4, -7]}
                             />
                             <mesh
                                 name="cube_83"
@@ -1155,18 +1190,16 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_83.geometry}
                                 material={nodes.cube_83.material}
-                                position={[4.875, -4, -8]}
-                                rotation={[0, -Math.PI / 2, 0]}
+                                position={[0, -4, -5]}
                             />
-                        </group>
-                        <group name="group2" position={[-2, 2.688, 1.031]} rotation={[0, -Math.PI / 2, 0]}>
                             <mesh
                                 name="cube_84"
                                 castShadow
                                 receiveShadow
                                 geometry={nodes.cube_84.geometry}
                                 material={nodes.cube_84.material}
-                                position={[0, -0.25, 5.469]}
+                                position={[7.25, -4, -8]}
+                                rotation={[0, -Math.PI / 2, 0]}
                             />
                             <mesh
                                 name="cube_85"
@@ -1174,7 +1207,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_85.geometry}
                                 material={nodes.cube_85.material}
-                                position={[0, -0.25, 5.469]}
+                                position={[8.063, -4, -8]}
+                                rotation={[0, -Math.PI / 2, 0]}
                             />
                             <mesh
                                 name="cube_86"
@@ -1182,9 +1216,11 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_86.geometry}
                                 material={nodes.cube_86.material}
-                                position={[0, -0.25, 5.469]}
-                                rotation={[-Math.PI / 8, 0, 0]}
+                                position={[4.875, -4, -8]}
+                                rotation={[0, -Math.PI / 2, 0]}
                             />
+                        </group>
+                        <group name="group2" position={[-2, 2.688, 1.031]} rotation={[0, -Math.PI / 2, 0]}>
                             <mesh
                                 name="cube_87"
                                 castShadow
@@ -1192,7 +1228,6 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_87.geometry}
                                 material={nodes.cube_87.material}
                                 position={[0, -0.25, 5.469]}
-                                rotation={[-Math.PI / 8, 0, 0]}
                             />
                             <mesh
                                 name="cube_88"
@@ -1201,7 +1236,6 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_88.geometry}
                                 material={nodes.cube_88.material}
                                 position={[0, -0.25, 5.469]}
-                                rotation={[0, Math.PI / 4, 0]}
                             />
                             <mesh
                                 name="cube_89"
@@ -1210,7 +1244,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_89.geometry}
                                 material={nodes.cube_89.material}
                                 position={[0, -0.25, 5.469]}
-                                rotation={[0, -Math.PI / 4, 0]}
+                                rotation={[-Math.PI / 8, 0, 0]}
                             />
                             <mesh
                                 name="cube_90"
@@ -1228,7 +1262,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_91.geometry}
                                 material={nodes.cube_91.material}
                                 position={[0, -0.25, 5.469]}
-                                rotation={[-Math.PI / 8, 0, 0]}
+                                rotation={[0, Math.PI / 4, 0]}
                             />
                             <mesh
                                 name="cube_92"
@@ -1236,8 +1270,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_92.geometry}
                                 material={nodes.cube_92.material}
-                                position={[0, -0.25, 0.5]}
-                                rotation={[0, Math.PI / 4, 0]}
+                                position={[0, -0.25, 5.469]}
+                                rotation={[0, -Math.PI / 4, 0]}
                             />
                             <mesh
                                 name="cube_93"
@@ -1245,7 +1279,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_93.geometry}
                                 material={nodes.cube_93.material}
-                                position={[0, -0.25, 0.5]}
+                                position={[0, -0.25, 5.469]}
                                 rotation={[-Math.PI / 8, 0, 0]}
                             />
                             <mesh
@@ -1254,7 +1288,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_94.geometry}
                                 material={nodes.cube_94.material}
-                                position={[0, -0.25, 0.5]}
+                                position={[0, -0.25, 5.469]}
                                 rotation={[-Math.PI / 8, 0, 0]}
                             />
                             <mesh
@@ -1264,7 +1298,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_95.geometry}
                                 material={nodes.cube_95.material}
                                 position={[0, -0.25, 0.5]}
-                                rotation={[0, -Math.PI / 4, 0]}
+                                rotation={[0, Math.PI / 4, 0]}
                             />
                             <mesh
                                 name="cube_96"
@@ -1291,6 +1325,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_98.geometry}
                                 material={nodes.cube_98.material}
                                 position={[0, -0.25, 0.5]}
+                                rotation={[0, -Math.PI / 4, 0]}
                             />
                             <mesh
                                 name="cube_99"
@@ -1299,9 +1334,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_99.geometry}
                                 material={nodes.cube_99.material}
                                 position={[0, -0.25, 0.5]}
+                                rotation={[-Math.PI / 8, 0, 0]}
                             />
-                        </group>
-                        <group name="group3" position={[-2, 2.688, 1.031]} rotation={[0, -Math.PI / 2, 0]}>
                             <mesh
                                 name="cube_100"
                                 castShadow
@@ -1309,7 +1343,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_100.geometry}
                                 material={nodes.cube_100.material}
                                 position={[0, -0.25, 0.5]}
-                                rotation={[0, Math.PI / 4, 0]}
+                                rotation={[-Math.PI / 8, 0, 0]}
                             />
                             <mesh
                                 name="cube_101"
@@ -1318,7 +1352,6 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_101.geometry}
                                 material={nodes.cube_101.material}
                                 position={[0, -0.25, 0.5]}
-                                rotation={[-Math.PI / 8, 0, 0]}
                             />
                             <mesh
                                 name="cube_102"
@@ -1327,8 +1360,9 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_102.geometry}
                                 material={nodes.cube_102.material}
                                 position={[0, -0.25, 0.5]}
-                                rotation={[-Math.PI / 8, 0, 0]}
                             />
+                        </group>
+                        <group name="group3" position={[-2, 2.688, 1.031]} rotation={[0, -Math.PI / 2, 0]}>
                             <mesh
                                 name="cube_103"
                                 castShadow
@@ -1336,7 +1370,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_103.geometry}
                                 material={nodes.cube_103.material}
                                 position={[0, -0.25, 0.5]}
-                                rotation={[0, -Math.PI / 4, 0]}
+                                rotation={[0, Math.PI / 4, 0]}
                             />
                             <mesh
                                 name="cube_104"
@@ -1363,6 +1397,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_106.geometry}
                                 material={nodes.cube_106.material}
                                 position={[0, -0.25, 0.5]}
+                                rotation={[0, -Math.PI / 4, 0]}
                             />
                             <mesh
                                 name="cube_107"
@@ -1371,6 +1406,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_107.geometry}
                                 material={nodes.cube_107.material}
                                 position={[0, -0.25, 0.5]}
+                                rotation={[-Math.PI / 8, 0, 0]}
                             />
                             <mesh
                                 name="cube_108"
@@ -1378,8 +1414,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_108.geometry}
                                 material={nodes.cube_108.material}
-                                position={[0, -0.25, 5.469]}
-                                rotation={[0, Math.PI / 4, 0]}
+                                position={[0, -0.25, 0.5]}
+                                rotation={[-Math.PI / 8, 0, 0]}
                             />
                             <mesh
                                 name="cube_109"
@@ -1387,7 +1423,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_109.geometry}
                                 material={nodes.cube_109.material}
-                                position={[0, -0.25, 5.469]}
+                                position={[0, -0.25, 0.5]}
                             />
                             <mesh
                                 name="cube_110"
@@ -1395,7 +1431,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 receiveShadow
                                 geometry={nodes.cube_110.geometry}
                                 material={nodes.cube_110.material}
-                                position={[0, -0.25, 5.469]}
+                                position={[0, -0.25, 0.5]}
                             />
                             <mesh
                                 name="cube_111"
@@ -1404,7 +1440,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_111.geometry}
                                 material={nodes.cube_111.material}
                                 position={[0, -0.25, 5.469]}
-                                rotation={[-Math.PI / 8, 0, 0]}
+                                rotation={[0, Math.PI / 4, 0]}
                             />
                             <mesh
                                 name="cube_112"
@@ -1413,7 +1449,6 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_112.geometry}
                                 material={nodes.cube_112.material}
                                 position={[0, -0.25, 5.469]}
-                                rotation={[-Math.PI / 8, 0, 0]}
                             />
                             <mesh
                                 name="cube_113"
@@ -1422,7 +1457,6 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 geometry={nodes.cube_113.geometry}
                                 material={nodes.cube_113.material}
                                 position={[0, -0.25, 5.469]}
-                                rotation={[0, -Math.PI / 4, 0]}
                             />
                             <mesh
                                 name="cube_114"
@@ -1442,44 +1476,44 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                 position={[0, -0.25, 5.469]}
                                 rotation={[-Math.PI / 8, 0, 0]}
                             />
+                            <mesh
+                                name="cube_116"
+                                castShadow
+                                receiveShadow
+                                geometry={nodes.cube_116.geometry}
+                                material={nodes.cube_116.material}
+                                position={[0, -0.25, 5.469]}
+                                rotation={[0, -Math.PI / 4, 0]}
+                            />
+                            <mesh
+                                name="cube_117"
+                                castShadow
+                                receiveShadow
+                                geometry={nodes.cube_117.geometry}
+                                material={nodes.cube_117.material}
+                                position={[0, -0.25, 5.469]}
+                                rotation={[-Math.PI / 8, 0, 0]}
+                            />
+                            <mesh
+                                name="cube_118"
+                                castShadow
+                                receiveShadow
+                                geometry={nodes.cube_118.geometry}
+                                material={nodes.cube_118.material}
+                                position={[0, -0.25, 5.469]}
+                                rotation={[-Math.PI / 8, 0, 0]}
+                            />
                         </group>
                         <group name="doors2" position={[0, 0, -8]}>
                             <group name="door2" position={[-0.6, 1.35, 0]}>
                                 <group name="handle2" position={[1.016, -0.188, 0.15]}>
-                                    <mesh
-                                        name="cube_116"
-                                        castShadow
-                                        receiveShadow
-                                        geometry={nodes.cube_116.geometry}
-                                        material={nodes.cube_116.material}
-                                        position={[-0.416, -1.125, -0.15]}
-                                    />
-                                    <mesh
-                                        name="cube_117"
-                                        castShadow
-                                        receiveShadow
-                                        geometry={nodes.cube_117.geometry}
-                                        material={nodes.cube_117.material}
-                                        position={[-0.416, -1.125, -0.15]}
-                                    />
-                                </group>
-                                <group name="door_label2" position={[0.3, 0.488, 0.127]}>
-                                    <mesh
-                                        name="cube_118"
-                                        castShadow
-                                        receiveShadow
-                                        geometry={nodes.cube_118.geometry}
-                                        material={nodes.cube_118.material}
-                                        position={[0.3, -1.838, -0.15]}
-                                    />
                                     <mesh
                                         name="cube_119"
                                         castShadow
                                         receiveShadow
                                         geometry={nodes.cube_119.geometry}
                                         material={nodes.cube_119.material}
-                                        position={[0.525, 0.134, 0]}
-                                        rotation={[0, 0, Math.PI / 4]}
+                                        position={[-0.416, -1.125, -0.15]}
                                     />
                                     <mesh
                                         name="cube_120"
@@ -1487,16 +1521,17 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_120.geometry}
                                         material={nodes.cube_120.material}
-                                        position={[0.225, -1.838, -0.15]}
+                                        position={[-0.416, -1.125, -0.15]}
                                     />
+                                </group>
+                                <group name="door_label2" position={[0.3, 0.488, 0.127]}>
                                     <mesh
                                         name="cube_121"
                                         castShadow
                                         receiveShadow
                                         geometry={nodes.cube_121.geometry}
                                         material={nodes.cube_121.material}
-                                        position={[0.526, -0.134, 0]}
-                                        rotation={[0, 0, -Math.PI / 4]}
+                                        position={[0.3, -1.838, -0.15]}
                                     />
                                     <mesh
                                         name="cube_122"
@@ -1504,7 +1539,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_122.geometry}
                                         material={nodes.cube_122.material}
-                                        position={[0.074, -0.134, 0]}
+                                        position={[0.525, 0.134, 0]}
                                         rotation={[0, 0, Math.PI / 4]}
                                     />
                                     <mesh
@@ -1513,8 +1548,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_123.geometry}
                                         material={nodes.cube_123.material}
-                                        position={[0.075, 0.134, 0]}
-                                        rotation={[0, 0, -Math.PI / 4]}
+                                        position={[0.225, -1.838, -0.15]}
                                     />
                                     <mesh
                                         name="cube_124"
@@ -1522,7 +1556,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_124.geometry}
                                         material={nodes.cube_124.material}
-                                        position={[0.375, -1.838, -0.15]}
+                                        position={[0.526, -0.134, 0]}
+                                        rotation={[0, 0, -Math.PI / 4]}
                                     />
                                     <mesh
                                         name="cube_125"
@@ -1530,42 +1565,42 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                         receiveShadow
                                         geometry={nodes.cube_125.geometry}
                                         material={nodes.cube_125.material}
+                                        position={[0.074, -0.134, 0]}
+                                        rotation={[0, 0, Math.PI / 4]}
+                                    />
+                                    <mesh
+                                        name="cube_126"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.cube_126.geometry}
+                                        material={nodes.cube_126.material}
+                                        position={[0.075, 0.134, 0]}
+                                        rotation={[0, 0, -Math.PI / 4]}
+                                    />
+                                    <mesh
+                                        name="cube_127"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.cube_127.geometry}
+                                        material={nodes.cube_127.material}
+                                        position={[0.375, -1.838, -0.15]}
+                                    />
+                                    <mesh
+                                        name="cube_128"
+                                        castShadow
+                                        receiveShadow
+                                        geometry={nodes.cube_128.geometry}
+                                        material={nodes.cube_128.material}
                                         position={[0.247, -0.369, 0.141]}
                                     />
                                 </group>
-                                <mesh
-                                    name="cube_126"
-                                    castShadow
-                                    receiveShadow
-                                    geometry={nodes.cube_126.geometry}
-                                    material={nodes.cube_126.material}
-                                    position={[0.6, -1.35, 0]}
-                                />
-                                <mesh
-                                    name="cube_127"
-                                    castShadow
-                                    receiveShadow
-                                    geometry={nodes.cube_127.geometry}
-                                    material={nodes.cube_127.material}
-                                    position={[0.6, -1.35, 0]}
-                                />
-                                <mesh
-                                    name="cube_128"
-                                    castShadow
-                                    receiveShadow
-                                    geometry={nodes.cube_128.geometry}
-                                    material={nodes.cube_128.material}
-                                    position={[0.6, -1.315, -0.752]}
-                                    rotation={[Math.PI / 4, 0, 0]}
-                                />
                                 <mesh
                                     name="cube_129"
                                     castShadow
                                     receiveShadow
                                     geometry={nodes.cube_129.geometry}
                                     material={nodes.cube_129.material}
-                                    position={[1.002, -0.787, 0.017]}
-                                    rotation={[0, Math.PI / 4, 0]}
+                                    position={[0.6, -1.35, 0]}
                                 />
                                 <mesh
                                     name="cube_130"
@@ -1573,8 +1608,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_130.geometry}
                                     material={nodes.cube_130.material}
-                                    position={[-0.04, 0.15, -0.752]}
-                                    rotation={[0, -Math.PI / 4, 0]}
+                                    position={[0.6, -1.35, 0]}
                                 />
                                 <mesh
                                     name="cube_131"
@@ -1582,8 +1616,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_131.geometry}
                                     material={nodes.cube_131.material}
-                                    position={[0.6, -0.26, -0.752]}
-                                    rotation={[-Math.PI / 4, 0, 0]}
+                                    position={[0.6, -1.315, -0.752]}
+                                    rotation={[Math.PI / 4, 0, 0]}
                                 />
                                 <mesh
                                     name="cube_132"
@@ -1591,8 +1625,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_132.geometry}
                                     material={nodes.cube_132.material}
-                                    position={[0.6, 1.015, -0.752]}
-                                    rotation={[-Math.PI / 4, 0, 0]}
+                                    position={[1.002, -0.787, 0.017]}
+                                    rotation={[0, Math.PI / 4, 0]}
                                 />
                                 <mesh
                                     name="cube_133"
@@ -1600,7 +1634,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_133.geometry}
                                     material={nodes.cube_133.material}
-                                    position={[-0.04, 1.425, -0.752]}
+                                    position={[-0.04, 0.15, -0.752]}
                                     rotation={[0, -Math.PI / 4, 0]}
                                 />
                                 <mesh
@@ -1609,8 +1643,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_134.geometry}
                                     material={nodes.cube_134.material}
-                                    position={[0.6, -0.04, -0.752]}
-                                    rotation={[Math.PI / 4, 0, 0]}
+                                    position={[0.6, -0.26, -0.752]}
+                                    rotation={[-Math.PI / 4, 0, 0]}
                                 />
                                 <mesh
                                     name="cube_135"
@@ -1618,8 +1652,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_135.geometry}
                                     material={nodes.cube_135.material}
-                                    position={[1.002, 0.488, 0.017]}
-                                    rotation={[0, Math.PI / 4, 0]}
+                                    position={[0.6, 1.015, -0.752]}
+                                    rotation={[-Math.PI / 4, 0, 0]}
                                 />
                                 <mesh
                                     name="cube_136"
@@ -1627,7 +1661,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_136.geometry}
                                     material={nodes.cube_136.material}
-                                    position={[0.6, -0.075, 0]}
+                                    position={[-0.04, 1.425, -0.752]}
+                                    rotation={[0, -Math.PI / 4, 0]}
                                 />
                                 <mesh
                                     name="cube_137"
@@ -1635,7 +1670,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_137.geometry}
                                     material={nodes.cube_137.material}
-                                    position={[0.6, -1.35, 0]}
+                                    position={[0.6, -0.04, -0.752]}
+                                    rotation={[Math.PI / 4, 0, 0]}
                                 />
                                 <mesh
                                     name="cube_138"
@@ -1643,7 +1679,8 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_138.geometry}
                                     material={nodes.cube_138.material}
-                                    position={[0.6, -0.128, 0.035]}
+                                    position={[1.002, 0.488, 0.017]}
+                                    rotation={[0, Math.PI / 4, 0]}
                                 />
                                 <mesh
                                     name="cube_139"
@@ -1651,16 +1688,15 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_139.geometry}
                                     material={nodes.cube_139.material}
-                                    position={[0.6, -1.344, 0.035]}
+                                    position={[0.6, -0.075, 0]}
                                 />
-                            </group>
-                            <group name="door_frame2">
                                 <mesh
                                     name="cube_140"
                                     castShadow
                                     receiveShadow
                                     geometry={nodes.cube_140.geometry}
                                     material={nodes.cube_140.material}
+                                    position={[0.6, -1.35, 0]}
                                 />
                                 <mesh
                                     name="cube_141"
@@ -1668,6 +1704,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_141.geometry}
                                     material={nodes.cube_141.material}
+                                    position={[0.6, -0.128, 0.035]}
                                 />
                                 <mesh
                                     name="cube_142"
@@ -1675,7 +1712,10 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_142.geometry}
                                     material={nodes.cube_142.material}
+                                    position={[0.6, -1.344, 0.035]}
                                 />
+                            </group>
+                            <group name="door_frame2">
                                 <mesh
                                     name="cube_143"
                                     castShadow
@@ -1690,17 +1730,12 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     geometry={nodes.cube_144.geometry}
                                     material={nodes.cube_144.material}
                                 />
-                            </group>
-                        </group>
-                        <group name="Rush" position={[0.063, 2, -2.125]} rotation={[0, Math.PI / 2, 0]}>
-                            <group name="RushParticles" position={[-0.183, 0, 0]}>
                                 <mesh
                                     name="cube_145"
                                     castShadow
                                     receiveShadow
                                     geometry={nodes.cube_145.geometry}
                                     material={nodes.cube_145.material}
-                                    position={[0.12, -2, 0.063]}
                                 />
                                 <mesh
                                     name="cube_146"
@@ -1708,7 +1743,6 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_146.geometry}
                                     material={nodes.cube_146.material}
-                                    position={[0.12, -1, 0.063]}
                                 />
                                 <mesh
                                     name="cube_147"
@@ -1716,15 +1750,18 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_147.geometry}
                                     material={nodes.cube_147.material}
-                                    position={[0.12, 0, 0.063]}
                                 />
+                            </group>
+                        </group>
+                        <group name="Rush" position={[0.063, 2, -2.125]} rotation={[0, Math.PI / 2, 0]}>
+                            <group name="RushParticles" position={[-0.183, 0, 0]}>
                                 <mesh
                                     name="cube_148"
                                     castShadow
                                     receiveShadow
                                     geometry={nodes.cube_148.geometry}
                                     material={nodes.cube_148.material}
-                                    position={[0.12, 1, 0.063]}
+                                    position={[0.12, -2, 0.063]}
                                 />
                                 <mesh
                                     name="cube_149"
@@ -1732,7 +1769,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_149.geometry}
                                     material={nodes.cube_149.material}
-                                    position={[0.12, 0, -0.938]}
+                                    position={[0.12, -1, 0.063]}
                                 />
                                 <mesh
                                     name="cube_150"
@@ -1740,7 +1777,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_150.geometry}
                                     material={nodes.cube_150.material}
-                                    position={[0.12, 1, -0.938]}
+                                    position={[0.12, 0, 0.063]}
                                 />
                                 <mesh
                                     name="cube_151"
@@ -1748,7 +1785,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_151.geometry}
                                     material={nodes.cube_151.material}
-                                    position={[0.12, -2, -0.938]}
+                                    position={[0.12, 1, 0.063]}
                                 />
                                 <mesh
                                     name="cube_152"
@@ -1756,7 +1793,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_152.geometry}
                                     material={nodes.cube_152.material}
-                                    position={[0.12, -1, -0.938]}
+                                    position={[0.12, 0, -0.938]}
                                 />
                                 <mesh
                                     name="cube_153"
@@ -1764,8 +1801,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_153.geometry}
                                     material={nodes.cube_153.material}
-                                    position={[-0.005, 0, 0]}
-                                    rotation={[-Math.PI / 2, 0, 0]}
+                                    position={[0.12, 1, -0.938]}
                                 />
                                 <mesh
                                     name="cube_154"
@@ -1773,8 +1809,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_154.geometry}
                                     material={nodes.cube_154.material}
-                                    position={[-0.005, 0, 0]}
-                                    rotation={[-Math.PI / 2, 0, 0]}
+                                    position={[0.12, -2, -0.938]}
                                 />
                                 <mesh
                                     name="cube_155"
@@ -1782,8 +1817,7 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     receiveShadow
                                     geometry={nodes.cube_155.geometry}
                                     material={nodes.cube_155.material}
-                                    position={[-0.005, 0, 0]}
-                                    rotation={[-Math.PI / 2, 0, 0]}
+                                    position={[0.12, -1, -0.938]}
                                 />
                                 <mesh
                                     name="cube_156"
@@ -1830,13 +1864,40 @@ export default function Animations(props: JSX.IntrinsicElements['group']) {
                                     position={[-0.005, 0, 0]}
                                     rotation={[-Math.PI / 2, 0, 0]}
                                 />
+                                <mesh
+                                    name="cube_161"
+                                    castShadow
+                                    receiveShadow
+                                    geometry={nodes.cube_161.geometry}
+                                    material={nodes.cube_161.material}
+                                    position={[-0.005, 0, 0]}
+                                    rotation={[-Math.PI / 2, 0, 0]}
+                                />
+                                <mesh
+                                    name="cube_162"
+                                    castShadow
+                                    receiveShadow
+                                    geometry={nodes.cube_162.geometry}
+                                    material={nodes.cube_162.material}
+                                    position={[-0.005, 0, 0]}
+                                    rotation={[-Math.PI / 2, 0, 0]}
+                                />
+                                <mesh
+                                    name="cube_163"
+                                    castShadow
+                                    receiveShadow
+                                    geometry={nodes.cube_163.geometry}
+                                    material={nodes.cube_163.material}
+                                    position={[-0.005, 0, 0]}
+                                    rotation={[-Math.PI / 2, 0, 0]}
+                                />
                             </group>
                             <mesh
-                                name="cube_161"
+                                name="cube_164"
                                 castShadow
                                 receiveShadow
-                                geometry={nodes.cube_161.geometry}
-                                material={nodes.cube_161.material}
+                                geometry={nodes.cube_164.geometry}
+                                material={nodes.cube_164.material}
                                 position={[-0.063, -2, -1.938]}
                             />
                         </group>
