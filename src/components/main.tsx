@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CreatorDetailList, CreatorList } from '../data';
 import './main.css';
-import BannerTeam from '/banner-team.png';
-import IconDownload from '/icons/Download.svg';
-import LauncherImage from '/images/launcher.png';
 import OVChestOpen from '/ov_chest_open.mp4';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -47,7 +44,7 @@ export default function MainPage() {
                     <h1>Minecraft Maps,</h1>
                     <h1>Without Mods.</h1>
                     <Link to='/games/' onClick={scrollTop} className='coolclick glass maps'>
-                        <img className='notextselection' src={IconDownload} />
+                        <img className='notextselection' src='/icons/Download.svg' />
                         View Maps
                     </Link>
 
@@ -57,55 +54,80 @@ export default function MainPage() {
                 </div>
             </motion.div>
 
+
             <div className='arg'>
-                <div className='notextselection glass img'>
-                    <img src={BannerTeam} loading='lazy' decoding='async' />
+                <div className='notextselection glass img animatedarg'>
+                    <img src='/banner-team.png' loading='lazy' decoding='async' />
                 </div>
 
                 <div className='text'>
                     <h1>No Mods Required.</h1>
-                    <p><b>All maps are 100% vanilla</b> and require no mods, thanks to Datapacks and Resource packs!<br />* Some Maps may use Mods to enhance the experience, but are not required!</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: '20px' }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                    >
+                        <b>All maps are 100% vanilla</b> and require no mods, thanks to Datapacks and Resource packs!<br />* Some Maps may use Mods to enhance the experience, but are not required!
+                    </motion.p>
                 </div>
             </div>
-
-            {/* <div className='arg'>
-                <div className='notextselection glass img'>
-                    <img src={BannerTeam} />
-                </div>
-
-                <div className='text'>
-                    <h1>Hall of Fame.</h1>
-                    <p>Check out our <b>Hall of Fame</b> and see every contest we've taken part in and won!</p>
-                    <Link to='/halloffame/' onClick={scrollTop}>
-                        Click here to check it out!
-                    </Link>
-                </div>
-            </div> */}
 
             <div className='arg'>
                 <div className='text'>
                     <h1>Fancy Animations.</h1>
-                    <p>We brought <b>amazing animations</b> into vanilla Minecraft using <a href='https://animated-java.dev' target='_blank'>Animated Java</a> and <a href='https://www.blockbench.net' target='_blank'>Blockbench</a>!<br />An <b>exhibition room</b> is in the works! You will be able to see the models in 3D and download some of them!</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: '20px' }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                    >
+                        We brought <b>amazing animations</b> into vanilla Minecraft using <a href='https://animated-java.dev' target='_blank'>Animated Java</a> and <a href='https://www.blockbench.net' target='_blank'>Blockbench</a>!<br />An <b>exhibition room</b> is in the works! You will be able to see the models in 3D and download some of them!
+                    </motion.p>
                 </div>
 
-                <div className='notextselection glass img' style={{ animation: isDesktop ? '' : 'float 6s ease-in-out infinite', minHeight: isDesktop ? '400px' : undefined }}>
+                <div className={'notextselection glass img' + (isDesktop ? '' : ' animatedarg')} style={{ minHeight: isDesktop ? '400px' : undefined }}>
                     {isDesktop &&
                         <SceneAnimations />
                     }
                     {!isDesktop &&
-                        <img src='/banner-team.png' loading='lazy' decoding='async' />
+                        <img src='/games/banners/yer2.png' loading='lazy' decoding='async' />
                     }
                 </div>
             </div>
 
             <div className='arg'>
-                <div className='notextselection glass img'>
-                    <img src={LauncherImage} loading='lazy' decoding='async' />
+                <div className='notextselection glass img animatedarg'>
+                    <img src='/halloffame/mewoster.png' />
                 </div>
 
                 <div className='text'>
+                    <h1>Hall of Fame.</h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: '20px' }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                    >
+                        Check out our <b>Hall of Fame</b> and see every contest we've taken part in and won!
+                    </motion.p>
+                    <Link to='/halloffame/' onClick={scrollTop}>
+                        Click here to check it out!
+                    </Link>
+                </div>
+            </div>
+
+            <div className='arg'>
+                <div className='text'>
                     <h1>Custom Launcher.</h1>
-                    <p><b>Play all our games effortlessly in one place!</b><br />The Launcher also comes with optimization Mods to even work on slower computers.</p>
+                    <motion.p
+                        initial={{ opacity: 0, y: '20px' }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.2, ease: 'easeIn' }}
+                    >
+                        <b>Play all our games effortlessly in one place!</b><br />The Launcher also comes with optimization Mods to even work on slower computers.
+                    </motion.p>
+                </div>
+
+                <div className='notextselection glass img animatedarg'>
+                    <img src='/images/launcher.png' loading='lazy' decoding='async' />
                 </div>
             </div>
 

@@ -1,8 +1,5 @@
 import './header.css';
 import IconList from '/icons/List.svg';
-import IconDiscord from '/icons/Discord.svg';
-import IconGithub from '/icons/Github.svg';
-import IconYoutube from '/icons/Youtube.svg';
 import Icon from '/logo.png';
 import { useState } from 'react';
 import { links } from '../data.ts';
@@ -40,7 +37,7 @@ export default function Header() {
                 </div>
 
                 <Link to={links.discord as string} target='_blank'>
-                    <img className='coolclick notextselection icon' src={IconDiscord} />
+                    <img className='coolclick notextselection icon' src='/icons/Discord.svg' />
                 </Link>
             </header>
 
@@ -62,15 +59,11 @@ export default function Header() {
 
                     <div>
                         <div className='icon-row'>
-                            <Link to={links.discord as string} target='_blank' className='coolclick'>
-                                <img src={IconDiscord} />
-                            </Link>
-                            <Link to={links.youtube as string} target='_blank' className='coolclick'>
-                                <img src={IconYoutube} />
-                            </Link>
-                            <Link to={links.github as string} target='_blank' className='coolclick'>
-                                <img src={IconGithub} />
-                            </Link>
+                            {['Discord', 'Youtube', 'Tiktok', 'Github'].map((name) =>
+                                <Link to={links[name.toLowerCase()] as string} target='_blank' className='coolclick'>
+                                    <img src={`/icons/${name}.svg`} />
+                                </Link>
+                            )}
                         </div>
 
                         {pinardo == 13 &&

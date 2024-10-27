@@ -61,7 +61,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     transition: left 0.5s cubic-bezier(0.23, 1, 0.320, 1);
-    z-index: 100;
+    z-index: 101;
     left: -100%;
 }
 

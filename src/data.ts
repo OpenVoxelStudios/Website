@@ -7,6 +7,7 @@ export const links: { [key: string]: string | undefined } = {
     youtube: "https://www.youtube.com/@OpenVoxel",
     github: "https://github.com/OpenVoxelStudios",
     modrinth: "https://modrinth.com/organization/OpenVoxel",
+    tiktok: "https://www.tiktok.com/@openvoxel",
     something: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
 }
 

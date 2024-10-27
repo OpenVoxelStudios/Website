@@ -59,8 +59,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-top: 5vh;
-    margin-bottom: 8vh;
+    padding-top: 5vh;
+    padding-bottom: 8vh;
 }
 
 .arg .text {
@@ -304,4 +304,12 @@
         width: 70%;
         padding: 20px;
     }
+}
+
+.animatedarg {
+    animation: smallfloat 6s ease-in-out infinite;
+}
+
+.animatedarg:hover {
+    animation-play-state: paused;
 }
