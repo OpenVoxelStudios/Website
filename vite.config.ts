@@ -25,7 +25,6 @@ var config: UserConfig = {
         bakingbread: resolve(root, 'bakingbread', 'index.html'),
         halloffame: resolve(root, 'halloffame', 'index.html'),
         404: resolve(root, '404', 'index.html'),
-        "3d": resolve(root, '3d', 'index.html'),
         // when2cook: resolve(root, 'when2cook', 'index.html'),
       },
       output: {

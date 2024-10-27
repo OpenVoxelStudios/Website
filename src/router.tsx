@@ -5,7 +5,6 @@ import GamesRoute from './routes/games.tsx';
 import LauncherRoute from './routes/launcher.tsx';
 import BakingBreadRoute from './routes/bakingBread.tsx';
 import HallOfFameRoute from './routes/hallOfFame.tsx';
-import ThreeDRoute from './routes/3d.tsx';
 import GameSpecificRoute from './routes/gameSpecific.tsx';
 
 export const scrollTop = () => {
@@ -50,10 +49,6 @@ export const router = createBrowserRouter([
     {
         path: '/halloffame',
         element: <HallOfFameRoute />
-    },
-    {
-        path: '/3d',
-        element: <ThreeDRoute />
     },
     {
         path: '/404',
