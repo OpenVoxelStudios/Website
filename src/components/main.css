@@ -52,12 +52,14 @@
 
 .arg {
     width: 100%;
+    min-height: 500px;
     height: 75vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin-top: 2vh;
     margin-bottom: 10vh;
 }
 
