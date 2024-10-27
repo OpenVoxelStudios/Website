@@ -10,9 +10,12 @@ import remarkGfm from 'remark-gfm';
 import { Link } from 'react-router-dom';
 import { scrollTop } from '../router';
 import { motion } from 'framer-motion';
+import useIsDesktop from '@/hooks/useIsDesktop';
+import SceneAnimations from './3d/SceneAnimations';
 
 export default function MainPage() {
     document.title = "OpenVoxel Studios";
+    const isDesktop = useIsDesktop();
 
     function scrollSetFrame() {
         setTimeout(() => {
@@ -55,13 +58,13 @@ export default function MainPage() {
             </motion.div>
 
             <div className='arg'>
+                <div className='notextselection glass img'>
+                    <img src={BannerTeam} loading='lazy' decoding='async' />
+                </div>
+
                 <div className='text'>
                     <h1>No Mods Required.</h1>
                     <p><b>All maps are 100% vanilla</b> and require no mods, thanks to Datapacks and Resource packs!<br />* Some Maps may use Mods to enhance the experience, but are not required!</p>
-                </div>
-
-                <div className='notextselection glass img'>
-                    <img src={BannerTeam} loading='lazy' decoding='async' />
                 </div>
             </div>
 
@@ -72,10 +75,28 @@ export default function MainPage() {
 
                 <div className='text'>
                     <h1>Hall of Fame.</h1>
-                    <p>Check out our <b>Hall of Fame</b> and see every contest we've taken part in and won!<br /><u style={{ cursor: 'pointer' }} onClick={() => localRedirect("/halloffame/", 'halloffame', undefined)}>Click here</u> to check it out!</p>
+                    <p>Check out our <b>Hall of Fame</b> and see every contest we've taken part in and won!</p>
+                    <Link to='/halloffame/' onClick={scrollTop}>
+                        Click here to check it out!
+                    </Link>
                 </div>
             </div> */}
 
+            <div className='arg'>
+                <div className='text'>
+                    <h1>Fancy Animations.</h1>
+                    <p>We brought <b>amazing animations</b> into vanilla Minecraft using <a href='https://animated-java.dev' target='_blank'>Animated Java</a> and <a href='https://www.blockbench.net' target='_blank'>Blockbench</a>!<br />An <b>exhibition room</b> is in the works! You will be able to see the models in 3D and download some of them!</p>
+                </div>
+
+                <div className='notextselection glass img' style={{ animation: isDesktop ? '' : 'float 6s ease-in-out infinite', minHeight: isDesktop ? '400px' : undefined }}>
+                    {isDesktop &&
+                        <SceneAnimations />
+                    }
+                    {!isDesktop &&
+                        <img src='/banner-team.png' loading='lazy' decoding='async' />
+                    }
+                </div>
+            </div>
 
             <div className='arg'>
                 <div className='notextselection glass img'>

@@ -52,13 +52,15 @@
 
 .arg {
     width: 100%;
+    min-height: 500px;
     height: 75vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 8vh;
 }
 
 .arg .text {
@@ -76,20 +78,20 @@
 
 .arg .img {
     width: 50%;
-    height: fit-content;
+    max-height: 75vh;
+    height: 75vh;
     display: flex;
     align-items: center;
-    animation: float 6s ease-in-out infinite;
 
     position: relative;
     transition: all 0.2s ease;
     transform-style: preserve-3d;
 }
 
-.arg .img>img {
+.arg .img>* {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     image-rendering: pixelated;
     border-radius: 16px;
 }
@@ -273,12 +275,10 @@
     }
 
     .arg .img {
+        width: 100%;
+        cursor: default;
         animation: smallfloat 6s ease-in-out infinite;
         z-index: 0;
-    }
-
-    .arg .img>img {
-        object-fit: cover;
     }
 
     .arg .text {
@@ -299,9 +299,9 @@
         font-size: 40px;
     }
 
-    .arg .text,
-    .arg .img {
+    .arg .text {
         position: absolute;
-        width: 90%;
+        width: 70%;
+        padding: 20px;
     }
 }
