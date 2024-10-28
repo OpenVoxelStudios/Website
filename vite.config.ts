@@ -28,13 +28,9 @@ var config: UserConfig = {
         // when2cook: resolve(root, 'when2cook', 'index.html'),
       },
       output: {
-        assetFileNames: (assetInfo) => {
-          return 'assets/' + assetInfo.name as string;
-        },
-        entryFileNames: (chunkInfo) => {
-          return 'assets/' + chunkInfo.name + '.js';
-        },
-        chunkFileNames: `assets/App.js`,
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]',
       }
     },
   },

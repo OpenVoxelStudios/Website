@@ -8,7 +8,24 @@ import { Link } from 'react-router-dom';
 import { scrollTop } from '../router';
 import { motion } from 'framer-motion';
 import useIsDesktop from '@/hooks/useIsDesktop';
-import SceneAnimations from './3d/SceneAnimations';
+
+const DesktopScene = () => {
+    const [SceneComponent, setSceneComponent] = useState<React.ComponentType | null>(null);
+
+    useEffect(() => {
+        // Dynamically import the Three.js component and its dependencies
+        import('./3d/SceneAnimations').then((module) => {
+            setSceneComponent(() => module.default);
+        });
+    }, []);
+
+    if (!SceneComponent) {
+        return <div className="loading">Loading 3D Scene...</div>;
+    }
+
+    return <SceneComponent />;
+};
+
 
 export default function MainPage() {
     document.title = "OpenVoxel Studios";
@@ -85,12 +102,11 @@ export default function MainPage() {
                 </div>
 
                 <div className={'notextselection glass img' + (isDesktop ? '' : ' animatedarg')} style={{ minHeight: isDesktop ? '400px' : undefined }}>
-                    {isDesktop &&
-                        <SceneAnimations />
-                    }
-                    {!isDesktop &&
+                    {isDesktop ? (
+                        <DesktopScene />
+                    ) : (
                         <img src='/games/banners/yer2.png' loading='lazy' decoding='async' />
-                    }
+                    )}
                 </div>
             </div>
 
