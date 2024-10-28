@@ -43,6 +43,10 @@
     color: white;
 }
 
+.footer .top .smalltitle {
+    font-size: 30px;
+}
+
 .footer .small {
     text-align: center;
     font-weight: bold;
@@ -86,6 +90,11 @@
         font-size: 24px;
     }
 
+
+    .footer .top .smalltitle {
+        font-size: 20px;
+    }
+
     .footer .small {
         font-size: 22px;
     }
@@ -117,6 +126,11 @@
     .footer .top .subtitle {
         font-size: 14px;
         width: 40%;
+    }
+
+
+    .footer .top .smalltitle {
+        font-size: 10px;
     }
 
     .footer .small {

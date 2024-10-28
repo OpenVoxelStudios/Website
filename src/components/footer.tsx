@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './footer.css';
 import Icon from '/logo.png';
 import { Link } from 'react-router-dom';
+import { links } from '@/data';
 
 export default function Footer() {
     const [BREADMAN, _] = useState(Math.round(Math.random() * 20) == 1);
@@ -17,12 +18,18 @@ export default function Footer() {
 
                             location.href = '/bakingbread/';
                         }
-                    }}>
+                    }} style={{ justifyContent: 'start' }}>
                         <img className='notextselection logo' src={!BREADMAN ? Icon : '/bakingbread/breadman.png'} />
                         <a className='title'>{!BREADMAN ? 'OpenVoxel Studios' : 'BreadVoxel??'}</a>
                     </div>
 
-                    <a className='subtitle'>Minecraft Maps, without Mods.</a>
+                    <p className='subtitle' style={{ textAlign: 'end' }}>
+                        Minecraft Maps, without Mods.
+                        <br />
+                        <Link to={links.kofi as string} target='_blank' className='subtitle smalltitle coolclick' style={{ textDecoration: 'underline' }}>
+                            Consider supporting us on Ko-Fi!
+                        </Link>
+                    </p>
                 </div>
                 <div className='notextselection small'>
                     <div className='notextselection coolclick glass backtotop' id='scrollToTopBtn' onClick={(ev) => {

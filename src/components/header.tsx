@@ -55,12 +55,16 @@ export default function Header() {
                         <Link to='/launcher/' onClick={() => { setMenu(false); scrollTop() }} className='yestextselection coolclick'>
                             <h1><p className='yestextselection coolclick'>Launcher</p></h1>
                         </Link>
+
+                        <Link to={links.kofi as string} target='_blank' className='yestextselection coolclick'>
+                            <h1><p className='yestextselection coolclick'>Support Us</p></h1>
+                        </Link>
                     </div>
 
                     <div>
                         <div className='icon-row'>
-                            {['Discord', 'Youtube', 'Tiktok', 'Github'].map((name) =>
-                                <Link to={links[name.toLowerCase()] as string} target='_blank' className='coolclick'>
+                            {['Discord', 'Youtube', 'Tiktok', 'Github'].map((name, key) =>
+                                <Link key={`sidebaricon-${key}`} to={links[name.toLowerCase()] as string} target='_blank' className='coolclick'>
                                     <img src={`/icons/${name}.svg`} />
                                 </Link>
                             )}

@@ -9,6 +9,7 @@ export const links: { [key: string]: string | undefined } = {
     modrinth: "https://modrinth.com/organization/OpenVoxel",
     tiktok: "https://www.tiktok.com/@openvoxel",
     something: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    kofi: "https://ko-fi.com/openvoxel",
 }
 
 export type CreatorList = "ChoosingBerry" | "CMANIF" | "Cryptic Knight" | "Kubik" | "Monster Art" | "RoseRocket" | "S0FL" | "Sammy" | "Stevelocks" | "The Bread Giver";
