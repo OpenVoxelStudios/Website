@@ -11,13 +11,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
-      - name: Set up Bun
-        run: |
-          curl -fsSL https://bun.sh/install | bash
-          export PATH="${HOME}/.bun/bin:$PATH"
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2.0.1
+        with:
+          bun-version: "latest"
       
       - name: Run update-all
+        env:
+          GH_KEY: ${{ secrets.GH_KEY }}
         run: bun run update-all
       
       - name: Commit and push changes
