@@ -63,8 +63,8 @@ async function doMagic(progressText: string, endText: string, func: { (...args: 
     console.time(endText);
     process.stdout.write(`[🗿] ${progressText}`);
     let output = await func(...funcArgs);
-    process.stdout?.clearLine(0);
-    process.stdout?.cursorTo(0);
+    if (process.stdout?.clearLine) process.stdout.clearLine(0);
+    if (process.stdout?.cursorTo) process.stdout.cursorTo(0);
     console.timeEnd(endText);
 
     if (typeof output == 'function') output()
