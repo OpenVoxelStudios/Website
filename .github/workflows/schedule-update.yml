@@ -16,7 +16,17 @@ jobs:
         uses: oven-sh/setup-bun@v2.0.1
         with:
           bun-version: "latest"
+
+      - name: Switch to main and pull latest changes
+        run: |
+          git checkout main
+          git pull origin main
       
+      - name: Create and switch to update-all branch
+        run: |
+          git checkout -b update-all
+          git reset --hard origin/main
+          
       - name: Run update-all
         env:
           GH_KEY: ${{ secrets.GH_KEY }}
@@ -26,17 +36,17 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout -b update-dependencies
           git add .
           git commit -m 'Update dependencies'
-          git push --set-upstream origin update-dependencies
+          git push --set-upstream origin update-all
       
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: update-dependencies
-          title: 'Update dependencies'
-          body: 'This PR updates dependencies.'
+          branch: update-all
+          base: 'main'
+          title: 'Update All'
+          body: 'This PR updates dependencies & download counts.'
           labels: dependencies
           commit-message: '[create-pull-request] automated change'
