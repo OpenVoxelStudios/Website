@@ -16,13 +16,13 @@ export default function Game({ name, date, downloads, description, image, link }
             <p className='yestextselection glass title'>{name}</p>
 
             <div className='details'>
-                <img className='notextselection thumbnail' src={image} loading='lazy' decoding='async' />
+                <img className='notextselection thumbnail' src={image} loading='lazy' decoding='async' alt={'Banner of the game ' + name} />
                 {date !== null &&
                     <p className='yestextselection date'>{date.toLocaleDateString()}</p>
                 }
                 {downloads !== null &&
                     <p className='yestextselection downloads'>
-                        <img className='notextselection downloadicon' src={IconDownload} />
+                        <img className='notextselection downloadicon' src={IconDownload} alt={'Download Count: ' + String(downloads)} />
                         {downloads}
                     </p>
                 }

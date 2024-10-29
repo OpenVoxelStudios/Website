@@ -44,16 +44,16 @@ export default function Launcher() {
                     <a className='download coolclick glass' href={quickDownload}><b>Download</b></a>
                 </div>
 
-                <img className='glass coolclick' src={LauncherImage} />
+                <img className='glass coolclick' src={LauncherImage} alt='Launcher Preview' />
             </div>
 
-            <h1 className='maintitle'>All Downloads</h1>
+            <h1 className='maintitle'>All Downloads (note: the Launcher is disabled)</h1>
 
             <div className='downloader'>
                 <div className='os glass'>
                     <div style={{ background: 'url(/images/lobby/morning.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='bg' />
 
-                    <img src={LogoWindows} />
+                    <img src={LogoWindows} alt='Windows' />
                     <h1>Windows</h1>
 
                     <a className='download coolclick glass' href={downloadPrefix + downloads.installer.windows}><b>Download</b></a>
@@ -62,7 +62,7 @@ export default function Launcher() {
                 <div className='os glass'>
                     <div style={{ background: 'url(/images/lobby/day.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='bg' />
 
-                    <img src={LogoApple} />
+                    <img src={LogoApple} alt='Mac' />
                     <h1>Mac</h1>
 
                     <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -74,7 +74,7 @@ export default function Launcher() {
                 <div className='os glass'>
                     <div style={{ background: 'url(/images/lobby/night.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='bg' />
 
-                    <img src={LogoLinux} />
+                    <img src={LogoLinux} alt='Linux' />
                     <h1>Linux</h1>
 
                     <a style={{ width: '60%', fontSize: '24px', textAlign: 'center' }}>No installer on Linux for now... Check the Portable Download right below!</a>

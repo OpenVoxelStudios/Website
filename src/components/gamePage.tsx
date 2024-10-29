@@ -26,7 +26,7 @@ export default function GamePage({ game }: { game: string }) {
 
                     <div className='coolclick glass downloadLatest'>
                         <Link to='/launcher' onClick={scrollTop}>
-                            <img className='icon' src={IconDownload} />
+                            <img className='icon' src={IconDownload} alt='Download' />
                             Download Launcher
                         </Link>
                     </div>
@@ -36,7 +36,7 @@ export default function GamePage({ game }: { game: string }) {
 
             <div className='notextselection glass info'>
                 <div className='name'>
-                    <img src={GAME.icon} className='icon' />
+                    <img src={GAME.icon} className='icon' alt={GAME.name} />
                     <a className='yestextselection name'>{GAME.name}</a>
                 </div>
                 <p className='yestextselection description'>
@@ -56,13 +56,13 @@ export default function GamePage({ game }: { game: string }) {
 
                         document.body.appendChild(iframe);
                     }}>
-                        <img className='icon' src={IconOpen} />
+                        <img className='icon' src={IconOpen} alt='Open In Launcher' />
                         <a className='yestextselection text'>Open In Launcher</a>
                     </div>
                 }
 
                 <Link to={GAME.versions.filter(v => v.type == "release")[0].download} target='_blank' className='coolclick glass downloadLatest yestextselection text'>
-                    <img className='icon' src={IconDownload} />
+                    <img className='icon' src={IconDownload} alt='Download Latest' />
                     Download Latest
                 </Link>
 
@@ -120,7 +120,7 @@ export default function GamePage({ game }: { game: string }) {
 
                                 <div className='text'>
                                     <Link to={v.download} target='_blank' className='coolclick glass title'>
-                                        <img className='notextselection download' src={IconDownload}></img>
+                                        <img className='notextselection download' src={IconDownload} alt='Download' />
                                         <p className='bold'>[{v.supports}] {v.name}</p>
                                         <p>(on {v.date.toLocaleDateString()})</p>
                                     </Link>

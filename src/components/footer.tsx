@@ -19,7 +19,7 @@ export default function Footer() {
                             location.href = '/bakingbread/';
                         }
                     }} style={{ justifyContent: 'start' }}>
-                        <img className='notextselection logo' src={!BREADMAN ? Icon : '/bakingbread/breadman.png'} />
+                        <img className='notextselection logo' src={!BREADMAN ? Icon : '/bakingbread/breadman.png'} alt='OpenVoxel Studios Logo'/>
                         <a className='title'>{!BREADMAN ? 'OpenVoxel Studios' : 'BreadVoxel??'}</a>
                     </div>
 

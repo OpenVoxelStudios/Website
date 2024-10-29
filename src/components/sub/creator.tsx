@@ -22,7 +22,7 @@ export default function Creator({ creatorName }: { creatorName: keyof typeof Cre
                 }, 19000);
             }}
         >
-            <img className='head' src={'/heads/' + CreatorDetailList[creatorName].minecraft + '.png'} />
+            <img className='head' src={'/heads/' + CreatorDetailList[creatorName].minecraft + '.png'} alt={'Head of ' + creatorName} />
             <p className='yestextselection name'>{creatorName}</p>
         </Link>
     )

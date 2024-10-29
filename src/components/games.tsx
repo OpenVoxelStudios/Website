@@ -39,7 +39,7 @@ export default function Games() {
     <div className="games">
       <div className="subheader">
         <div className="notextselection search glass">
-          <img className="notextselection icon" src="/icons/Search.svg" />
+          <img className="notextselection icon" src="/icons/Search.svg" alt='Search' />
           <input
             className="yestextselection input"
             placeholder="Search a Map..."
@@ -58,7 +58,7 @@ export default function Games() {
             )
           }
         >
-          <img className="notextselection icon" src="/icons/Sort.svg" />
+          <img className="notextselection icon" src="/icons/Sort.svg" alt='Sort By' />
           <a className="yestextselection sortby">{filter}</a>
         </div>
 

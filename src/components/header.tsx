@@ -26,18 +26,18 @@ export default function Header() {
                     <img className='coolclick notextselection icon' src={IconList} onMouseDown={(ev) => { ev.stopPropagation(); }} onClick={() => {
                         setMenu(!menu);
                         if (!menu) setPinardo((pinardo + 1) % 14);
-                    }} />
+                    }} alt='Open Side Menu' />
                 </div>
 
                 <div className='brand'>
                     <Link to='/' onClick={scrollTop}>
-                        <img className='coolclick notextselection logo' id='headerlogo' src={Icon} />
+                        <img className='coolclick notextselection logo' id='headerlogo' src={Icon} alt='OpenVoxel Studios Logo' />
                     </Link>
                     <a className='title' id='headertitle'>OpenVoxel Studios</a>
                 </div>
 
                 <Link to={links.discord as string} target='_blank'>
-                    <img className='coolclick notextselection icon' src='/icons/Discord.svg' />
+                    <img className='coolclick notextselection icon' src='/icons/Discord.svg' alt='Our Discord Server' />
                 </Link>
             </header>
 
@@ -65,14 +65,14 @@ export default function Header() {
                         <div className='icon-row'>
                             {['Discord', 'Youtube', 'Tiktok', 'Github'].map((name, key) =>
                                 <Link key={`sidebaricon-${key}`} to={links[name.toLowerCase()] as string} target='_blank' className='coolclick'>
-                                    <img src={`/icons/${name}.svg`} />
+                                    <img src={`/icons/${name}.svg`} alt={name} />
                                 </Link>
                             )}
                         </div>
 
                         {pinardo == 13 &&
                             <h1 style={{ width: "100%", marginBottom: "0", display: "flex" }}>
-                                <img src={PinardoImage} style={{ width: "40%" }} loading='lazy' decoding='async' />
+                                <img src={PinardoImage} style={{ width: "40%" }} loading='lazy' decoding='async' alt='Pinardo Was Here!' />
                             </h1>
                         }
                     </div>

@@ -61,7 +61,7 @@ export default function MainPage() {
                     <h1>Minecraft Maps,</h1>
                     <h1>Without Mods.</h1>
                     <Link to='/games/' onClick={scrollTop} className='coolclick glass maps'>
-                        <img className='notextselection' src='/icons/Download.svg' />
+                        <img className='notextselection' src='/icons/Download.svg' alt='View Maps' />
                         View Maps
                     </Link>
 
@@ -74,7 +74,7 @@ export default function MainPage() {
 
             <div className='arg'>
                 <div className='notextselection glass img animatedarg'>
-                    <img src='/banner-team.png' loading='lazy' decoding='async' />
+                    <img src='/banner-team.png' loading='lazy' decoding='async' alt='OpenVoxel Studios Banner' />
                 </div>
 
                 <div className='text'>
@@ -107,14 +107,14 @@ export default function MainPage() {
                     {isDesktop ? (
                         <DesktopScene />
                     ) : (
-                        <img src='/games/banners/yer2.jpg' loading='lazy' decoding='async' />
+                        <img src='/games/banners/yer2.jpg' loading='lazy' decoding='async' alt='Banner of the YER2 Game' />
                     )}
                 </div>
             </div>
 
             <div className='arg'>
                 <div className='notextselection glass img animatedarg'>
-                    <img src='/halloffame/mewoster.jpg' />
+                    <img src='/halloffame/mewoster.jpg' alt='Mewoster Banner' />
                 </div>
 
                 <div className='text'>
@@ -147,7 +147,7 @@ export default function MainPage() {
                 </div>
 
                 <div className='notextselection glass img animatedarg'>
-                    <img src='/images/launcher.png' loading='lazy' decoding='async' />
+                    <img src='/images/launcher.png' loading='lazy' decoding='async' alt='Launcher Preview' />
                 </div>
             </div>
 
@@ -175,7 +175,7 @@ export default function MainPage() {
                                 visible: { scale: 1, y: 0, transition: { duration: 0.3 } }
                             }}
                         >
-                            <img src={`/heads/${CreatorDetailList[creator as CreatorList].minecraft}.png`} loading='lazy' decoding='async' />
+                            <img src={`/heads/${CreatorDetailList[creator as CreatorList].minecraft}.png`} loading='lazy' decoding='async' alt={'Head of ' + profile} />
                         </motion.div>
                     ))}
                 </motion.div>
@@ -191,6 +191,7 @@ export default function MainPage() {
                             src={`/heads/${CreatorDetailList[profile as CreatorList].minecraft}.png`}
                             loading='lazy'
                             decoding='async'
+                            alt={'Head of ' + profile}
                         />
                         <h1 className='yestextselection'>{profile}</h1>
                     </div>
