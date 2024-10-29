@@ -29,7 +29,6 @@ jobs:
           git checkout -b update-dependencies
           git add .
           git commit -m 'Update dependencies'
-          git pull --rebase origin main
           git push --set-upstream origin update-dependencies
       
       - name: Create Pull Request
@@ -37,7 +36,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: update-dependencies
-          base: 'main'
           title: 'Update dependencies'
           body: 'This PR updates dependencies.'
           labels: dependencies
