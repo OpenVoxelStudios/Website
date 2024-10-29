@@ -10,5 +10,5 @@
     "allowImportingTsExtensions": true,
     "emitDeclarationOnly": true
   },
-  "include": ["vite.config.ts", "config.ts", "./src/data.ts", "./script/beforeRun.ts", "./script/afterRun.ts"],
+  "include": ["vite.config.ts", "config.ts", "./src/data.ts", "./script/beforeRun.ts", "./script/afterRun.ts", "./robots.ts"],
 }

@@ -5,10 +5,21 @@ import { gameList } from './src/data.ts';
 import type { RollupOptions } from './node_modules/rollup/dist/rollup.d.ts';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { root, outDir } from './config.ts';
+import Sitemap from 'vite-plugin-sitemap';
+import robotsTXT from './robots.ts';
 
 var config: UserConfig = {
   root,
-  plugins: [react()],
+  plugins: [
+    react(),
+    Sitemap({
+      hostname: 'https://openvoxel.studio',
+      outDir: outDir,
+      readable: true,
+      generateRobotsTxt: true,
+      robots: robotsTXT
+    }),
+  ],
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
