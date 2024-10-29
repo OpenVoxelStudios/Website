@@ -36,6 +36,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: update-dependencies
+          base: 'main'
           title: 'Update dependencies'
           body: 'This PR updates dependencies.'
           labels: dependencies
+          commit-message: '[create-pull-request] automated change'
