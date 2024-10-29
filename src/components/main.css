@@ -110,6 +110,7 @@
 }
 
 .team .heads {
+    transition: transform 0.15s ease;
     height: 100%;
     width: 200px;
     display: flex;
@@ -135,9 +136,14 @@
 }
 
 .team .heads .head>img {
+    transition: height 0.15s ease;
     height: 70%;
     image-rendering: pixelated;
     border-radius: 8px;
+}
+
+.team .heads .head:hover>img {
+    height: 80%;
 }
 
 .team .description .top {
@@ -212,10 +218,20 @@
     .team .heads .head:hover {
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
+
+    .team .heads:hover {
+        transform: scale(1.06);
+        z-index: 100;
+    }
+
+    .team .heads:active {
+        transform: scale(1.06) translateY(3px);
+    }
 }
 
 @media screen and (max-width: 1000px) {
     .team {
+        width: 100%;
         flex-direction: column;
         gap: 15px;
     }
@@ -246,15 +262,20 @@
     }
 
     .team .heads {
-        flex-direction: row;
-        width: calc(100% - 10px);
-        height: fit-content;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(5, 75px);
+        grid-template-rows: 75px 75px;
+        gap: 10px;
+        justify-content: center;
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .team .heads:active {
+        transform: translateY(3px);
     }
 
     .team .heads .head {
-        flex: 0 0 20%;
         width: 75px;
         height: 75px;
     }
