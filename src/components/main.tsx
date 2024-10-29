@@ -107,14 +107,14 @@ export default function MainPage() {
                     {isDesktop ? (
                         <DesktopScene />
                     ) : (
-                        <img src='/games/banners/yer2.png' loading='lazy' decoding='async' />
+                        <img src='/games/banners/yer2.jpg' loading='lazy' decoding='async' />
                     )}
                 </div>
             </div>
 
             <div className='arg'>
                 <div className='notextselection glass img animatedarg'>
-                    <img src='/halloffame/mewoster.png' />
+                    <img src='/halloffame/mewoster.jpg' />
                 </div>
 
                 <div className='text'>
