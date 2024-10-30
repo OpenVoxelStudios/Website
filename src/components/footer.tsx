@@ -19,15 +19,15 @@ export default function Footer() {
                             location.href = '/bakingbread/';
                         }
                     }} style={{ justifyContent: 'start' }}>
-                        <img className='notextselection logo' src={!BREADMAN ? Icon : '/bakingbread/breadman.png'} alt='OpenVoxel Studios Logo'/>
+                        <img className='notextselection logo' src={!BREADMAN ? Icon : '/bakingbread/breadman.png'} alt='OpenVoxel Studios Logo' />
                         <a className='title'>{!BREADMAN ? 'OpenVoxel Studios' : 'BreadVoxel??'}</a>
                     </div>
 
                     <p className='subtitle' style={{ textAlign: 'end' }}>
                         Minecraft Maps, without Mods.
                         <br />
-                        <Link to={links.kofi as string} target='_blank' className='subtitle smalltitle coolclick' style={{ textDecoration: 'underline' }}>
-                            Consider supporting us on Ko-Fi!
+                        <Link to={links.kofi as string} target='_blank' className='subtitle smalltitle' style={{ textDecoration: 'underline', paddingTop: '15px' }}>
+                            <img src='/support.png' height='50px' className='coolclick' />
                         </Link>
                     </p>
                 </div>

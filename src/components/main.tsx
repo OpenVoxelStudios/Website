@@ -82,8 +82,9 @@ export default function MainPage() {
                     <motion.p
                         initial={{ opacity: 0, y: '20px' }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        exit={{ y: '20px', opacity: 0 }}
                         transition={{ duration: 1.5, delay: 0.1, ease: 'easeIn', type: 'spring', bounce: 0.5 }}
-                        viewport={{ once: true, amount: 0.3 }}
+                        viewport={{ once: false, amount: 0.3 }}
                     >
                         <b>All maps are 100% vanilla</b> and require no mods, thanks to Datapacks and Resource packs!<br />* Some Maps may use Mods to enhance the experience, but are not required!
                     </motion.p>
@@ -96,8 +97,9 @@ export default function MainPage() {
                     <motion.p
                         initial={{ opacity: 0, y: '20px' }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        exit={{ y: '20px', opacity: 0 }}
                         transition={{ duration: 1.5, delay: 0.1, ease: 'easeIn', type: 'spring', bounce: 0.5 }}
-                        viewport={{ once: true, amount: 0.3 }}
+                        viewport={{ once: false, amount: 0.3 }}
                     >
                         We brought <b>amazing animations</b> into vanilla Minecraft using <a href='https://animated-java.dev' target='_blank'>Animated Java</a> and <a href='https://www.blockbench.net' target='_blank'>Blockbench</a>!<br />An <b>exhibition room</b> is in the works! You will be able to see the models in 3D and download some of them!
                     </motion.p>
@@ -122,8 +124,9 @@ export default function MainPage() {
                     <motion.p
                         initial={{ opacity: 0, y: '20px' }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        exit={{ y: '20px', opacity: 0 }}
                         transition={{ duration: 1.5, delay: 0.1, ease: 'easeIn', type: 'spring', bounce: 0.5 }}
-                        viewport={{ once: true, amount: 0.3 }}
+                        viewport={{ once: false, amount: 0.3 }}
                     >
                         Check out our <b>Hall of Fame</b> and see every contest we've taken part in and won!
                     </motion.p>
@@ -139,8 +142,9 @@ export default function MainPage() {
                     <motion.p
                         initial={{ opacity: 0, y: '20px' }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        exit={{ y: '20px', opacity: 0 }}
                         transition={{ duration: 1.5, delay: 0.1, ease: 'easeIn', type: 'spring', bounce: 0.5 }}
-                        viewport={{ once: true, amount: 0.3 }}
+                        viewport={{ once: false, amount: 0.3 }}
                     >
                         <b>Play all our games effortlessly in one place!</b><br />The Launcher also comes with optimization Mods to even work on slower computers.
                     </motion.p>
