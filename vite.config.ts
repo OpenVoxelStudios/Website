@@ -44,6 +44,7 @@ var config: UserConfig = {
         assetFileNames: 'assets/[name].[ext]',
       }
     },
+    sourcemap: true,
   },
 };
 

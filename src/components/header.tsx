@@ -1,9 +1,9 @@
 import './header.css';
 import IconList from '/icons/List.svg';
-import Icon from '/logo.png';
+import Icon from '/logo.webp';
 import { useState } from 'react';
 import { links } from '../data.ts';
-import PinardoImage from '/images/pinardo.png'
+import PinardoImage from '/images/pinardo.webp'
 import { Link } from 'react-router-dom';
 import { scrollTop } from '../router.tsx';
 

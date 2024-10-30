@@ -1,9 +1,5 @@
 import './launcher.css';
-import LauncherImage from '/images/launcher.png';
-
-import LogoApple from '/images/apple.svg';
-import LogoWindows from '/images/windows.svg';
-import LogoLinux from '/images/linux.svg';
+import LauncherImage from '/images/launcher.webp';
 import { links } from '../data';
 
 export default function Launcher() {
@@ -56,18 +52,18 @@ export default function Launcher() {
 
             <div className='downloader'>
                 <div className='os glass'>
-                    <div style={{ background: 'url(/images/lobby/morning.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='bg' />
+                    <div style={{ background: 'url(/images/lobby/morning.webp)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='bg' />
 
-                    <img src={LogoWindows} alt='Windows' />
+                    <img src='/images/windows.svg' alt='Windows' />
                     <h1>Windows</h1>
 
                     <a className='download coolclick glass' href={downloadPrefix + downloads.installer.windows}><b>Download</b></a>
                 </div>
 
                 <div className='os glass'>
-                    <div style={{ background: 'url(/images/lobby/day.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='bg' />
+                    <div style={{ background: 'url(/images/lobby/day.webp)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='bg' />
 
-                    <img src={LogoApple} alt='Mac' />
+                    <img src='/images/apple.svg' alt='Mac' />
                     <h1>Mac</h1>
 
                     <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -77,9 +73,9 @@ export default function Launcher() {
                 </div>
 
                 <div className='os glass'>
-                    <div style={{ background: 'url(/images/lobby/night.png)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='bg' />
+                    <div style={{ background: 'url(/images/lobby/night.webp)', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} className='bg' />
 
-                    <img src={LogoLinux} alt='Linux' />
+                    <img src='/images/linux.svg' alt='Linux' />
                     <h1>Linux</h1>
 
                     <a style={{ width: '60%', fontSize: '24px', textAlign: 'center' }}>No installer on Linux for now... Check the Portable Download right below!</a>

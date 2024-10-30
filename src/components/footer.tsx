@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './footer.css';
-import Icon from '/logo.png';
+import Icon from '/logo.webp';
 import { Link } from 'react-router-dom';
 import { links } from '@/data';
 
@@ -20,14 +20,14 @@ export default function Footer() {
                         }
                     }} style={{ justifyContent: 'start' }}>
                         <img className='notextselection logo' src={!BREADMAN ? Icon : '/bakingbread/breadman.png'} alt='OpenVoxel Studios Logo' />
-                        <a className='title'>{!BREADMAN ? 'OpenVoxel Studios' : 'BreadVoxel??'}</a>
+                        <p className='title'>{!BREADMAN ? 'OpenVoxel Studios' : 'BreadVoxel??'}</p>
                     </div>
 
                     <p className='subtitle' style={{ textAlign: 'end' }}>
                         Minecraft Maps, without Mods.
                         <br />
                         <Link to={links.kofi as string} target='_blank' className='subtitle smalltitle' style={{ textDecoration: 'underline', paddingTop: '15px' }}>
-                            <img src='/support.png' height='50px' className='coolclick' />
+                            <img src='/support.webp' height='50px' className='coolclick supportus' alt='Support Us! Access our donation page' loading='lazy' decoding='async' />
                         </Link>
                     </p>
                 </div>
@@ -40,7 +40,7 @@ export default function Footer() {
                     }}></div>
 
                     <br />
-                    <a className='yestextselection actuallybigger'>Copyright © OpenVoxel Studios 2024</a>
+                    <p className='yestextselection actuallybigger'>Copyright © OpenVoxel Studios 2024</p>
                     <br />
                     <Link to='mailto:contact@openvoxel.studio' className='yestextselection contactmail' style={{
                         textDecoration: 'underline',
@@ -48,7 +48,7 @@ export default function Footer() {
                     </Link>
                     <br />
                     <br />
-                    <a className='yestextselection'>NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</a>
+                    <p className='yestextselection'>NOT AN OFFICIAL MINECRAFT SERVICE. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
                 </div>
             </div>
         </>

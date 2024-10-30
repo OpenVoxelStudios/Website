@@ -18,7 +18,7 @@ export default function HallOfFame() {
                                 <br /><br />
                                 <a href='https://www.youtube.com/watch?v=I2bOFSabiNk&t=10159s' target='_blank'>Watch Yahi's Stream by clicking here</a>
                             </>,
-                            // image: "/halloffame/yer2.jpg",
+                            // image: "/halloffame/yer2.webp",
                             link: 'https://www.youtube.com/watch?v=I2bOFSabiNk&t=10159s',
                         },
                         {
@@ -29,7 +29,7 @@ export default function HallOfFame() {
                                 <br /><br />
                                 <a href='https://www.youtube.com/watch?v=f3B0o8uBadc' target='_blank'>Watch Mysti's Stream by clicking here</a>
                             </>,
-                            image: '/halloffame/mewoster.jpg',
+                            image: '/halloffame/mewoster.webp',
                             link: 'https://www.youtube.com/watch?v=g7jRjRDhZIM',
                         },
                     ] as {

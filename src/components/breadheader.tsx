@@ -1,5 +1,5 @@
 import './header.css';
-import Icon from '/logo.png';
+import Icon from '/logo.webp';
 import { useState } from 'react';
 
 export default function Header({ showLeaderboard, setShowLeaderboard }: { showLeaderboard: boolean, setShowLeaderboard: React.Dispatch<React.SetStateAction<boolean>> }) {

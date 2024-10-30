@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { CreatorDetailList, CreatorList } from '../data';
 import './main.css';
-import OVChestOpen from '/ov_chest_open.mp4';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Link } from 'react-router-dom';
@@ -61,12 +60,12 @@ export default function MainPage() {
                     <h1>Minecraft Maps,</h1>
                     <h1>Without Mods.</h1>
                     <Link to='/games/' onClick={scrollTop} className='coolclick glass maps'>
-                        <img className='notextselection' src='/icons/Download.svg' alt='View Maps' />
+                        <img className='notextselection' src='/icons/Download.svg' alt='Click here to access our Maps' />
                         View Maps
                     </Link>
 
-                    <video className='notextselection' id="v0" autoPlay={true} muted={true} playsInline={true} onPlay={(e) => e.currentTarget.pause()} controls={false}>
-                        <source className='notextselection' type="video/mp4;" src={OVChestOpen}></source>
+                    <video className='notextselection' id="v0" autoPlay={true} muted={true} playsInline={true} onPlay={(e) => e.currentTarget.pause()} controls={false} width={1500} height={714}>
+                        <source className='notextselection' type="video/mp4;" src='/ov_chest_open.mp4'></source>
                     </video>
                 </div>
             </motion.div>
@@ -74,7 +73,7 @@ export default function MainPage() {
 
             <div className='arg'>
                 <div className='notextselection glass img animatedarg'>
-                    <img src='/banner-team.png' loading='lazy' decoding='async' alt='OpenVoxel Studios Banner' />
+                    <img src='/banner-team.webp' loading='lazy' decoding='async' alt='OpenVoxel Studios Banner' />
                 </div>
 
                 <div className='text'>
@@ -109,14 +108,14 @@ export default function MainPage() {
                     {isDesktop ? (
                         <DesktopScene />
                     ) : (
-                        <img src='/games/banners/yer2.jpg' loading='lazy' decoding='async' alt='Banner of the YER2 Game' />
+                        <img src='/games/banners/yer2.webp' loading='lazy' decoding='async' alt='Banner of the YER2 Game' />
                     )}
                 </div>
             </div>
 
             <div className='arg'>
                 <div className='notextselection glass img animatedarg'>
-                    <img src='/halloffame/mewoster.jpg' alt='Mewoster Banner' />
+                    <img src='/halloffame/mewoster.webp' alt='Mewoster Banner' />
                 </div>
 
                 <div className='text'>
@@ -151,7 +150,7 @@ export default function MainPage() {
                 </div>
 
                 <div className='notextselection glass img animatedarg'>
-                    <img src='/images/launcher.png' loading='lazy' decoding='async' alt='Launcher Preview' />
+                    <img src='/images/launcher.webp' loading='lazy' decoding='async' alt='Launcher Preview' />
                 </div>
             </div>
 

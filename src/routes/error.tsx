@@ -21,7 +21,7 @@ export default function ErrorRoute({ status, statusText, message }: { status?: n
                     <p style={{ fontSize: '18px' }}>{message || error.data || error.message}</p>
 
                     <Link to='/' className='coolclick glass' style={{ padding: '15px', fontSize: '20px', fontWeight: 'bold', marginTop: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
-                        <img src='/logo.png' style={{ width: '50px', height: '50px' }} alt='OpenVoxel Studios Logo' />
+                        <img src='/logo.webp' style={{ width: '50px', height: '50px' }} alt='OpenVoxel Studios Logo' />
                         Return Home
                     </Link>
                 </div>
