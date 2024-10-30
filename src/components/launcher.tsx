@@ -38,16 +38,21 @@ export default function Launcher() {
     return (
         <>
             <div className='splash'>
-                <div className='download-recommended'>
+                {/* <div className='download-recommended'>
                     <h1>Download for<br /><i>{os == 'mac' ? 'Mac' : 'Windows'}!</i></h1>
 
                     <a className='download coolclick glass' href={quickDownload}><b>Download</b></a>
+                </div> */}
+                <div className='download-recommended'>
+                    <h1>Sorry! The launcher is under repair!</h1>
+
+                    <a className='download'><b>Thanks but the Launcher is not out yet! Come back soon :)</b></a>
                 </div>
 
                 <img className='glass coolclick' src={LauncherImage} alt='Launcher Preview' />
             </div>
 
-            <h1 className='maintitle'>All Downloads (note: the Launcher is disabled)</h1>
+            {/* <h1 className='maintitle'>All Downloads</h1>
 
             <div className='downloader'>
                 <div className='os glass'>
@@ -104,7 +109,7 @@ export default function Launcher() {
 
                     <a className='download coolclick glass' href={downloadPrefix + downloads.portable.linux_x64}><b>Download</b></a>
                 </div>
-            </div>
+            </div> */}
 
             <h1 className='maintitle'>Need help with the Launcher?</h1>
             <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
