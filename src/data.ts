@@ -158,6 +158,31 @@ var gameListRaw: {
     islauncher?: boolean;
 }[] = [
         {
+            name: 'Doors Invasion',
+            description: 'Doors entities and items made their way into your world!',
+            extended_description: 'Doors entities and items made their way into your world!',
+            fulldetails: '## 🎃 Halloween Map!\n\n(Roblox) Doors entities made their way into your world! Use craftable items to explore caves and protect from them!\n\n## Featuring:\n\n### Giggles\n![Giggles hanging on the ceiling](https://cdn.modrinth.com/data/cached_images/6be61ddd762bec41fd365ef9d52b5b770b6e4d77_0.webp)\n\nNot friendly, spawns in caves and lands on your head!\n\n### Items!\n![In game models for the Bulklight, Flashlight, Lighter, Vitamins and Crucifix](https://cdn.modrinth.com/data/cached_images/3e0ded274a52b003689c13c32b988870c5de0660.png)\n\nThe Bulklight, Flashlight and the Lighter are here to help you navigate caves! And also stun giggles.\n\nThe Vitamins are here to make you run faster! Stackable up to 3.\n\nThe Crucifix let\'s you crucify Doors Entities or any other entity by hitting it! Costs a bit.',
+            creators: ['Kubik', 'ChoosingBerry'],
+            link: { game_id: 'doors-invasion' },
+            date: new Date(1730415800000),
+            image: '/games/banners/doors-invasion.webp',
+            icon: '/games/icons/doors-invasion.webp',
+            downloads: 0,
+            tags: ['doors', 'invasion', 'entities', 'items', 'craftable', 'giggles', 'bulklight', 'flashlight', 'candle', 'crucifix', 'survivalfriendly'],
+            versions: [
+                {
+                    name: 'Hallows Release!',
+                    changes: 'Just one Giggle and some items!',
+                    date: new Date(1730415800000),
+                    download: 'https://www.planetminecraft.com/data-pack/doors-invasion/',
+                    supports: '1.21.1',
+                    type: 'release',
+                    id: 'v1',
+                }
+            ],
+            islauncher: false,
+        },
+        {
             name: 'Yahiamice Escape Room 2',
             description: 'The sequel... But better this time (and no math)!',
             extended_description: 'Please steve i beg i dont wanna type that extended description i dont even know what to put aaaaaaaaaaaaaaaa',
