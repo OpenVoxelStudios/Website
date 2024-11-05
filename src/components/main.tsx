@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { scrollTop } from '../router';
 import { motion } from 'framer-motion';
 import useIsDesktop from '@/hooks/useIsDesktop';
+import OptimizedVideo from './sub/mainVideo';
 
 const DesktopScene = () => {
     const [SceneComponent, setSceneComponent] = useState<React.ComponentType | null>(null);
@@ -64,9 +65,12 @@ export default function MainPage() {
                         View Maps
                     </Link>
 
-                    <video className='notextselection' id="v0" autoPlay={true} muted={true} playsInline={true} onPlay={(e) => e.currentTarget.pause()} controls={false} width={1500} height={714}>
-                        <source className='notextselection' type="video/mp4;" src='/ov_chest_open.mp4'></source>
-                    </video>
+                    <OptimizedVideo
+                        id="v0"
+                        src="/ov_chest_open.mp4"
+                        width={1500}
+                        height={714}
+                    />
                 </div>
             </motion.div>
 
@@ -115,7 +119,7 @@ export default function MainPage() {
 
             <div className='arg'>
                 <div className='notextselection glass img animatedarg'>
-                    <img src='/halloffame/mewoster.webp' alt='Mewoster Banner' />
+                    <img src='/halloffame/mewoster.webp' loading='lazy' decoding='async' alt='Mewoster Banner' />
                 </div>
 
                 <div className='text'>

@@ -27,7 +27,7 @@ export default function Footer() {
                         Minecraft Maps, without Mods.
                         <br />
                         <Link to={links.kofi as string} target='_blank' className='subtitle smalltitle' style={{ textDecoration: 'underline', paddingTop: '15px' }}>
-                            <img src='/support.webp' height='50px' className='coolclick supportus' alt='Support Us! Access our donation page' loading='lazy' decoding='async' />
+                            Support Us on Ko-fi!
                         </Link>
                     </p>
                 </div>
