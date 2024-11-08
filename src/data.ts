@@ -167,7 +167,7 @@ var gameListRaw: {
             date: new Date(1730415800000),
             image: '/games/banners/doors-invasion.webp',
             icon: '/games/icons/doors-invasion.webp',
-            downloads: 18,
+            downloads: 21,
             tags: ['doors', 'invasion', 'entities', 'items', 'craftable', 'giggles', 'bulklight', 'flashlight', 'candle', 'crucifix', 'survivalfriendly'],
             versions: [
                 {

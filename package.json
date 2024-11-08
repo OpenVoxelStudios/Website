@@ -50,7 +50,7 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.6",
-    "@mui/x-date-pickers": "^7.22.1",
+    "@mui/x-date-pickers": "^7.22.2",
     "@react-three/drei": "^9.115.0",
     "@react-three/fiber": "^8.17.10",
     "@types/ua-parser-js": "^0.7.39",
