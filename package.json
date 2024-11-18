@@ -68,7 +68,7 @@
     "remark-gfm": "^4.0.0",
     "sharp": "^0.33.5",
     "three": "^0.170.0",
-    "ua-parser-js": "^1.0.39"
+    "ua-parser-js": "^2.0.0"
   },
   "devDependencies": {
     "@types/bun": "^1.1.13",
