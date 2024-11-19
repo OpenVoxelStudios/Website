@@ -51,7 +51,7 @@
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.7",
     "@mui/x-date-pickers": "^7.22.2",
-    "@react-three/drei": "^9.116.3",
+    "@react-three/drei": "^9.117.2",
     "@react-three/fiber": "^8.17.10",
     "@types/ua-parser-js": "^0.7.39",
     "chalk": "^5.3.0",
@@ -68,15 +68,15 @@
     "remark-gfm": "^4.0.0",
     "sharp": "^0.33.5",
     "three": "^0.170.0",
-    "ua-parser-js": "^1.0.39"
+    "ua-parser-js": "^2.0.0"
   },
   "devDependencies": {
     "@types/bun": "^1.1.13",
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@typescript-eslint/eslint-plugin": "^8.14.0",
-    "@typescript-eslint/parser": "^8.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
     "@vitejs/plugin-react-swc": "^3.7.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.15.0",
