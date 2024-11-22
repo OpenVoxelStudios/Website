@@ -47,11 +47,11 @@
     "server.dev": "bun --watch backend/index.ts"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@mui/material": "^6.1.7",
-    "@mui/x-date-pickers": "^7.22.2",
-    "@react-three/drei": "^9.117.2",
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/material": "^6.1.8",
+    "@mui/x-date-pickers": "^7.22.3",
+    "@react-three/drei": "^9.117.3",
     "@react-three/fiber": "^8.17.10",
     "@types/ua-parser-js": "^0.7.39",
     "chalk": "^5.3.0",
@@ -72,7 +72,7 @@
   },
   "devDependencies": {
     "@types/bun": "^1.1.13",
-    "@types/node": "^22.9.0",
+    "@types/node": "^22.9.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^8.15.0",
