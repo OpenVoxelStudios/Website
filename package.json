@@ -49,7 +49,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
-    "@mui/material": "^6.1.8",
+    "@mui/material": "^6.1.9",
     "@mui/x-date-pickers": "^7.22.3",
     "@react-three/drei": "^9.117.3",
     "@react-three/fiber": "^8.17.10",
@@ -57,7 +57,7 @@
     "chalk": "^5.3.0",
     "dayjs": "^1.11.13",
     "elysia": "^1.1.25",
-    "framer-motion": "^11.11.17",
+    "framer-motion": "^11.12.0",
     "maath": "^0.10.8",
     "octokit": "^4.0.2",
     "react": "^18.3.1",
@@ -71,13 +71,13 @@
     "ua-parser-js": "^2.0.0"
   },
   "devDependencies": {
-    "@types/bun": "^1.1.13",
-    "@types/node": "^22.9.3",
+    "@types/bun": "^1.1.14",
+    "@types/node": "^22.10.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@typescript-eslint/eslint-plugin": "^8.15.0",
-    "@typescript-eslint/parser": "^8.15.0",
-    "@vitejs/plugin-react-swc": "^3.7.1",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "@vitejs/plugin-react-swc": "^3.7.2",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",
@@ -85,7 +85,7 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.7.2",
-    "vite": "^5.4.11",
+    "vite": "^6.0.1",
     "vite-plugin-sitemap": "^0.7.1"
   }
 }
