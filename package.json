@@ -41,7 +41,7 @@
     "build": "bunx vite build && bun run ./script/afterRun.ts",
     "preview": "bunx vite preview",
     "test": "bun run build && bunx vite preview",
-    "preprod": "bun run update-all && bun run build && bun ./script/preprod.ts",
+    "preprod": "bun run build && bun ./script/preprod.ts",
     "cleanup": "rm -rf openvoxel.studio && rm -f openvoxel.studio.zip",
     "server": "NODE_ENV=production bun backend/index.ts",
     "server.dev": "bun --watch backend/index.ts"
@@ -52,7 +52,7 @@
     "@mui/material": "^6.1.10",
     "@mui/x-date-pickers": "^7.23.1",
     "@react-three/drei": "^9.120.4",
-    "@react-three/fiber": "^8.17.10",
+    "@react-three/fiber": "^9.0.0-alpha.8",
     "@types/ua-parser-js": "^0.7.39",
     "chalk": "^5.3.0",
     "dayjs": "^1.11.13",
