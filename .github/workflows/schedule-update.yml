@@ -2,7 +2,7 @@ name: Schedule Update
 
 on:
   schedule:
-    - cron: '0 0 */3 * *'  # Runs every 3 days at midnight
+    - cron: '0 0 */7 * *'  # Runs every 7 days at midnight
   workflow_dispatch:  # Allows manual triggering
 
 jobs:

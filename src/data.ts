@@ -106,7 +106,7 @@ export const CreatorDetailList: Record<CreatorList, {
             + "\n\n# My Socials"
             + "\n\n**Youtube**: [@Sammy3D](https://youtube.com/@Sammy3D)"
             + "\n\n**Discord**: [sammy2d](https://discordapp.com/users/552465226583506945)"
-            + "\n\n**Minecraft**: Sammy2D",
+            + "\n\n**Minecraft**: Sammy3D",
     },
     "Stevelocks": {
         minecraft: "0849bc57-4d67-414b-a371-b71c45e02a14",
@@ -126,7 +126,7 @@ export const CreatorDetailList: Record<CreatorList, {
             + "\n\n**Youtube**: [@thebreadgiver](https://youtube.com/@thebreadgiver)"
             + "\n\n**Minecraft Youtube**: [@LimeGearStudios](https://youtube.com/@LimeGearStudios)"
             + "\n\n**Discord**: [thebreadgiver.](https://discordapp.com/users/761898818982772747)"
-            + "\n\n**Minecraft**: AndersenChamp",
+            + "\n\n**Minecraft**: TheBreadGiver",
     },
 };
 
