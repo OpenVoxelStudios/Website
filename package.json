@@ -52,7 +52,7 @@
     "@mui/material": "^6.4.7",
     "@mui/x-date-pickers": "^7.27.3",
     "@react-three/drei": "^10.0.4",
-    "@react-three/fiber": "^9.0.4",
+    "@react-three/fiber": "^9.1.0",
     "@types/ua-parser-js": "^0.7.39",
     "chalk": "^5.4.1",
     "dayjs": "^1.11.13",
