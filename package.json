@@ -57,7 +57,7 @@
     "chalk": "^5.4.1",
     "dayjs": "^1.11.13",
     "elysia": "^1.2.25",
-    "framer-motion": "^12.6.3",
+    "framer-motion": "^12.6.5",
     "maath": "^0.10.8",
     "octokit": "^4.1.2",
     "react": "^19.1.0",
