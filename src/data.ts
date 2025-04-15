@@ -12,7 +12,7 @@ export const links: { [key: string]: string | undefined } = {
     kofi: "https://ko-fi.com/openvoxel",
 }
 
-export type CreatorList = "ChoosingBerry" | "CMANIF" | "Cryptic Knight" | "Kubik" | "Monster Art" | "RoseRocket" | "S0FL" | "Sammy" | "Stevelocks" | "The Bread Giver";
+export type CreatorList = "ChoosingBerry" | "CMANIF" | "Cryptic Knight" | "Kubik" | "Monster Art" | "RoseRocket" | "S0FL" | "Sammy3D" | "Stevelocks" | "The Bread Giver";
 
 export const CreatorDetailList: Record<CreatorList, {
     minecraft: string;
@@ -99,7 +99,7 @@ export const CreatorDetailList: Record<CreatorList, {
             + "\n\n**Discord**: [s0fl](https://discordapp.com/users/249993006705278986)"
             + "\n\n**Minecraft**: S0FL",
     },
-    "Sammy": {
+    "Sammy3D": {
         minecraft: "d0c31c74-f1b0-4c27-a988-db9a6d95bb70",
         youtube: "@Sammy3D",
         description: "I don't know... I'm still not good at this stuff"
@@ -186,7 +186,7 @@ var gameListRaw: {
             name: 'Yahiamice Escape Room 2',
             description: 'The sequel... But better this time (and no math)!',
             extended_description: 'Please steve i beg i dont wanna type that extended description i dont even know what to put aaaaaaaaaaaaaaaa',
-            creators: ['Stevelocks', 'ChoosingBerry', 'Kubik', 'RoseRocket', 'Sammy', 'The Bread Giver', 'S0FL'],
+            creators: ['Stevelocks', 'ChoosingBerry', 'Kubik', 'RoseRocket', 'Sammy3D', 'The Bread Giver', 'S0FL'],
             collaboration: [{ name: 'GloxoST' }, { name: 'Ichosecheese', url: 'https://www.youtube.com/watch?v=YEqYo5gH1gM' }, { name: 'ScoobySnack' }],
             link: { game_id: 'yer2' },
             date: new Date(1727259800000),
@@ -342,9 +342,34 @@ var gameListRaw: {
             islauncher: false,
         },
         {
+            name: "Bendy And The Ink Machine: Moving Pictures",
+            description: "A recreation of the first Bendy And The Ink Machine chapter in Minecraft",
+            extended_description: "A near-perfect recreation of the first Bendy And The Ink Machine chapter in Minecraft",
+            creators: ["Sammy3D", "ChoosingBerry", "Stevelocks", "The Bread Giver"],
+            link: { game_id: "batim" },
+            date: new Date(1744732539717),
+            image: "/games/banners/batim.webp",
+            icon: "/games/icons/batim.webp",
+            downloads: 0,
+            tags: ["bendy", "ink", "machine", "batim", "chapter", "1"],
+            fulldetails: "# Bendy And The Ink Machine: Moving Pictures\n\n\n\n### A near-perfect recreation of the first Bendy And The Ink Machine chapter in Minecraft\n\n___\n\n\n\n## Cool stats\n\n2,072 Commands\n\n23 Animated Java Rigs\n\n151 models\n\nSOMEHOW done in like 3 weeks\n\n\n\n\n## Features \n\nAll blocks, models and textures in the map are custom\n\nCustom shaders for Bendy style visuals\n\nA whole game of darts\n\n\n\n\n## Recommended Settings/Mods\n\nFabulous graphics settings are recommended for the best experience\n\nThe map has been tested (with fabulous graphics) in vanilla and sodium. Optifine has not been tested. You have been warned!\n\nSetting brightness to 100% is recommended for optimal seeing things\n\nParticles must be enabled, because certain effects depend on particles.\n\n\n\nThe map version is 1.21.4, and no other Minecraft versions will work.\n\nMultiplayer is supported in the map, and has dedicated functionality in certain parts.\n\n\n\nTo reset the map, you can use `/function bendy:reset_world`\n\nThis will reset the map, along with all the advancements. \n\nWARNING: If you do not use this while in the lobby, you could get softlocked.\n\n\n\n\n## Credits\n\nSammy3D - Builder | Coder\n\nChoosingBerry - Modeler | Pixel artist | Voice of Wally Franks\n\nTheBreadGiver - Builder | Idea Baker | Voice of Thomas Connors\n\nStevelocks - Builder | Coder | VFX Artist | Voice of Henry Stein\n\n\n\n\n## Additional credits\n\nQuack - Quaternion utilities datapack: https://github.com/Eroxen/Quack\n\nGm - Floating point arithmetic datapack: https://github.com/gibbsly/gm\n\nShader Selector V3 - Toggleable shaders using fabulous graphics  \n\nhttps://github.com/HalbFettKaese/ShaderSelectorV3\n\nAnimated Java - Model and animation creator  \n\nhttps://animated-java.dev\n\nMC-Build - Datapack pre-compiler: https://mcbuild.dev\n\nStable Player Display - Display full player skin via core shaders: https://github.com/Erkko68/stable_player_display\n\nOriginal BATIM SFX: https://www.sounds-resource.com/pc_computer/bendyandtheinkmachine/",
+            versions: [
+                {
+                    changes: "Initial release!",
+                    date: new Date(1744732539717),
+                    download: "https://github.com/OpenVoxelStudios/Maps/releases/download/OpenVoxel/batim.zip",
+                    name: "Chapter 1 Version 1.0",
+                    supports: "1.21.4",
+                    id: "v1",
+                    type: "release",
+                }
+            ],
+            islauncher: false,
+        },
+        {
             name: "More Maps Soon!",
             description: "We are actively coding new maps for the best of the community!",
-            creators: ["CMANIF", "ChoosingBerry", "Kubik", "Monster Art", "S0FL", "Sammy", "Stevelocks"],
+            creators: ["CMANIF", "ChoosingBerry", "Kubik", "Monster Art", "S0FL", "Sammy3D", "Stevelocks"],
             link: links.discord as string,
             date: null,
             image: "/banner.webp",
