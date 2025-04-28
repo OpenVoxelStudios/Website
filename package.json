@@ -51,7 +51,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^7.0.2",
     "@mui/x-date-pickers": "^8.0.0",
-    "@react-three/drei": "^10.0.6",
+    "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
     "@types/ua-parser-js": "^0.7.39",
     "chalk": "^5.4.1",
